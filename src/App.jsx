@@ -92,7 +92,7 @@ const App = () => {
               margin: '0 0 .5rem 0',
             }}>{product.name} - ${product.price}</p>
             <p>Quantity: {product.quantity}</p>
-            <button onClick={() => addItemToCart(product)}>Add to cart</button>
+            <button onClick={() => addItemToCart(product)} disabled={product.quantity === 0}>Add to cart</button>
           </li>
         ))}
       </ul>
