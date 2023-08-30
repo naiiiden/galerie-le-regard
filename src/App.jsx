@@ -58,7 +58,7 @@ const App = () => {
 
   return (
     <main>
-      <h1>Cart</h1>
+      <h1>Cart functionality</h1>
       <ul style={{
         listStyle: 'none',
         padding: 0,
@@ -75,6 +75,12 @@ const App = () => {
             }}>{product.name} - ${product.price}</p>
             <button onClick={() => addItemToCart(product)}>Add to cart</button>
           </li>
+        ))}
+      </ul>
+      <h2>Cart</h2>
+      <ul>
+        {cartItems?.map((item) => (
+          <li key={item.id}>{item.name} - ${item.price}</li>
         ))}
       </ul>
     </main>
