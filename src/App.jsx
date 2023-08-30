@@ -56,6 +56,11 @@ const App = () => {
     console.log('cart: ', cartItems);
   }
 
+  const removeItemFromCart = (item) => {
+    const newCartItems = cartItems.filter(i => i !== item)
+    setCartItems(newCartItems);
+  }
+
   return (
     <main>
       <h1>Cart functionality</h1>
@@ -81,7 +86,10 @@ const App = () => {
       {cartItems.length !== 0 && 
         <ul>
           {cartItems.map((item) => (
-            <li key={item.id}>{item.name} - ${item.price}</li>
+            <li key={item.id}>
+              <p>{item.name} - ${item.price}</p>
+              <button onClick={() => removeItemFromCart(item)}>Remove from cart</button>
+            </li>
           ))}
         </ul>
       }
