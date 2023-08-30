@@ -67,6 +67,9 @@ const App = () => {
 
   const [cartItems, setCartItems] = useState([]);
   
+  let totalSumOfItemsInCart = 0;
+  cartItems.forEach(item => totalSumOfItemsInCart += item.price);
+
   const addItemToCart = (item) => {
     setCartItems([...cartItems, item]);
     console.log('cart: ', cartItems);
@@ -97,20 +100,24 @@ const App = () => {
         ))}
       </ul>
       <h2>Cart Items</h2>
-      {cartItems.length !== 0 && 
-        <ul style={ulStyle}>
-          {cartItems.map((item) => (
-            <li key={item.id} style={{
-              border: '1px solid red',
-              width: 'fit-content',
-              padding: '1rem',
-              margin: '1rem',
-            }}>
-              <p>{item.name} - ${item.price}</p>
-              <button onClick={() => removeItemFromCart(item)}>Remove from cart</button>
-            </li>
-          ))}
-        </ul>
+      {cartItems.length !== 0 &&
+        <>
+          <ul style={ulStyle}>
+            {cartItems.map((item) => (
+              <li key={item.id} style={{
+                border: '1px solid red',
+                width: 'fit-content',
+                padding: '1rem',
+                margin: '1rem',
+              }}>
+                <p>{item.name} - ${item.price}</p>
+                <button onClick={() => removeItemFromCart(item)}>Remove from cart</button>
+              </li>
+            ))}
+          </ul>
+  
+          <p>Total price: {totalSumOfItemsInCart.toFixed(2)}</p>
+        </>
       }
     </main>
   )
