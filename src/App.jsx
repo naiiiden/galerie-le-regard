@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 const App = () => {
   const products = [
     {
@@ -47,6 +49,13 @@ const App = () => {
     },
   ]
 
+  const [cartItems, setCartItems] = useState([]);
+  
+  const addItemToCart = (item) => {
+    setCartItems([...cartItems, item]);
+    console.log('cart: ', cartItems);
+  }
+
   return (
     <main>
       <h1>Cart</h1>
@@ -64,7 +73,7 @@ const App = () => {
             <p style={{
               margin: '0 0 .5rem 0',
             }}>{product.name} - ${product.price}</p>
-            <button>Add to cart</button>
+            <button onClick={() => addItemToCart(product)}>Add to cart</button>
           </li>
         ))}
       </ul>
