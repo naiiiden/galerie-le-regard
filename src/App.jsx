@@ -109,9 +109,26 @@ const App = () => {
   };
 
   const removeItemFromCart = (item) => {
-    const newCartItems = cartItems.filter(i => i !== item)
-    setCartItems(newCartItems);
-  }
+    // Find the index of the removed item in the cartItems array
+    const cartItemIndex = cartItems.findIndex(cartItem => cartItem === item);
+  
+    if (cartItemIndex !== -1) {
+      const removedCartItem = cartItems[cartItemIndex];
+      // Increase the quantity of the corresponding product in the products array
+      const productIndex = products.findIndex(product => product.id === removedCartItem.id);
+      
+      if (productIndex !== -1) {
+        const updatedProducts = [...products];
+        updatedProducts[productIndex].quantity += removedCartItem.quantity;
+        setProducts(updatedProducts);
+      }
+  
+      // Remove the item from the cartItems array
+      const updatedCartItems = [...cartItems];
+      updatedCartItems.splice(cartItemIndex, 1);
+      setCartItems(updatedCartItems);
+    }
+  };
 
   return (
     <main>
@@ -144,7 +161,6 @@ const App = () => {
                 margin: '1rem',
               }}>
                 <p>{item.name} - ${item.price}</p>
-                <p>Quantity: {item.quantity}</p>
                 <button onClick={() => removeItemFromCart(item)}>Remove from cart</button>
               </li>
             ))}
