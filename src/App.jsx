@@ -8,7 +8,7 @@ const App = () => {
     flexWrap: 'wrap',
   }
 
-  const products = [
+  const [products, setProducts] = useState([
     {
       id: 1,
       name: 'Product 1',
@@ -63,8 +63,7 @@ const App = () => {
       price: 19.99,
       quantity: 6,
     },
-  ]
-
+  ])
   const [cartItems, setCartItems] = useState([]);
   
   let totalSumOfItemsInCart = 0;
