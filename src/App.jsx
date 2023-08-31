@@ -70,9 +70,43 @@ const App = () => {
   cartItems.forEach(item => totalSumOfItemsInCart += item.price);
 
   const addItemToCart = (item) => {
-    setCartItems([...cartItems, item]);
-    console.log('cart: ', cartItems);
-  }
+    // Find the index of the item in the products array
+    const productIndex = products.findIndex((product) => product.id === item.id);
+    // Create a copy of the products array to ensure immutability
+    const updatedProducts = [...products];
+  
+    // Check if the item is in the products array and its quantity is greater than 0
+    if (productIndex !== -1 && products[productIndex].quantity > 0) {
+      // Find the index of the item in the cartItems array
+      const cartItemIndex = cartItems.findIndex((cartItem) => cartItem.id === item.id);
+  
+      // If the item is already in the cart, update its quantity
+      if (cartItemIndex !== -1) {
+        // Create a copy of the cartItems array to ensure immutability
+        const updatedCart = [...cartItems];
+        // Get the existing cart item and create an updated version with increased quantity
+        const existingCartItem = updatedCart[cartItemIndex];
+        const updatedCartItem = { ...existingCartItem, quantity: existingCartItem.quantity + 1 };
+        // Replace the existing cart item with the updated version
+        updatedCart[cartItemIndex] = updatedCartItem;
+        // Update the cartItems state with the updated cart
+        setCartItems(updatedCart);
+      } else {
+        // If the item is not in the cart, create a new cart item with quantity 1
+        const newCartItem = { ...item, quantity: 1 };
+        // Add the new cart item to the cartItems array
+        setCartItems([...cartItems, newCartItem]);
+      }
+  
+      // Create an updated version of the product with decreased quantity
+      const updatedProduct = { ...updatedProducts[productIndex] };
+      updatedProduct.quantity -= 1;
+      // Replace the existing product with the updated version
+      updatedProducts[productIndex] = updatedProduct;
+      // Update the products state with the updated products
+      setProducts(updatedProducts);
+    }
+  };
 
   const removeItemFromCart = (item) => {
     const newCartItems = cartItems.filter(i => i !== item)
@@ -110,6 +144,7 @@ const App = () => {
                 margin: '1rem',
               }}>
                 <p>{item.name} - ${item.price}</p>
+                <p>Quantity: {item.quantity}</p>
                 <button onClick={() => removeItemFromCart(item)}>Remove from cart</button>
               </li>
             ))}
