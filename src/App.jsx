@@ -130,6 +130,20 @@ const App = () => {
     }
   };
 
+  const handleQuantityChange = (item, newQuantity) => {
+  const updatedCart = cartItems.map((cartItem) =>
+    cartItem.id === item.id ? { ...cartItem, quantity: parseInt(newQuantity, 10) } : cartItem
+  );
+  setCartItems(updatedCart);
+
+  const productIndex = products.findIndex((product) => product.id === item.id);
+  if (productIndex !== -1) {
+    const updatedProducts = [...products];
+    updatedProducts[productIndex].quantity += item.quantity - parseInt(newQuantity, 10);
+    setProducts(updatedProducts);
+  }
+};
+
   return (
     <main>
       <h1>Cart functionality</h1>
@@ -161,6 +175,16 @@ const App = () => {
                 margin: '1rem',
               }}>
                 <p>{item.name} - ${item.price}</p>
+                <label htmlFor="quantity">Quantity: </label>
+                <input
+                  id='quantity'
+                  type='number'
+                  value={item.quantity}
+                  onChange={(e) => handleQuantityChange(item, e.target.value)}
+                  min='1'
+                  max={item.availableQuantity}
+                />
+                <br/>
                 <button onClick={() => removeItemFromCart(item)}>Remove from cart</button>
               </li>
             ))}
