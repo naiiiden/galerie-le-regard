@@ -131,18 +131,40 @@ const App = () => {
   };
 
   const handleQuantityChange = (item, newQuantity) => {
-  const updatedCart = cartItems.map((cartItem) =>
-    cartItem.id === item.id ? { ...cartItem, quantity: parseInt(newQuantity, 10) } : cartItem
-  );
-  setCartItems(updatedCart);
-
-  const productIndex = products.findIndex((product) => product.id === item.id);
-  if (productIndex !== -1) {
-    const updatedProducts = [...products];
-    updatedProducts[productIndex].quantity += item.quantity - parseInt(newQuantity, 10);
-    setProducts(updatedProducts);
-  }
-};
+    const numericNewQuantity = parseInt(newQuantity, 10);
+  
+    if (!isNaN(numericNewQuantity) && numericNewQuantity >= 0) {
+      // Calculate the difference between the new quantity and the old quantity
+      const quantityDifference = numericNewQuantity - item.quantity;
+  
+      // Ensure that the product's quantity doesn't go below zero
+      const productIndex = products.findIndex((product) => product.id === item.id);
+      if (productIndex !== -1) {
+        const updatedProducts = [...products];
+        const updatedProduct = updatedProducts[productIndex];
+  
+        // Check if there are enough products available to add to the cart
+        if (updatedProduct.quantity - quantityDifference >= 0) {
+          updatedProduct.quantity -= quantityDifference;
+          setProducts(updatedProducts);
+        } else {
+          // If not enough products available, set the cart item's quantity to the maximum available
+          const newCartItemQuantity = updatedProduct.quantity;
+          const updatedCart = cartItems.map((cartItem) =>
+            cartItem.id === item.id ? { ...cartItem, quantity: newCartItemQuantity } : cartItem
+          );
+          setCartItems(updatedCart);
+        }
+      }
+  
+      // Update the cart item's quantity
+      const updatedCart = cartItems.map((cartItem) =>
+        cartItem.id === item.id ? { ...cartItem, quantity: numericNewQuantity } : cartItem
+      );
+      setCartItems(updatedCart);
+    }
+  };
+  
 
   return (
     <main>
@@ -182,7 +204,8 @@ const App = () => {
                   value={item.quantity}
                   onChange={(e) => handleQuantityChange(item, e.target.value)}
                   min='1'
-                  max={item.availableQuantity}
+                  // max={item.availableQuantity}
+                  disabled={item.quantity === item.availableQuantity}
                 />
                 <br/>
                 <button onClick={() => removeItemFromCart(item)}>Remove from cart</button>
