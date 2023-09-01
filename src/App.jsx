@@ -92,9 +92,9 @@ const App = () => {
         // Update the cartItems state with the updated cart
         setCartItems(updatedCart);
       } else {
-        // If the item is not in the cart, create a new cart item with quantity 1
-        const newCartItem = { ...item, quantity: 1 };
         // Add the new cart item to the cartItems array
+        // If the item is not in the cart, create a new cart item with quantity 1
+        const newCartItem = { ...item, quantity: 1, availableQuantity: item.quantity };
         setCartItems([...cartItems, newCartItem]);
       }
   
@@ -132,39 +132,31 @@ const App = () => {
 
   const handleQuantityChange = (item, newQuantity) => {
     const numericNewQuantity = parseInt(newQuantity, 10);
-  
-    if (!isNaN(numericNewQuantity) && numericNewQuantity >= 0) {
-      // Calculate the difference between the new quantity and the old quantity
-      const quantityDifference = numericNewQuantity - item.quantity;
-  
-      // Ensure that the product's quantity doesn't go below zero
-      const productIndex = products.findIndex((product) => product.id === item.id);
-      if (productIndex !== -1) {
-        const updatedProducts = [...products];
-        const updatedProduct = updatedProducts[productIndex];
-  
-        // Check if there are enough products available to add to the cart
-        if (updatedProduct.quantity - quantityDifference >= 0) {
-          updatedProduct.quantity -= quantityDifference;
+
+    if (!isNaN(numericNewQuantity) && numericNewQuantity >= 1) {
+      // Use the stored available quantity to limit the input
+      if (numericNewQuantity <= item.availableQuantity) {
+        const updatedCart = cartItems.map((cartItem) =>
+          cartItem.id === item.id ? { ...cartItem, quantity: numericNewQuantity } : cartItem
+        );
+        setCartItems(updatedCart);
+
+        // Update the product's quantity as well
+        const productIndex = products.findIndex((product) => product.id === item.id);
+        if (productIndex !== -1) {
+          const updatedProducts = [...products];
+          updatedProducts[productIndex].quantity += item.quantity - numericNewQuantity;
           setProducts(updatedProducts);
-        } else {
-          // If not enough products available, set the cart item's quantity to the maximum available
-          const newCartItemQuantity = updatedProduct.quantity;
-          const updatedCart = cartItems.map((cartItem) =>
-            cartItem.id === item.id ? { ...cartItem, quantity: newCartItemQuantity } : cartItem
-          );
-          setCartItems(updatedCart);
         }
+      } else {
+        // If the new quantity exceeds available quantity, set it to the available quantity
+        const updatedCart = cartItems.map((cartItem) =>
+          cartItem.id === item.id ? { ...cartItem, quantity: item.availableQuantity } : cartItem
+        );
+        setCartItems(updatedCart);
       }
-  
-      // Update the cart item's quantity
-      const updatedCart = cartItems.map((cartItem) =>
-        cartItem.id === item.id ? { ...cartItem, quantity: numericNewQuantity } : cartItem
-      );
-      setCartItems(updatedCart);
     }
   };
-  
 
   return (
     <main>
@@ -204,8 +196,7 @@ const App = () => {
                   value={item.quantity}
                   onChange={(e) => handleQuantityChange(item, e.target.value)}
                   min='1'
-                  // max={item.availableQuantity}
-                  disabled={item.quantity === item.availableQuantity}
+                  max={item.availableQuantity}
                 />
                 <br/>
                 <button onClick={() => removeItemFromCart(item)}>Remove from cart</button>
