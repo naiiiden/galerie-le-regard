@@ -67,7 +67,7 @@ const App = () => {
   const [cartItems, setCartItems] = useState([]);
   
   let totalSumOfItemsInCart = 0;
-  cartItems.forEach(item => totalSumOfItemsInCart += item.price);
+  cartItems.forEach(item => totalSumOfItemsInCart += item.price * item.quantity);
 
   const addItemToCart = (item) => {
     // Find the index of the item in the products array
