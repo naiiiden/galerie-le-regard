@@ -1,5 +1,6 @@
 import { useState } from "react"
 import CartItem from "./components/CartItem/CartItem";
+import ProductItem from "./components/ProductItem/ProductItem";
 
 const App = () => {
   const ulStyle = {
@@ -164,18 +165,11 @@ const App = () => {
       <h1>Cart functionality</h1>
       <ul style={ulStyle}>
         {products.map((product) => (
-          <li key={product.id} style={{
-            background: 'darkcyan',
-            width: 'fit-content',
-            padding: '1rem',
-            margin: '1rem',
-          }}>
-            <p style={{
-              margin: '0 0 .5rem 0',
-            }}>{product.name} - ${product.price}</p>
-            <p>Quantity: {product.quantity}</p>
-            <button onClick={() => addItemToCart(product)} disabled={product.quantity === 0} aria-label={`Add ${product.name} to cart`}>Add to cart</button>
-          </li>
+          <ProductItem 
+            product={product} 
+            key={product.id}
+            onClick={() => addItemToCart(product)}
+          />
         ))}
       </ul>
       <h2>Cart Items</h2>
