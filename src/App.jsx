@@ -1,4 +1,5 @@
 import { useState } from "react"
+import CartItem from "./components/CartItem/CartItem";
 
 const App = () => {
   const ulStyle = {
@@ -182,25 +183,12 @@ const App = () => {
         <>
           <ul style={ulStyle}>
             {cartItems.map((item) => (
-              <li key={item.id} style={{
-                border: '1px solid red',
-                width: 'fit-content',
-                padding: '1rem',
-                margin: '1rem',
-              }}>
-                <p>{item.name} - ${item.price}</p>
-                <label htmlFor={`quantity-product-${item.id}`}>Quantity: </label>
-                <input
-                  id={`quantity-product-${item.id}`}
-                  type='number'
-                  value={item.quantity}
-                  onChange={(e) => handleQuantityChange(item, e.target.value)}
-                  min='1'
-                  max={item.availableQuantity}
-                />
-                <br/>
-                <button onClick={() => removeItemFromCart(item)} aria-label={`Remove ${item.name} from your cart`}>Remove from cart</button>
-              </li>
+              <CartItem 
+                item={item} 
+                key={item.id} 
+                onChange={(e) => handleQuantityChange(item, e.target.value)}
+                onClick={() => removeItemFromCart(item)}
+              />
             ))}
           </ul>
   
