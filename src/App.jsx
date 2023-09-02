@@ -173,7 +173,7 @@ const App = () => {
         ))}
       </ul>
       <h2>Cart Items</h2>
-      {cartItems.length !== 0 &&
+      {cartItems.length !== 0 ?
         <>
           <ul style={ulStyle}>
             {cartItems.map((item) => (
@@ -188,6 +188,8 @@ const App = () => {
   
           <p>Total price: {totalSumOfItemsInCart.toFixed(2)}</p>
         </>
+        :
+        <p>Your cart is empty.</p>
       }
     </main>
   )
