@@ -173,7 +173,7 @@ const App = () => {
               margin: '0 0 .5rem 0',
             }}>{product.name} - ${product.price}</p>
             <p>Quantity: {product.quantity}</p>
-            <button onClick={() => addItemToCart(product)} disabled={product.quantity === 0}>Add to cart</button>
+            <button onClick={() => addItemToCart(product)} disabled={product.quantity === 0} aria-label={`Add ${product.name} to cart`}>Add to cart</button>
           </li>
         ))}
       </ul>
@@ -199,7 +199,7 @@ const App = () => {
                   max={item.availableQuantity}
                 />
                 <br/>
-                <button onClick={() => removeItemFromCart(item)}>Remove from cart</button>
+                <button onClick={() => removeItemFromCart(item)} aria-label={`Remove ${item.name} from your cart`}>Remove from cart</button>
               </li>
             ))}
           </ul>
