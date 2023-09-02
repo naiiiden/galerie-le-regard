@@ -189,9 +189,9 @@ const App = () => {
                 margin: '1rem',
               }}>
                 <p>{item.name} - ${item.price}</p>
-                <label htmlFor="quantity">Quantity: </label>
+                <label htmlFor={`quantity-product-${item.id}`}>Quantity: </label>
                 <input
-                  id='quantity'
+                  id={`quantity-product-${item.id}`}
                   type='number'
                   value={item.quantity}
                   onChange={(e) => handleQuantityChange(item, e.target.value)}
