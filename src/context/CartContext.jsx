@@ -67,102 +67,120 @@ const CartContext = createContext();
 const cartReducer = (state, action) => {
     switch (action.type) {
         case 'ADD_TO_CART':
-            const newItem = action.payload;
-            const productIndex = state.products.findIndex((product) => product.id === newItem.id);
+            const productId = action.payload.id;
+            const productToAdd = state.products.find((product) => product.id === productId);
 
-            if (productIndex !== -1 && state.products[productIndex].quantity > 0) {
-                const cartItemIndex = state.cartItems.findIndex((cartItem) => cartItem.id === newItem.id);
-
-                if (cartItemIndex !== -1) {
-                    const updatedCart = [...state.cartItems];
-                    const existingCartItem = updatedCart[cartItemIndex];
-                    const updatedCartItem = { ...existingCartItem, quantity: existingCartItem.quantity + 1 };
-                    updatedCart[cartItemIndex] = updatedCartItem;
-
-                    const updatedProducts = [...state.products];
-                    const updatedProduct = { ...updatedProducts[productIndex] };
-                    updatedProduct.quantity -= 1;
-                    updatedProducts[productIndex] = updatedProduct;
-
-                    return {
-                        ...state,
-                        cartItems: updatedCart,
-                        products: updatedProducts,
-                    };
-                } else {
-                    const newCartItem = { ...newItem, quantity: 1, availableQuantity: newItem.quantity };
-
-                    return {
-                        ...state,
-                        cartItems: [...state.cartItems, newCartItem],
-                        products: state.products.map((product) =>
-                        product.id === newItem.id ? { ...product, quantity: product.quantity - 1 } : product
-                        ),
-                    };
-                }
+            if (!productToAdd || productToAdd.quantity === 0) {
+                return state; // Product not found or no more available
             }
-            return state;
-        case 'REMOVE_FROM_CART':
-            const itemToRemove = action.payload;
-            const cartItemIndex = state.cartItems.findIndex((cartItem) => cartItem.id === itemToRemove.id);
 
-            if (cartItemIndex !== -1) {
-                const removedCartItem = state.cartItems[cartItemIndex];
-                const productIndex = state.products.findIndex((product) => product.id === removedCartItem.id);
-                
-                if (productIndex !== -1) {
-                    const updatedProducts = [...state.products];
-                    updatedProducts[productIndex].quantity += removedCartItem.quantity;
+            const existingCartItem = state.cartItems.find((cartItem) => cartItem.id === productId);
 
-                    const updatedCartItems = [...state.cartItems];
-                    updatedCartItems.splice(cartItemIndex, 1);
-
-                    return {
-                        ...state,
-                        cartItems: updatedCartItems,
-                        products: updatedProducts,
-                    };
-                }
-            }
-            return state;
-        case 'UPDATE_QUANTITY':
-            const { itemToUpdate, newQuantity } = action.payload;
-            const numericNewQuantity = parseInt(newQuantity, 10);
-        
-            if (!isNaN(numericNewQuantity) && numericNewQuantity >= 1) {
-                // Use the stored available quantity to limit the input
-                if (numericNewQuantity <= itemToUpdate.availableQuantity) {
+            if (existingCartItem) {
+                if (existingCartItem.quantity < existingCartItem.availableQuantity) {
                     const updatedCartItems = state.cartItems.map((cartItem) =>
-                        cartItem.id === itemToUpdate.id ? { ...cartItem, quantity: numericNewQuantity } : cartItem
+                        cartItem.id === productId
+                        ? { ...cartItem, quantity: cartItem.quantity + 1 }
+                        : cartItem
                     );
-                
+
                     const updatedProducts = state.products.map((product) =>
-                        product.id === itemToUpdate.id ? { ...product, quantity: product.quantity + (itemToUpdate.quantity - numericNewQuantity) } : product
+                        product.id === productId
+                        ? { ...product, quantity: product.quantity - 1 }
+                        : product
                     );
-            
+
                     return {
                         ...state,
                         cartItems: updatedCartItems,
                         products: updatedProducts,
                     };
-                } else {
-                    // If the new quantity exceeds available quantity, set it to the available quantity
-                    const updatedCartItems = state.cartItems.map((cartItem) =>
-                        cartItem.id === itemToUpdate.id ? { ...cartItem, quantity: itemToUpdate.availableQuantity } : cartItem
+                }
+            } else {
+                if (productToAdd.quantity > 0) {
+                    const newCartItem = {
+                        ...productToAdd,
+                        quantity: 1,
+                        availableQuantity: productToAdd.quantity,
+                    };
+
+                    const updatedCartItems = [...state.cartItems, newCartItem];
+
+                    const updatedProducts = state.products.map((product) =>
+                        product.id === productId
+                        ? { ...product, quantity: product.quantity - 1 }
+                        : product
                     );
-                
+
                     return {
                         ...state,
                         cartItems: updatedCartItems,
+                        products: updatedProducts,
                     };
                 }
             }
-
-            return state;
-        default:
-            return state;
+        return state;
+      case 'REMOVE_FROM_CART':
+        const removedProductId = action.payload.id;
+        const removedCartItem = state.cartItems.find((cartItem) => cartItem.id === removedProductId);
+  
+        if (!removedCartItem) {
+          return state;
+        }
+  
+        const updatedCartItems = state.cartItems.filter((cartItem) => cartItem.id !== removedProductId);
+  
+        const updatedProducts = [...state.products];
+        const productToUpdate = updatedProducts.find((product) => product.id === removedProductId);
+        productToUpdate.quantity += removedCartItem.quantity;
+  
+        return {
+          ...state,
+          cartItems: updatedCartItems,
+          products: updatedProducts,
+        };
+  
+      case 'UPDATE_QUANTITY':
+        const { itemToUpdate, newQuantity } = action.payload;
+  
+        const numericNewQuantity = parseInt(newQuantity, 10);
+  
+        if (!isNaN(numericNewQuantity) && numericNewQuantity >= 1) {
+          if (numericNewQuantity <= itemToUpdate.availableQuantity) {
+            const updatedCartItems = state.cartItems.map((cartItem) =>
+              cartItem.id === itemToUpdate.id ? { ...cartItem, quantity: numericNewQuantity } : cartItem
+            );
+  
+            const updatedProducts = state.products.map((product) =>
+              product.id === itemToUpdate.id
+                ? { ...product, quantity: product.quantity + (itemToUpdate.quantity - numericNewQuantity) }
+                : product
+            );
+  
+            return {
+              ...state,
+              cartItems: updatedCartItems,
+              products: updatedProducts,
+            };
+          } else {
+            const updatedCartItems = state.cartItems.map((cartItem) =>
+              cartItem.id === itemToUpdate.id ? { ...cartItem, quantity: itemToUpdate.availableQuantity } : cartItem
+            );
+  
+            return {
+              ...state,
+              cartItems: updatedCartItems,
+            };
+          }
+        }
+  
+        return state;
+  
+      default:
+        return state;
     }
-}
+  };
+  
 
 export const CartProvider = ({ children }) => {
     const [cartState, dispatch] = useReducer(cartReducer, initialState);
