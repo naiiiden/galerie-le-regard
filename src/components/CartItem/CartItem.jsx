@@ -1,5 +1,17 @@
 /* eslint-disable react/prop-types */
-const CartItem = ({ item, onChange, onClick }) => {
+import { useState } from 'react';
+
+const CartItem = ({ item, onQuantityChange, onRemove }) => {
+  const [quantity, setQuantity] = useState(item.quantity);
+
+  const handleQuantityChange = (event) => {
+    const newQuantity = parseInt(event.target.value, 10);
+    if (!isNaN(newQuantity) && newQuantity >= 1 && newQuantity <= item.availableQuantity) {
+      setQuantity(newQuantity);
+      onQuantityChange(item, newQuantity);
+    }
+  };
+
   return (
     <li key={item.id} style={{
         border: '1px solid red',
@@ -12,15 +24,15 @@ const CartItem = ({ item, onChange, onClick }) => {
       <input
         id={`quantity-product-${item.id}`}
         type='number'
-        value={item.quantity}
-        onChange={onChange}
+        value={quantity}
+        onChange={handleQuantityChange}
         min='1'
         max={item.availableQuantity}
       />
       <br/>
-      <button onClick={onClick} aria-label={`Remove ${item.name} from your cart`}>Remove from cart</button>
+      <button onClick={() => onRemove(item)} aria-label={`Remove ${item.name} from your cart`}>Remove from cart</button>
     </li>
   )
 }
 
-export default CartItem
+export default CartItem;

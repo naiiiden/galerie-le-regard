@@ -19,6 +19,27 @@ const App = () => {
     totalSumOfItemsInCart += item.price * item.quantity;
   });
 
+  const handleQuantityChange = (itemToUpdate, newQuantity) => {
+    // Dispatch the 'UPDATE_QUANTITY' action here
+    dispatch({
+      type: 'UPDATE_QUANTITY',
+      payload: {
+        itemToUpdate,
+        newQuantity,
+      },
+    });
+  };
+
+  const handleRemove = (itemToRemove) => {
+    // Dispatch the 'REMOVE_FROM_CART' action here
+    dispatch({
+      type: 'REMOVE_FROM_CART',
+      payload: {
+        id: itemToRemove.id,
+      },
+    });
+  };
+
   return (
     <main>
       <h1>Cart functionality</h1>
@@ -37,17 +58,11 @@ const App = () => {
         <>
           <ul style={ulStyle}>
             {cartState.cartItems.map((item) => (
-              <CartItem 
-                item={item} 
-                key={item.id} 
-                // Use the dispatch function to update item quantity in the cart
-                onChange={(newQuantity) => {
-                  dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate: item, newQuantity } });
-                }}
-                // Use the dispatch function to remove items from the cart
-                onClick={() => {
-                  dispatch({ type: 'REMOVE_FROM_CART', payload: item });
-                }}
+              <CartItem
+                key={item.id}
+                item={item}
+                onQuantityChange={handleQuantityChange}
+                onRemove={handleRemove}
               />
             ))}
           </ul>

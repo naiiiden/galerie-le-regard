@@ -139,9 +139,7 @@ const cartReducer = (state, action) => {
                     products: updatedProducts,
                 };
             }
-        
             return state;
-        
       case 'UPDATE_QUANTITY':
         const { itemToUpdate, newQuantity } = action.payload;
   
