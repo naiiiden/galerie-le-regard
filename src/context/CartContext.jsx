@@ -120,26 +120,28 @@ const cartReducer = (state, action) => {
                 }
             }
         return state;
-      case 'REMOVE_FROM_CART':
-        const removedProductId = action.payload.id;
-        const removedCartItem = state.cartItems.find((cartItem) => cartItem.id === removedProductId);
-  
-        if (!removedCartItem) {
-          return state;
-        }
-  
-        const updatedCartItems = state.cartItems.filter((cartItem) => cartItem.id !== removedProductId);
-  
-        const updatedProducts = [...state.products];
-        const productToUpdate = updatedProducts.find((product) => product.id === removedProductId);
-        productToUpdate.quantity += removedCartItem.quantity;
-  
-        return {
-          ...state,
-          cartItems: updatedCartItems,
-          products: updatedProducts,
-        };
-  
+        case 'REMOVE_FROM_CART':
+            const removedProductId = action.payload.id;
+            const removedCartItem = state.cartItems.find((cartItem) => cartItem.id === removedProductId);
+        
+            if (removedCartItem) {
+                const updatedProducts = state.products.map((product) =>
+                    product.id === removedProductId
+                    ? { ...product, quantity: product.quantity + removedCartItem.quantity }
+                    : product
+                );
+        
+                const updatedCartItems = state.cartItems.filter((cartItem) => cartItem.id !== removedProductId);
+        
+                return {
+                    ...state,
+                    cartItems: updatedCartItems,
+                    products: updatedProducts,
+                };
+            }
+        
+            return state;
+        
       case 'UPDATE_QUANTITY':
         const { itemToUpdate, newQuantity } = action.payload;
   
