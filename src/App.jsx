@@ -13,10 +13,12 @@ const App = () => {
   const { cartState, dispatch } = useCart();
 
   let totalSumOfItemsInCart = 0;
+  let totalItemsInCart = 0;
 
   // Calculate the total price of items in the cart
   cartState.cartItems.forEach((item) => {
     totalSumOfItemsInCart += item.price * item.quantity;
+    totalItemsInCart = cartState.cartItems.length;
   });
 
   const handleQuantityChange = (itemToUpdate, newQuantity) => {
@@ -68,6 +70,7 @@ const App = () => {
           </ul>
 
           <p>Total price: {totalSumOfItemsInCart.toFixed(2)}</p>
+          <p>Total items in cart: {totalItemsInCart}</p>
         </>
       ) : (
         <p>Your cart is empty.</p>
