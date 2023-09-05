@@ -1,64 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-case-declarations */
-import { createContext, useContext, useReducer, useEffect } from "react";
+import { createContext, useContext, useReducer, useEffect, useState } from "react";
+import productData from '../products.json';
 
 const initialState = {
-    products: [
-        {
-            id: 1,
-            name: 'Product 1',
-            price: 11.99,
-            quantity: 5,
-          },
-          {
-            id: 2,
-            name: 'Product 2',
-            price: 12.99,
-            quantity: 10,
-          },
-          {
-            id: 3,
-            name: 'Product 3',
-            price: 13.99,
-            quantity: 2,
-          },
-          {
-            id: 4,
-            name: 'Product 4',
-            price: 14.99,
-            quantity: 3,
-          },
-          {
-            id: 5,
-            name: 'Product 5',
-            price: 15.99,
-            quantity: 20,
-          },
-          {
-            id: 6,
-            name: 'Product 6',
-            price: 16.99,
-            quantity: 15,
-          },
-          {
-            id: 7,
-            name: 'Product 7',
-            price: 17.99,
-            quantity: 0,
-          },
-          {
-            id: 8,
-            name: 'Product 8',
-            price: 18.99,
-            quantity: 7,
-          },
-          {
-            id: 9,
-            name: 'Product 9',
-            price: 19.99,
-            quantity: 6,
-          },
-    ],
+    products: productData,
     cartItems: [],
 };
 
@@ -183,14 +129,23 @@ const cartReducer = (state, action) => {
   
 
 export const CartProvider = ({ children }) => {
-    const storedCartState = JSON.parse(localStorage.getItem("cartState")) || initialState;
+    const [cartState, dispatch] = useReducer(cartReducer, initialState);
 
-    const [cartState, dispatch] = useReducer(cartReducer, storedCartState);
-
-    // Save the cart state to localStorage whenever it changes
     useEffect(() => {
-      localStorage.setItem("cartState", JSON.stringify(cartState));
-    }, [cartState]);
+      fetch(`src/products.json`)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Failed to fetch product data');
+          }
+          return response.json();
+        })
+        .then((productData) => {
+          dispatch({ type: 'INITIALIZE_CART', payload: { products: productData, cartItems: [] } });
+        })
+        .catch((error) => {
+          console.error('Error initializing cart:', error);
+        });
+    }, []);
 
     return (
         <CartContext.Provider value={{ cartState, dispatch }}>
