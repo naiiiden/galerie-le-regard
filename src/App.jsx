@@ -19,8 +19,16 @@ const App = () => {
 
   return (
     <div className="App">
-      <header>
+      <header style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+      }}>
         <h1>Cart functionality</h1>
+        <nav>
+          <Link to="/" style={{ marginRight: '1rem' }}>All Products</Link>
+          <Link to="/cart">Cart</Link>
+        </nav>
       </header>
       <Routes>
         <Route path="/" element={
@@ -39,6 +47,7 @@ const App = () => {
             <Cart style={ulStyle}/>
           </main>
         }/>
+        <Route path="/cart" element={<Cart/>}/>
         <Route path="/:productName" element={<SingleProduct/>}/>
       </Routes>
     </div>
