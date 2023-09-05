@@ -16,36 +16,6 @@ const App = () => {
 
   const { cartState, dispatch } = useCart();
 
-  let totalSumOfItemsInCart = 0;
-  let totalItemsInCart = 0;
-
-  // Calculate the total price of items in the cart
-  cartState.cartItems.forEach((item) => {
-    totalSumOfItemsInCart += item.price * item.quantity;
-    totalItemsInCart = cartState.cartItems.length;
-  });
-
-  const handleQuantityChange = (itemToUpdate, newQuantity) => {
-    // Dispatch the 'UPDATE_QUANTITY' action here
-    dispatch({
-      type: 'UPDATE_QUANTITY',
-      payload: {
-        itemToUpdate,
-        newQuantity,
-      },
-    });
-  };
-
-  const handleRemove = (itemToRemove) => {
-    // Dispatch the 'REMOVE_FROM_CART' action here
-    dispatch({
-      type: 'REMOVE_FROM_CART',
-      payload: {
-        id: itemToRemove.id,
-      },
-    });
-  };
-
   return (
     <div className="App">
       <header>
@@ -60,11 +30,11 @@ const App = () => {
                   linkHref={product.name}
                   product={product} 
                   key={product.id}
-                  // Use the dispatch function to add items to the cart
                   onClick={() => dispatch({ type: 'ADD_TO_CART', payload: product })}
                 />
               ))}
             </ul>
+            {/* FUTURE CART COMPONENT */}
             <h2>Cart Items</h2>
             {cartState.cartItems.length !== 0 ? (
               <>
@@ -73,8 +43,8 @@ const App = () => {
                     <CartItem
                       key={item.id}
                       item={item}
-                      onQuantityChange={handleQuantityChange}
-                      onRemove={handleRemove}
+                      onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}
+                      onRemove={(itemToRemove) => dispatch({ type: 'REMOVE_FROM_CART', payload: { id: itemToRemove.id } })}
                     />
                   ))}
                 </ul>
