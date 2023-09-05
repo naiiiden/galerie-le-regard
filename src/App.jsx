@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
 import CartItem from "./components/CartItem/CartItem";
 import ProductItem from "./components/ProductItem/ProductItem";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
+import TotalPriceAndItems from "./components/TotalPriceAndItems/TotalPriceAndItems";
 import { useCart } from "./context/CartContext";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 const App = () => {
   const ulStyle = {
@@ -77,8 +79,7 @@ const App = () => {
                   ))}
                 </ul>
 
-                <p>Total price: {totalSumOfItemsInCart.toFixed(2)}</p>
-                <p>Total items in cart: {totalItemsInCart}</p>
+                <TotalPriceAndItems/>
               </>
             ) : (
               <p>Your cart is empty.</p>
