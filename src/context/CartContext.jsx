@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-case-declarations */
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer, useEffect } from "react";
 
 const initialState = {
     products: [
@@ -71,7 +71,7 @@ const cartReducer = (state, action) => {
             const productToAdd = state.products.find((product) => product.id === productId);
 
             if (!productToAdd || productToAdd.quantity === 0) {
-                return state; // Product not found or no more available
+              return state; // Product not found or no more available
             }
 
             const existingCartItem = state.cartItems.find((cartItem) => cartItem.id === productId);
@@ -183,8 +183,15 @@ const cartReducer = (state, action) => {
   
 
 export const CartProvider = ({ children }) => {
-    const [cartState, dispatch] = useReducer(cartReducer, initialState);
-    
+    const storedCartState = JSON.parse(localStorage.getItem("cartState")) || initialState;
+
+    const [cartState, dispatch] = useReducer(cartReducer, storedCartState);
+
+    // Save the cart state to localStorage whenever it changes
+    useEffect(() => {
+      localStorage.setItem("cartState", JSON.stringify(cartState));
+    }, [cartState]);
+
     return (
         <CartContext.Provider value={{ cartState, dispatch }}>
             {children}
