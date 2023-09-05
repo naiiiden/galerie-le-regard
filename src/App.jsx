@@ -43,8 +43,6 @@ const App = () => {
                 />
               ))}
             </ul>
-            {/* FUTURE CART COMPONENT */}
-            <Cart style={ulStyle}/>
           </main>
         }/>
         <Route path="/cart" element={<Cart/>}/>
