@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-case-declarations */
 import { createContext, useContext, useReducer, useEffect, useState } from "react";

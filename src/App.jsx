@@ -1,6 +1,8 @@
 import CartItem from "./components/CartItem/CartItem";
 import ProductItem from "./components/ProductItem/ProductItem";
+import SingleProduct from "./components/SingleProduct/SingleProduct";
 import { useCart } from "./context/CartContext";
+import { Routes, Route } from "react-router-dom";
 
 const App = () => {
   const ulStyle = {
@@ -43,39 +45,49 @@ const App = () => {
   };
 
   return (
-    <main>
-      <h1>Cart functionality</h1>
-      <ul style={ulStyle}>
-        {cartState.products.map((product) => (
-          <ProductItem 
-            product={product} 
-            key={product.id}
-            // Use the dispatch function to add items to the cart
-            onClick={() => dispatch({ type: 'ADD_TO_CART', payload: product })}
-          />
-        ))}
-      </ul>
-      <h2>Cart Items</h2>
-      {cartState.cartItems.length !== 0 ? (
-        <>
-          <ul style={ulStyle}>
-            {cartState.cartItems.map((item) => (
-              <CartItem
-                key={item.id}
-                item={item}
-                onQuantityChange={handleQuantityChange}
-                onRemove={handleRemove}
-              />
-            ))}
-          </ul>
+    <div className="App">
+      <header>
+        <h1>Cart functionality</h1>
+      </header>
+      <Routes>
+        <Route path="/" element={
+          <main>
+            <ul style={ulStyle}>
+              {cartState.products.map((product) => (
+                <ProductItem 
+                  linkHref={product.name}
+                  product={product} 
+                  key={product.id}
+                  // Use the dispatch function to add items to the cart
+                  onClick={() => dispatch({ type: 'ADD_TO_CART', payload: product })}
+                />
+              ))}
+            </ul>
+            <h2>Cart Items</h2>
+            {cartState.cartItems.length !== 0 ? (
+              <>
+                <ul style={ulStyle}>
+                  {cartState.cartItems.map((item) => (
+                    <CartItem
+                      key={item.id}
+                      item={item}
+                      onQuantityChange={handleQuantityChange}
+                      onRemove={handleRemove}
+                    />
+                  ))}
+                </ul>
 
-          <p>Total price: {totalSumOfItemsInCart.toFixed(2)}</p>
-          <p>Total items in cart: {totalItemsInCart}</p>
-        </>
-      ) : (
-        <p>Your cart is empty.</p>
-      )}
-    </main>
+                <p>Total price: {totalSumOfItemsInCart.toFixed(2)}</p>
+                <p>Total items in cart: {totalItemsInCart}</p>
+              </>
+            ) : (
+              <p>Your cart is empty.</p>
+            )}
+          </main>
+        }/>
+        <Route path="/:productName" element={<SingleProduct/>}/>
+      </Routes>
+    </div>
   )
 }
 
