@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import Cart from "./components/Cart/Cart";
 import CartItem from "./components/CartItem/CartItem";
 import ProductItem from "./components/ProductItem/ProductItem";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
@@ -35,25 +36,7 @@ const App = () => {
               ))}
             </ul>
             {/* FUTURE CART COMPONENT */}
-            <h2>Cart Items</h2>
-            {cartState.cartItems.length !== 0 ? (
-              <>
-                <ul style={ulStyle}>
-                  {cartState.cartItems.map((item) => (
-                    <CartItem
-                      key={item.id}
-                      item={item}
-                      onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}
-                      onRemove={(itemToRemove) => dispatch({ type: 'REMOVE_FROM_CART', payload: { id: itemToRemove.id } })}
-                    />
-                  ))}
-                </ul>
-
-                <TotalPriceAndItems/>
-              </>
-            ) : (
-              <p>Your cart is empty.</p>
-            )}
+            <Cart style={ulStyle}/>
           </main>
         }/>
         <Route path="/:productName" element={<SingleProduct/>}/>
