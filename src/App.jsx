@@ -4,6 +4,7 @@ import CartItem from "./components/CartItem/CartItem";
 import ProductItem from "./components/ProductItem/ProductItem";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
 import TotalPriceAndItems from "./components/TotalPriceAndItems/TotalPriceAndItems";
+import TotalProductsInCart from "./components/TotalProductsInCart/TotalProductsInCart";
 import { useCart } from "./context/CartContext";
 import { Routes, Route, Link } from "react-router-dom";
 
@@ -27,7 +28,10 @@ const App = () => {
         <h1>Cart functionality</h1>
         <nav>
           <Link to="/" style={{ marginRight: '1rem' }}>All Products</Link>
-          <Link to="/cart">Cart</Link>
+          <Link to="/cart" style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }}>
+            Cart
+            <TotalProductsInCart/>
+          </Link>
         </nav>
       </header>
       <Routes>
