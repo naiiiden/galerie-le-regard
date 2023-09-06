@@ -49,7 +49,7 @@ const App = () => {
             </ul>
           </main>
         }/>
-        <Route path="/cart" element={<Cart/>}/>
+        <Route path="/cart" element={<Cart style={ulStyle}/>}/>
         <Route path="/:productName" element={<SingleProduct/>}/>
       </Routes>
     </div>

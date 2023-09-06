@@ -6,7 +6,6 @@ const TotalPriceAndItems = () => {
     
     let totalSumOfItemsInCart = 0;
     
-    // Calculate the total price of items in the cart
     cartState.cartItems.forEach((item) => {
         totalSumOfItemsInCart += item.price * item.quantity;
     });

@@ -9,9 +9,7 @@ const TotalProductsInCart = () => {
         totalItemsInCart = cartState.cartItems.length;
     });
 
-    return (
-        <span>{totalItemsInCart}</span>
-    )
+    return <span>{totalItemsInCart}</span>
 }
 
 export default TotalProductsInCart
