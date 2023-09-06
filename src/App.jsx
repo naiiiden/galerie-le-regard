@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import { useState } from "react";
 import Cart from "./components/Cart/Cart";
 import CartItem from "./components/CartItem/CartItem";
 import ProductItem from "./components/ProductItem/ProductItem";
@@ -18,12 +19,15 @@ const App = () => {
 
   const { cartState, dispatch } = useCart();
 
+  const [addToCartAlert, setAddToCartAlert] = useState(null);
+
   return (
     <div className="App">
       <header style={{
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
+        border: '1px solid red',
       }}>
         <h1>Cart functionality</h1>
         <nav>
@@ -32,6 +36,7 @@ const App = () => {
             Cart
             <TotalProductsInCart/>
           </Link>
+          {addToCartAlert !== null ? <p style={{ border: '1px solid black' }}>{addToCartAlert}</p> : null}
         </nav>
       </header>
       <Routes>
@@ -43,7 +48,13 @@ const App = () => {
                   linkHref={product.name}
                   product={product} 
                   key={product.id}
-                  onClick={() => dispatch({ type: 'ADD_TO_CART', payload: product })}
+                  onClick={() => 
+                    dispatch({ type: 'ADD_TO_CART', payload: product }, 
+                    setAddToCartAlert(`${product.name} added to cart`),
+                    setTimeout(() => {
+                      setAddToCartAlert(null)
+                    }, 3000)  
+                  )}
                 />
               ))}
             </ul>
