@@ -10,9 +10,7 @@ const TotalProductsInCart = () => {
     });
 
     return (
-        <div>
-            <p>{totalItemsInCart}</p>
-        </div>
+        <span>{totalItemsInCart}</span>
     )
 }
 
