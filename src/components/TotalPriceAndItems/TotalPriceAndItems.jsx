@@ -1,21 +1,20 @@
 import { useCart } from "../../context/CartContext";
+import TotalProductsInCart from "../TotalProductsInCart/TotalProductsInCart";
 
 const TotalPriceAndItems = () => {
     const { cartState } = useCart();
     
     let totalSumOfItemsInCart = 0;
-      let totalItemsInCart = 0;
     
-      // Calculate the total price of items in the cart
-      cartState.cartItems.forEach((item) => {
+    // Calculate the total price of items in the cart
+    cartState.cartItems.forEach((item) => {
         totalSumOfItemsInCart += item.price * item.quantity;
-        totalItemsInCart = cartState.cartItems.length;
     });
 
     return (
         <div>
             <p>Total price: {totalSumOfItemsInCart.toFixed(2)}</p>
-            <p>Total items in cart: {totalItemsInCart}</p>
+            <p style={{ display: 'inline-flex', alignItems: 'center', margin: 0 }}>Total items in cart: <TotalProductsInCart/></p>
         </div>
     )
 }
