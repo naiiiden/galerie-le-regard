@@ -17,19 +17,7 @@ const App = () => {
     flexWrap: 'wrap',
   }
 
-  const { cartState, dispatch, alert } = useCart();
-
-  useEffect(() => {
-    console.log('Alert effect triggered');
-    // Clear the alert message after a delay (3 seconds)
-    if (alert) {
-      setTimeout(() => {
-        console.log('Clearing alert');
-        dispatch({ type: 'CLEAR_ALERT' });
-      }, 3000);
-    }
-  }, [alert, dispatch]);
-  
+  const { cartState, dispatch } = useCart();
 
   return (
     <div className="App">
@@ -46,7 +34,7 @@ const App = () => {
             Cart
             <TotalProductsInCart/>
           </Link>
-          <p id="global-alert">{cartState.alert}</p> {/* Use cartState.alert */}
+          <p id="global-alert">{cartState.alert}</p>
         </nav>
       </header>
       <Routes>
@@ -60,6 +48,10 @@ const App = () => {
                   key={product.id}
                   onClick={() => 
                     dispatch({ type: 'ADD_TO_CART', payload: product }, 
+                    setTimeout(() => {
+                      console.log('Clearing alert');
+                      dispatch({ type: 'CLEAR_ALERT' });
+                    }, 3000)
                   )}
                 />
               ))}
