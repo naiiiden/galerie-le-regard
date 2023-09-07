@@ -2,6 +2,7 @@ import React from 'react';
 import CartItem from '../CartItem/CartItem';
 import TotalPriceAndItems from '../TotalPriceAndItems/TotalPriceAndItems';
 import { useCart } from '../../context/CartContext'
+import clearAlert from '../../helpers/clearAlert';
 
 const Cart = ({ style }) => {
     const { cartState, dispatch } = useCart();
@@ -19,9 +20,7 @@ const Cart = ({ style }) => {
                             onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}
                             onRemove={(itemToRemove) => 
                                 dispatch({ type: 'REMOVE_FROM_CART', payload: { id: itemToRemove.id } },
-                                setTimeout(() => {
-                                    dispatch({ type: 'CLEAR_ALERT' });
-                                }, 3000)
+                                clearAlert(dispatch)
                             )}
                         />
                         ))}

@@ -4,6 +4,7 @@ import SingleProduct from "./components/SingleProduct/SingleProduct";
 import TotalProductsInCart from "./components/TotalProductsInCart/TotalProductsInCart";
 import { useCart } from "./context/CartContext";
 import { Routes, Route, Link } from "react-router-dom";
+import clearAlert from "./helpers/clearAlert";
 
 const App = () => {
   const ulStyle = {
@@ -44,9 +45,7 @@ const App = () => {
                   key={product.id}
                   onClick={() => 
                     dispatch({ type: 'ADD_TO_CART', payload: product }, 
-                    setTimeout(() => {
-                      dispatch({ type: 'CLEAR_ALERT' });
-                    }, 3000)
+                    clearAlert(dispatch)
                   )}
                 />
               ))}
