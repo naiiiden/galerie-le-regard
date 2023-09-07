@@ -20,7 +20,6 @@ const Cart = ({ style }) => {
                             onRemove={(itemToRemove) => 
                                 dispatch({ type: 'REMOVE_FROM_CART', payload: { id: itemToRemove.id } },
                                 setTimeout(() => {
-                                    console.log('Clearing alert');
                                     dispatch({ type: 'CLEAR_ALERT' });
                                 }, 3000)
                             )}

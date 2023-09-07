@@ -1,10 +1,6 @@
-/* eslint-disable no-unused-vars */
-import { useEffect } from "react";
 import Cart from "./components/Cart/Cart";
-import CartItem from "./components/CartItem/CartItem";
 import ProductItem from "./components/ProductItem/ProductItem";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
-import TotalPriceAndItems from "./components/TotalPriceAndItems/TotalPriceAndItems";
 import TotalProductsInCart from "./components/TotalProductsInCart/TotalProductsInCart";
 import { useCart } from "./context/CartContext";
 import { Routes, Route, Link } from "react-router-dom";
@@ -49,7 +45,6 @@ const App = () => {
                   onClick={() => 
                     dispatch({ type: 'ADD_TO_CART', payload: product }, 
                     setTimeout(() => {
-                      console.log('Clearing alert');
                       dispatch({ type: 'CLEAR_ALERT' });
                     }, 3000)
                   )}
