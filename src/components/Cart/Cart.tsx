@@ -17,7 +17,13 @@ const Cart = ({ style }) => {
                             key={item.id}
                             item={item}
                             onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}
-                            onRemove={(itemToRemove) => dispatch({ type: 'REMOVE_FROM_CART', payload: { id: itemToRemove.id } })}
+                            onRemove={(itemToRemove) => 
+                                dispatch({ type: 'REMOVE_FROM_CART', payload: { id: itemToRemove.id } },
+                                setTimeout(() => {
+                                    console.log('Clearing alert');
+                                    dispatch({ type: 'CLEAR_ALERT' });
+                                }, 3000)
+                            )}
                         />
                         ))}
                     </ul>
