@@ -1,7 +1,13 @@
-const clearAlert = (dispatch) => {
-    setTimeout(() => {
-        dispatch({ type: 'CLEAR_ALERT' });
-    }, 3000)
-}
+let alertTimerId;
 
-export default clearAlert
+const clearAlert = (dispatch) => {
+    if (alertTimerId) {
+        clearTimeout(alertTimerId);
+    }
+
+    alertTimerId = setTimeout(() => {
+        dispatch({ type: 'CLEAR_ALERT' });
+    }, 3000); 
+};
+
+export default clearAlert;
