@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useState } from "react";
+import { useEffect } from "react";
 import Cart from "./components/Cart/Cart";
 import CartItem from "./components/CartItem/CartItem";
 import ProductItem from "./components/ProductItem/ProductItem";
@@ -17,9 +17,19 @@ const App = () => {
     flexWrap: 'wrap',
   }
 
-  const { cartState, dispatch } = useCart();
+  const { cartState, dispatch, alert } = useCart();
 
-  const [addToCartAlert, setAddToCartAlert] = useState(null);
+  useEffect(() => {
+    console.log('Alert effect triggered');
+    // Clear the alert message after a delay (3 seconds)
+    if (alert) {
+      setTimeout(() => {
+        console.log('Clearing alert');
+        dispatch({ type: 'CLEAR_ALERT' });
+      }, 3000);
+    }
+  }, [alert, dispatch]);
+  
 
   return (
     <div className="App">
@@ -36,7 +46,7 @@ const App = () => {
             Cart
             <TotalProductsInCart/>
           </Link>
-          {addToCartAlert !== null ? <p style={{ border: '1px solid black' }}>{addToCartAlert}</p> : null}
+          <p id="global-alert">{cartState.alert}</p> {/* Use cartState.alert */}
         </nav>
       </header>
       <Routes>
@@ -50,10 +60,6 @@ const App = () => {
                   key={product.id}
                   onClick={() => 
                     dispatch({ type: 'ADD_TO_CART', payload: product }, 
-                    setAddToCartAlert(`${product.name} added to cart`),
-                    setTimeout(() => {
-                      setAddToCartAlert(null)
-                    }, 3000)  
                   )}
                 />
               ))}
