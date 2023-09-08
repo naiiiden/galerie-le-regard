@@ -31,7 +31,7 @@ const App = () => {
             Cart
             <TotalProductsInCart/>
           </Link>
-          <p id="global-alert">{cartState.alert}</p>
+          <p id="global-alert" aria-live="polite">{cartState.alert}</p>
         </nav>
       </header>
       <Routes>
