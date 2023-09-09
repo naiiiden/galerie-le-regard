@@ -6,6 +6,8 @@ import { useCart } from "./context/CartContext";
 import { Routes, Route, Link } from "react-router-dom";
 import clearAlert from "./helpers/clearAlert";
 
+import './test.css';
+
 const App = () => {
   const ulStyle = {
     listStyle: 'none',
