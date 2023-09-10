@@ -17,6 +17,7 @@ const SingleProduct = () => {
                 <h2>{product.name}</h2>
                 <p>Price: ${product.price}</p>
                 <p>Quantity: {product.quantity}</p>
+                <p>Category: {product.category}</p>
                 </div>
             </div>}
     </div>

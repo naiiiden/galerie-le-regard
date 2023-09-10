@@ -14,6 +14,7 @@ const ProductItem = ({ product, onClick, linkHref }) => {
             margin: '0 0 .5rem 0',
           }}>{product.name} - ${product.price}</p>
           <p>Quantity: {product.quantity}</p>
+          <p>Category: {product.category}</p>
         </Link>
         <button onClick={onClick} disabled={product.quantity === 0} aria-label={`Add ${product.name} to cart`}>Add to cart</button>
       </li>
