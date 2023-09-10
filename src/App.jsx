@@ -33,7 +33,7 @@ const App = () => {
             Cart
             <TotalProductsInCart/>
           </Link>
-          <p id="global-alert" aria-live="polite">{cartState.alert}</p>
+          {cartState.alert === null ? null : <p id="global-alert" key={Math.random()} aria-live="polite">{cartState.alert}</p>}
         </nav>
       </header>
       <Routes>
