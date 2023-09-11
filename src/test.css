@@ -16,4 +16,8 @@
   100% {
     width: 0;
   }
+}
+
+.active {
+  color: darkgreen;
 }/*# sourceMappingURL=test.css.map */

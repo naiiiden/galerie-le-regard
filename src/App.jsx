@@ -4,7 +4,7 @@ import ProductItem from "./components/ProductItem/ProductItem";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
 import TotalProductsInCart from "./components/TotalProductsInCart/TotalProductsInCart";
 import { useCart } from "./context/CartContext";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 import clearAlert from "./helpers/clearAlert";
 
 import './test.css';
@@ -35,11 +35,11 @@ const App = () => {
       }}>
         <h1>Cart functionality</h1>
         <nav>
-          <Link to="/" style={{ marginRight: '1rem' }}>All Products</Link>
-          <Link to="/cart" style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }}>
+          <NavLink to="/" style={{ marginRight: '1rem' }}>All Products</NavLink>
+          <NavLink to="/cart" style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }}>
             Cart
             <TotalProductsInCart/>
-          </Link>
+          </NavLink>
           {cartState.alert === null ? null : <p id="global-alert" key={Math.random()} aria-live="polite">{cartState.alert}</p>}
         </nav>
       </header>
