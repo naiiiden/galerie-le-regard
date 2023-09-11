@@ -18,6 +18,10 @@ const App = () => {
 
   const { cartState, dispatch } = useCart();
 
+  console.log(1, cartState);
+
+  const categories = [...new Set(cartState.products.map(product => product.category))];
+
   return (
     <div className="App">
       <header style={{
@@ -39,6 +43,11 @@ const App = () => {
       <Routes>
         <Route path="/" element={
           <main>
+            <select>
+              {categories.map(category => 
+                <option key={category}>{category}</option>
+              )}
+            </select>
             <ul style={ulStyle}>
               {cartState.products.map((product) => (
                 <ProductItem 
