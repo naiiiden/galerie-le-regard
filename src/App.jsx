@@ -43,9 +43,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={
           <main>
-            <select>
+            <select onClick={(e) => console.log('value', e.target.value)}>\
+              <option value={''}>Filter by category</option>
               {categories.map(category => 
-                <option key={category}>{category}</option>
+                <option key={category} value={category}>{category}</option>
               )}
             </select>
             <ul style={ulStyle}>
