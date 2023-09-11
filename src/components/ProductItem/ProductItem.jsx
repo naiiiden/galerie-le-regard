@@ -4,12 +4,12 @@ import { Link } from "react-router-dom"
 const ProductItem = ({ product, onClick, linkHref }) => {
   return (
     <li key={product.id} style={{
-        background: 'darkcyan',
+        background: 'blanchedalmond',
         width: 'fit-content',
         padding: '1rem',
         margin: '1rem',
       }}>
-        <Link to={linkHref}>
+        <Link to={linkHref} style={{ color: 'black' }}>
           <p style={{
             margin: '0 0 .5rem 0',
           }}>{product.name} - ${product.price}</p>
