@@ -18,9 +18,12 @@ const App = () => {
   }
 
   const { cartState, dispatch } = useCart();
-  const [selectedCategory, setSelectedCategory] = useState();
-  
+  const [selectedCategory, setSelectedCategory] = useState('');
+
   const categories = [...new Set(cartState.products.map(product => product.category))];
+  const filteredProducts = selectedCategory === '' 
+    ? cartState.products 
+    : cartState.products.filter(product => product.category === selectedCategory)
 
   return (
     <div className="App">
@@ -50,7 +53,7 @@ const App = () => {
               )}
             </select>
             <ul style={ulStyle}>
-              {cartState.products.map((product) => (
+              {filteredProducts.map((product) => (
                 <ProductItem 
                   linkHref={product.name}
                   product={product} 
