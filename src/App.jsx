@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Cart from "./components/Cart/Cart";
 import ProductItem from "./components/ProductItem/ProductItem";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
@@ -17,9 +18,8 @@ const App = () => {
   }
 
   const { cartState, dispatch } = useCart();
-
-  console.log(1, cartState);
-
+  const [selectedCategory, setSelectedCategory] = useState();
+  
   const categories = [...new Set(cartState.products.map(product => product.category))];
 
   return (
@@ -43,7 +43,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={
           <main>
-            <select onClick={(e) => console.log('value', e.target.value)}>\
+            <select onChange={(e) => setSelectedCategory(e.target.value)} value={selectedCategory}>
               <option value={''}>Filter by category</option>
               {categories.map(category => 
                 <option key={category} value={category}>{category}</option>
