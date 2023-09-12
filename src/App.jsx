@@ -1,5 +1,5 @@
 import Cart from "./pages/Cart/Cart";
-import SingleProduct from "./components/SingleProduct/SingleProduct";
+import SingleProduct from "./pages/SingleProduct/SingleProduct";
 import TotalProductsInCart from "./components/TotalProductsInCart/TotalProductsInCart";
 import { useCart } from "./context/CartContext";
 import { Routes, Route, NavLink } from "react-router-dom";
