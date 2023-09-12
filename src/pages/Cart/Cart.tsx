@@ -1,6 +1,6 @@
 import React from 'react';
-import CartItem from '../CartItem/CartItem';
-import TotalPriceAndItems from '../TotalPriceAndItems/TotalPriceAndItems';
+import CartItem from '../../components/CartItem/CartItem';
+import TotalPriceAndItems from '../../components/TotalPriceAndItems/TotalPriceAndItems';
 import { useCart } from '../../context/CartContext'
 import clearAlert from '../../helpers/clearAlert';
 
