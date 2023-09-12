@@ -14,7 +14,7 @@ const Products = ({ style }) => {
         : cartState.products.filter(product => product.category === selectedCategory)
 
     return (
-        <main>
+        <div>
             <select onChange={(e) => setSelectedCategory(e.target.value)} value={selectedCategory}>
             <option value={''}>Filter by category</option>
             {categories.map(category => 
@@ -34,7 +34,7 @@ const Products = ({ style }) => {
                 />
             ))}
             </ul>
-        </main>
+        </div>
     )
 }
 

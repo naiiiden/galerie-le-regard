@@ -35,11 +35,13 @@ const App = () => {
           {cartState.alert === null ? null : <p id="global-alert" key={Math.random()} aria-live="polite">{cartState.alert}</p>}
         </nav>
       </header>
-      <Routes>
-        <Route path="/" element={<Products style={ulStyle}/>}/>
-        <Route path="/cart" element={<Cart style={ulStyle}/>}/>
-        <Route path="/:productName" element={<SingleProduct/>}/>
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Products style={ulStyle}/>}/>
+          <Route path="/cart" element={<Cart style={ulStyle}/>}/>
+          <Route path="/:productName" element={<SingleProduct/>}/>
+        </Routes>
+      </main>
     </div>
   )
 }
