@@ -12,6 +12,9 @@ const CartItem = ({ item, onQuantityChange, onRemove }) => {
     }
   };
 
+  console.log('initial quantity: ', quantity);
+  console.log('max quantity: ', item.availableQuantity);
+
   return (
     <li key={item.id} style={{
         border: '1px solid red',
@@ -20,6 +23,7 @@ const CartItem = ({ item, onQuantityChange, onRemove }) => {
         margin: '1rem',
       }}>
       <p>{item.name} - ${item.price}</p>
+      <p>test max quantity: {item.availableQuantity}</p>
       <label htmlFor={`quantity-product-${item.id}`}>Quantity: </label>
       <input
         id={`quantity-product-${item.id}`}
