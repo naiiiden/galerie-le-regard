@@ -15,7 +15,7 @@ const App = () => {
     flexWrap: 'wrap',
   }
 
-  const { cartState } = useCart();
+  const { cartState, dispatch } = useCart();
 
   return (
     <div className="App">
@@ -39,7 +39,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Products style={ulStyle}/>}/>
           <Route path="/cart" element={<Cart style={ulStyle}/>}/>
-          <Route path="/:productName" element={<SingleProduct/>}/>
+          <Route path="/:productName" element={<SingleProduct onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}/>}/>
         </Routes>
       </main>
     </div>
