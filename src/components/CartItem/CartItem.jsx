@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
+import { useCart } from '../../context/CartContext';
 
 const CartItem = ({ item, onQuantityChange, onRemove }) => {
   const [quantity, setQuantity] = useState(item.quantity);
 
+  
   const handleQuantityChange = (event) => {
     const newQuantity = parseInt(event.target.value, 10);
     if (!isNaN(newQuantity) && newQuantity >= 1 && newQuantity <= item.availableQuantity) {
@@ -12,8 +14,10 @@ const CartItem = ({ item, onQuantityChange, onRemove }) => {
     }
   };
 
-  console.log('initial quantity: ', quantity);
-  console.log('max quantity: ', item.availableQuantity);
+  // DEBUGGING
+  const { cartState } = useCart(); 
+  const productInCart = cartState.products.find((product) => product.name === item.name);
+  console.log(productInCart.name + ' product left quantity ' + productInCart.quantity);
 
   return (
     <li key={item.id} style={{
@@ -23,7 +27,7 @@ const CartItem = ({ item, onQuantityChange, onRemove }) => {
         margin: '1rem',
       }}>
       <p>{item.name} - ${item.price}</p>
-      <p>test max quantity: {item.availableQuantity}</p>
+      <p>TEST available quantity left: {productInCart.quantity}</p>
       <label htmlFor={`quantity-product-${item.id}`}>Quantity: </label>
       <input
         id={`quantity-product-${item.id}`}
