@@ -15,7 +15,7 @@ const Products = ({ style }) => {
 
     return (
         <div>
-            <select onChange={(e) => setSelectedCategory(e.target.value)} value={selectedCategory}>
+            <select onChange={(e) => setSelectedCategory(e.target.value)} value={selectedCategory} aria-label='Filter products by category'>
             <option value={''}>Filter by category</option>
             {categories.map(category => 
                 <option key={category} value={category}>{category}</option>
