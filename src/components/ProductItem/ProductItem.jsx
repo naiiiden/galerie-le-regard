@@ -10,7 +10,7 @@ const ProductItem = ({ product, onClick, linkHref }) => {
         margin: '1rem',
       }}>
         <Link to={linkHref} style={{ color: 'black' }}>
-          <img src={product.images[0]} alt=''/>
+          <img src={product.images[0]} alt='' style={{ width: "300px" }}/>
           <p style={{
             margin: '0 0 .5rem 0',
           }}>{product.name} - ${product.price}</p>
