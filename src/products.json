@@ -5,7 +5,10 @@
     "category": "Footwear",
     "price": 69.99,
     "quantity": 15,
-    "description": "Stylish sneakers for a trendy look."
+    "description": "Stylish sneakers for a trendy look.",
+    "images": [
+      "src/assets/h732.png"
+    ]
   },
   {
     "id": 2,
@@ -13,7 +16,10 @@
     "category": "Electronics",
     "price": 799.99,
     "quantity": 8,
-    "description": "The latest flagship smartphone with advanced features."
+    "description": "The latest flagship smartphone with advanced features.",
+    "images": [
+      "src/assets/h732.png"
+    ]
   },
   {
     "id": 3,
@@ -21,7 +27,10 @@
     "category": "Fashion",
     "price": 129.99,
     "quantity": 20,
-    "description": "High-quality designer sunglasses for UV protection."
+    "description": "High-quality designer sunglasses for UV protection.",
+    "images": [
+      "src/assets/h732.png"
+    ]
   },
   {
     "id": 4,
@@ -29,7 +38,10 @@
     "category": "Food & Beverage",
     "price": 19.99,
     "quantity": 50,
-    "description": "Premium coffee beans for a rich and aromatic brew."
+    "description": "Premium coffee beans for a rich and aromatic brew.",
+    "images": [
+      "src/assets/h732.png"
+    ]
   },
   {
     "id": 5,
@@ -37,7 +49,10 @@
     "category": "Health & Fitness",
     "price": 49.99,
     "quantity": 12,
-    "description": "Track your fitness goals with this smart fitness tracker."
+    "description": "Track your fitness goals with this smart fitness tracker.",
+    "images": [
+      "src/assets/h732.png"
+    ]
   },
   {
     "id": 6,
@@ -45,7 +60,10 @@
     "category": "Electronics",
     "price": 1299.99,
     "quantity": 5,
-    "description": "High-performance laptop for professionals and gamers."
+    "description": "High-performance laptop for professionals and gamers.",
+    "images": [
+      "src/assets/h732.png"
+    ]
   },
   {
     "id": 7,
@@ -53,6 +71,9 @@
     "category": "Entertainment",
     "price": 24.99,
     "quantity": 30,
-    "description": "Classic vinyl records for music enthusiasts."
+    "description": "Classic vinyl records for music enthusiasts.",
+    "images": [
+      "src/assets/h732.png"
+    ]
   }
 ]
