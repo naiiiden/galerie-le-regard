@@ -4,48 +4,55 @@
     "name": "Cool Sneakers",
     "category": "Footwear",
     "price": 69.99,
-    "quantity": 15
+    "quantity": 15,
+    "description": "Stylish sneakers for a trendy look."
   },
   {
     "id": 2,
     "name": "Smartphone X",
     "category": "Electronics",
     "price": 799.99,
-    "quantity": 8
+    "quantity": 8,
+    "description": "The latest flagship smartphone with advanced features."
   },
   {
     "id": 3,
     "name": "Designer Sunglasses",
     "category": "Fashion",
     "price": 129.99,
-    "quantity": 20
+    "quantity": 20,
+    "description": "High-quality designer sunglasses for UV protection."
   },
   {
     "id": 4,
     "name": "Gourmet Coffee Beans",
     "category": "Food & Beverage",
     "price": 19.99,
-    "quantity": 50
+    "quantity": 50,
+    "description": "Premium coffee beans for a rich and aromatic brew."
   },
   {
     "id": 5,
     "name": "Fitness Tracker",
     "category": "Health & Fitness",
     "price": 49.99,
-    "quantity": 12
+    "quantity": 12,
+    "description": "Track your fitness goals with this smart fitness tracker."
   },
   {
     "id": 6,
     "name": "Laptop Pro",
     "category": "Electronics",
     "price": 1299.99,
-    "quantity": 5
+    "quantity": 5,
+    "description": "High-performance laptop for professionals and gamers."
   },
   {
     "id": 7,
     "name": "Vintage Vinyl Records",
     "category": "Entertainment",
     "price": 24.99,
-    "quantity": 30
+    "quantity": 30,
+    "description": "Classic vinyl records for music enthusiasts."
   }
 ]
