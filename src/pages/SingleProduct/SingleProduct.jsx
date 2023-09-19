@@ -15,7 +15,9 @@ const SingleProduct = () => {
             : 
             <div>
                 <div>
+                  <img src={product.images[0]} alt='' style={{ width: '300px' }}/>
                   <h2>{product.name}</h2>
+                  <p>{product.description}</p>
                   <p>Price: ${product.price}</p>
                   <p>Quantity: {product.quantity}</p>
                   <p>Category: {product.category}</p>
