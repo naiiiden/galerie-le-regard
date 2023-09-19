@@ -7,7 +7,9 @@
     "quantity": 15,
     "description": "Stylish sneakers for a trendy look.",
     "images": [
-      "src/assets/h732.png"
+      "src/assets/sneaker1.jpg",
+      "src/assets/sneaker2.jpg",
+      "src/assets/sneaker3.jpg"
     ]
   },
   {
@@ -18,7 +20,9 @@
     "quantity": 8,
     "description": "The latest flagship smartphone with advanced features.",
     "images": [
-      "src/assets/h732.png"
+      "src/assets/phone1.png",
+      "src/assets/phone2.png",
+      "src/assets/phone3.png"
     ]
   },
   {
@@ -29,7 +33,9 @@
     "quantity": 20,
     "description": "High-quality designer sunglasses for UV protection.",
     "images": [
-      "src/assets/h732.png"
+      "src/assets/glasses1.jpg",
+      "src/assets/glasses2.jpg",
+      "src/assets/glasses3.jpg"
     ]
   },
   {
@@ -40,7 +46,9 @@
     "quantity": 50,
     "description": "Premium coffee beans for a rich and aromatic brew.",
     "images": [
-      "src/assets/h732.png"
+      "src/assets/beans1.jpg",
+      "src/assets/beans2.jpg",
+      "src/assets/beans3.jpg"
     ]
   },
   {
@@ -51,7 +59,9 @@
     "quantity": 12,
     "description": "Track your fitness goals with this smart fitness tracker.",
     "images": [
-      "src/assets/h732.png"
+      "src/assets/ft1.png",
+      "src/assets/ft2.png",
+      "src/assets/ft3.png"
     ]
   },
   {
@@ -62,7 +72,9 @@
     "quantity": 5,
     "description": "High-performance laptop for professionals and gamers.",
     "images": [
-      "src/assets/h732.png"
+      "src/assets/laptop1.jpeg",
+      "src/assets/laptop2.jpeg",
+      "src/assets/laptop3.jpeg"
     ]
   },
   {
@@ -73,7 +85,9 @@
     "quantity": 30,
     "description": "Classic vinyl records for music enthusiasts.",
     "images": [
-      "src/assets/h732.png"
+      "src/assets/vinyl1.png",
+      "src/assets/vinyl2.png",
+      "src/assets/vinyl3.png"
     ]
   }
 ]
