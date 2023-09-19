@@ -47,26 +47,5 @@
     "category": "Entertainment",
     "price": 24.99,
     "quantity": 30
-  },
-  {
-    "id": 8,
-    "name": "Home Decor Set",
-    "category": "Home & Living",
-    "price": 59.99,
-    "quantity": 18
-  },
-  {
-    "id": 9,
-    "name": "Organic Skincare Kit",
-    "category": "Beauty",
-    "price": 39.99,
-    "quantity": 25
-  },
-  {
-    "id": 10,
-    "name": "Camping Gear Bundle",
-    "category": "Outdoor",
-    "price": 199.99,
-    "quantity": 10
   }
 ]
