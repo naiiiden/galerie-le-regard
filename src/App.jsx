@@ -4,7 +4,7 @@ import TotalProductsInCart from "./components/TotalProductsInCart/TotalProductsI
 import { useCart } from "./context/CartContext";
 import { Routes, Route, NavLink } from "react-router-dom";
 
-import './test.css';
+import './styles/general.css';
 import Products from "./pages/Products/Products";
 
 const App = () => {
