@@ -17,7 +17,7 @@ const ProductItem = ({ product, onClick, linkHref }) => {
           <p>Quantity: {product.quantity}</p>
           <p>Category: {product.category}</p>
         </Link>
-        <button onClick={onClick} disabled={product.quantity === 0} aria-label={`Add ${product.name} to cart`}>Add to cart</button>
+        {/* <button onClick={onClick} disabled={product.quantity === 0} aria-label={`Add ${product.name} to cart`}>Add to cart</button> */}
       </li>
   )
 }
