@@ -1,10 +1,16 @@
 .cart-menu-closed {
-    position: absolute;
+    position: fixed;
     right: -50rem;    
     transition: .2s;
-
+    border: 1px solid red;
+    background: green;
+    top: 0;
+    bottom: 0;
+    
     &.cart-menu-open {
-        right: 0;
+        right : 0;
         transition: .2s;
+        width: 100%;
+        max-width: 450px;
     }
 }
