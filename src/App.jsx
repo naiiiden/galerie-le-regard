@@ -32,11 +32,11 @@ const App = () => {
         <h1>Cart functionality</h1>
         <nav>
           <NavLink to="/" style={{ marginRight: '1rem' }}>All Products</NavLink>
-          <button onClick={() => setOpenCart(!openCart)} style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }}>
+          <button onClick={() => setOpenCart(true)} style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }}>
             Cart
             <TotalProductsInCart/>
           </button>
-          <CartDropdown className={openCart ? 'cart-menu-open' : 'cart-menu-closed'}/>
+          <CartDropdown className={openCart ? 'cart-menu-open' : 'cart-menu-closed'} onClick={() => setOpenCart(false)}/>
           {cartState.alert === null ? null : <p id="global-alert" key={Math.random()} aria-live="polite">{cartState.alert}</p>}
         </nav>
       </header>
