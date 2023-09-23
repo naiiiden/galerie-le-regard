@@ -30,10 +30,4 @@ header {
     color: green !important;
 }
 
-.cart-menu-closed {
-    display: none;
-
-    &.cart-menu-open {
-        display: unset;
-    }
-}
+@import './cartdropdown';

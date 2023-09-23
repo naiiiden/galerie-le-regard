@@ -103,8 +103,11 @@ header {
 }
 
 .cart-menu-closed {
-  display: none;
+  position: absolute;
+  right: -50rem;
+  transition: 0.2s;
 }
 .cart-menu-closed.cart-menu-open {
-  display: unset;
+  right: 0;
+  transition: 0.2s;
 }/*# sourceMappingURL=general.css.map */

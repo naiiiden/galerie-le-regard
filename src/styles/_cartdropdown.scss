@@ -1,0 +1,10 @@
+.cart-menu-closed {
+    position: absolute;
+    right: -50rem;    
+    transition: .2s;
+
+    &.cart-menu-open {
+        right: 0;
+        transition: .2s;
+    }
+}

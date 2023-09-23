@@ -1,6 +1,6 @@
 const CartDropdown = ({ className }) => {
   return (
-    <div className={className}>CartDropdown</div>
+    <div className={`${className} cart-menu-closed`}>CartDropdown</div>
   )
 }
 
