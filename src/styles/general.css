@@ -74,6 +74,10 @@ html {
     scroll-behavior: auto !important;
   }
 }
+header {
+  padding: 1.25rem;
+}
+
 #global-alert {
   background: red;
   position: relative;
@@ -95,5 +99,12 @@ html {
 }
 
 .active {
-  color: red !important;
+  color: green !important;
+}
+
+.cart-menu-closed {
+  display: none;
+}
+.cart-menu-closed.cart-menu-open {
+  display: unset;
 }/*# sourceMappingURL=general.css.map */

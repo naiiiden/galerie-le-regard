@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom"
 
-const ProductItem = ({ product, onClick, linkHref }) => {
+const ProductItem = ({ product, linkHref }) => {
   return (
     <li key={product.id} style={{
         background: 'blanchedalmond',

@@ -6,6 +6,8 @@ import { Routes, Route, NavLink } from "react-router-dom";
 
 import './styles/general.css';
 import Products from "./pages/Products/Products";
+import CartDropdown from "./components/CartDropdown/CartDropdown";
+import { useState } from "react";
 
 const App = () => {
   const ulStyle = {
@@ -16,6 +18,8 @@ const App = () => {
   }
 
   const { cartState, dispatch } = useCart();
+
+  const [openCart, setOpenCart] = useState(false);
 
   return (
     <div className="App">
@@ -28,10 +32,13 @@ const App = () => {
         <h1>Cart functionality</h1>
         <nav>
           <NavLink to="/" style={{ marginRight: '1rem' }}>All Products</NavLink>
-          <NavLink to="/cart" style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }}>
-            Cart
-            <TotalProductsInCart/>
-          </NavLink>
+          <div>
+            <button onClick={() => setOpenCart(!openCart)} style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }}>
+              Cart
+              <TotalProductsInCart/>
+            </button>
+            <CartDropdown className={openCart ? 'cart-menu-open' : 'cart-menu-closed'}/>
+          </div>
           {cartState.alert === null ? null : <p id="global-alert" key={Math.random()} aria-live="polite">{cartState.alert}</p>}
         </nav>
       </header>

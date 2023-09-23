@@ -1,5 +1,9 @@
 @import '../../node_modules/naiden-css-reset/reset.scss';
 
+header {
+    padding: 1.25rem;
+}
+
 #global-alert {
     background: red;
     position: relative;
@@ -23,5 +27,13 @@
 }
 
 .active {
-    color: red !important;
+    color: green !important;
+}
+
+.cart-menu-closed {
+    display: none;
+
+    &.cart-menu-open {
+        display: unset;
+    }
 }
