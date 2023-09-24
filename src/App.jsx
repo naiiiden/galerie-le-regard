@@ -1,4 +1,3 @@
-import Cart from "./pages/Cart/Cart";
 import SingleProduct from "./pages/SingleProduct/SingleProduct";
 import TotalProductsInCart from "./components/TotalProductsInCart/TotalProductsInCart";
 import { useCart } from "./context/CartContext";
@@ -43,7 +42,6 @@ const App = () => {
       <main>
         <Routes>
           <Route path="/" element={<Products style={ulStyle}/>}/>
-          <Route path="/cart" element={<Cart style={ulStyle}/>}/>
           <Route path="/:productName" element={<SingleProduct onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}/>}/>
         </Routes>
       </main>
