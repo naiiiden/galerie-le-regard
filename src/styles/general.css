@@ -117,16 +117,17 @@ header {
 .cart-menu-closed {
   position: fixed;
   right: -50rem;
-  transition: 0.2s;
   border: 1px solid red;
   background: green;
   top: 0;
   bottom: 0;
   z-index: 99;
+  transition: 0.2s, box-shadow 0.1s;
 }
 .cart-menu-closed.cart-menu-open {
   right: 0;
-  transition: 0.2s;
   width: 100%;
   max-width: 450px;
+  box-shadow: 0 0 100rem 100vw rgba(0, 0, 0, 0.75);
+  transition: 0.2s, box-shadow 0.1s;
 }/*# sourceMappingURL=general.css.map */
