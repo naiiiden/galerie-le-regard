@@ -1,12 +1,9 @@
-import SingleProduct from "./pages/SingleProduct/SingleProduct";
-import TotalProductsInCart from "./components/TotalProductsInCart/TotalProductsInCart";
 import { useCart } from "./context/CartContext";
-import { Routes, Route, NavLink } from "react-router-dom";
-
-import './styles/general.css';
+import { Routes, Route } from "react-router-dom";
+import SingleProduct from "./pages/SingleProduct/SingleProduct";
 import Products from "./pages/Products/Products";
-import CartDropdown from "./components/CartDropdown/CartDropdown";
-import { useState } from "react";
+import Header from "./components/Header/Header";
+import './styles/general.css';
 
 const App = () => {
   const ulStyle = {
@@ -16,31 +13,11 @@ const App = () => {
     flexWrap: 'wrap',
   }
 
-  const { cartState, dispatch } = useCart();
-
-  const [openCart, setOpenCart] = useState(false);
-
-  openCart ? document.body.style.overflow = "hidden" : document.body.style.overflow = "";
+  const { dispatch } = useCart();
 
   return (
     <div className="App">
-      <header style={{
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        border: '1px solid red',
-      }}>
-        <h1>Cart functionality</h1>
-        <nav>
-          <NavLink to="/" style={{ marginRight: '1rem' }}>All Products</NavLink>
-          <button onClick={() => setOpenCart(true)} style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }}>
-            Cart
-            <TotalProductsInCart/>
-          </button>
-          <CartDropdown className={openCart ? 'cart-menu-open' : 'cart-menu-closed'} onClick={() => setOpenCart(false)}/>
-          {cartState.alert === null ? null : <p id="global-alert" key={Math.random()} aria-live="polite">{cartState.alert}</p>}
-        </nav>
-      </header>
+      <Header/>
       <main>
         <Routes>
           <Route path="/" element={<Products style={ulStyle}/>}/>
