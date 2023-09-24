@@ -21,8 +21,8 @@ const Header = () => {
                 }}>
                 <h1>Cart functionality</h1>
                 <nav>
-                    <NavLink to="/" style={{ marginRight: '1rem' }}>All Products</NavLink>
-                    <button onClick={() => openCart()} style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }} aria-label={openedCart ? "Close Cart" : "Open Cart"} aria-live="polite">
+                    <NavLink inert={openedCart ? '' : undefined} to="/" style={{ marginRight: '1rem' }}>All Products</NavLink>
+                    <button inert={openedCart ? '' : undefined} onClick={() => openCart()} style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }} aria-label={openedCart ? "Close Cart" : "Open Cart"} aria-live="polite">
                         Cart
                     </button>
                     <CartDropdown className={openedCart ? 'cart-menu-open' : 'cart-menu-closed'} onClick={() => closeCart()}/>
