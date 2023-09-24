@@ -20,6 +20,8 @@ const App = () => {
 
   const [openCart, setOpenCart] = useState(false);
 
+  openCart ? document.body.style.overflow = "hidden" : document.body.style.overflow = "";
+
   return (
     <div className="App">
       <header style={{

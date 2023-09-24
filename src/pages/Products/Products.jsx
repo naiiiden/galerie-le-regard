@@ -34,6 +34,32 @@ const Products = ({ style }) => {
                 />
             ))}
             </ul>
+            <ul style={style}>
+            {filteredProducts.map((product) => (
+                <ProductItem 
+                linkHref={product.name}
+                product={product} 
+                key={product.id}
+                onClick={() => 
+                    dispatch({ type: 'ADD_TO_CART', payload: product }, 
+                    clearAlert(dispatch)
+                )}
+                />
+            ))}
+            </ul>
+            <ul style={style}>
+            {filteredProducts.map((product) => (
+                <ProductItem 
+                linkHref={product.name}
+                product={product} 
+                key={product.id}
+                onClick={() => 
+                    dispatch({ type: 'ADD_TO_CART', payload: product }, 
+                    clearAlert(dispatch)
+                )}
+                />
+            ))}
+            </ul>
         </div>
     )
 }
