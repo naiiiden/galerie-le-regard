@@ -6,13 +6,6 @@ import Header from "./components/Header/Header";
 import './styles/general.css';
 
 const App = () => {
-  const ulStyle = {
-    listStyle: 'none',
-    padding: 0,
-    display: 'flex',
-    flexWrap: 'wrap',
-  }
-
   const { dispatch } = useCart();
 
   return (
@@ -20,7 +13,7 @@ const App = () => {
       <Header/>
       <main>
         <Routes>
-          <Route path="/" element={<Products style={ulStyle}/>}/>
+          <Route path="/" element={<Products/>}/>
           <Route path="/:productName" element={<SingleProduct onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}/>}/>
         </Routes>
       </main>
