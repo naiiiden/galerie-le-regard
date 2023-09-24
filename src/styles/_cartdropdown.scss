@@ -1,3 +1,15 @@
+.click-outside {
+    &.close {
+        background: transparent;
+        height: 1000vh;
+        pointer-events: all !important;
+        position: absolute;
+        user-select: all !important;
+        width: 100vw;
+        z-index: 98;
+    }
+}
+
 .cart-menu-closed {
     position: fixed;
     right: -50rem;    
@@ -6,6 +18,7 @@
     background: green;
     top: 0;
     bottom: 0;
+    z-index: 99;
     
     &.cart-menu-open {
         right : 0;

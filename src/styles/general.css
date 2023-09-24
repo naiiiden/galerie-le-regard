@@ -102,6 +102,18 @@ header {
   color: green !important;
 }
 
+.click-outside.close {
+  background: transparent;
+  height: 1000vh;
+  pointer-events: all !important;
+  position: absolute;
+  -webkit-user-select: all !important;
+     -moz-user-select: all !important;
+          user-select: all !important;
+  width: 100vw;
+  z-index: 98;
+}
+
 .cart-menu-closed {
   position: fixed;
   right: -50rem;
@@ -110,6 +122,7 @@ header {
   background: green;
   top: 0;
   bottom: 0;
+  z-index: 99;
 }
 .cart-menu-closed.cart-menu-open {
   right: 0;
