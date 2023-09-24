@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
-import { useCart } from '../../context/CartContext';
+import { UseCart } from '../../context/CartContext';
 
 const CartItem = ({ item, onQuantityChange, onRemove }) => {
   const [quantity, setQuantity] = useState(item.quantity);
@@ -15,7 +15,7 @@ const CartItem = ({ item, onQuantityChange, onRemove }) => {
   };
 
   // DEBUGGING
-  const { cartState } = useCart(); 
+  const { cartState } = UseCart(); 
   const productInCart = cartState.products.find((product) => product.name === item.name);
   console.log(productInCart.name + ' product left quantity ' + productInCart.quantity);
 

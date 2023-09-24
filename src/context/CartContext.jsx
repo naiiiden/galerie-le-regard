@@ -167,7 +167,7 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-export const useCart = () => {
+export const UseCart = () => {
   const context = useContext(CartContext);
   return context;
 };

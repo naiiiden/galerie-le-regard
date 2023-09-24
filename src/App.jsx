@@ -1,4 +1,4 @@
-import { useCart } from "./context/CartContext";
+import { UseCart } from "./context/CartContext";
 import { Routes, Route } from "react-router-dom";
 import SingleProduct from "./pages/SingleProduct/SingleProduct";
 import Products from "./pages/Products/Products";
@@ -6,7 +6,7 @@ import Header from "./components/Header/Header";
 import './styles/general.css';
 
 const App = () => {
-  const { dispatch } = useCart();
+  const { dispatch } = UseCart();
 
   return (
     <div className="App">

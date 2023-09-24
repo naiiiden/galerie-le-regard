@@ -1,10 +1,10 @@
 import { useParams } from 'react-router-dom';
-import { useCart } from '../../context/CartContext';
+import { UseCart } from '../../context/CartContext';
 import clearAlert from '../../helpers/clearAlert';
 
 const SingleProduct = () => {
   const { productName } = useParams();
-  const { cartState, dispatch } = useCart(); 
+  const { cartState, dispatch } = UseCart(); 
 
   const product = cartState.products.find((product) => product.name === productName);
 

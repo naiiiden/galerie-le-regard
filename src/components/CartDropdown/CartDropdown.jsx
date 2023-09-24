@@ -1,11 +1,12 @@
-import { useCart } from '../../context/CartContext'
+/* eslint-disable react/prop-types */
+import { UseCart } from '../../context/CartContext'
 import CartItem from '../CartItem/CartItem';
 import TotalPriceAndItems from '../TotalPriceAndItems/TotalPriceAndItems';
 import clearAlert from '../../helpers/clearAlert';
 
 const CartDropdown = ({ className, onClick }) => {
 
-  const { cartState, dispatch } = useCart(); 
+  const { cartState, dispatch } = UseCart(); 
 
   return (
     <div className={`${className} cart-menu-closed`}>

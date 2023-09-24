@@ -1,7 +1,7 @@
-import { useCart } from "../../context/CartContext";
+import { UseCart } from "../../context/CartContext";
 
 const TotalProductsInCart = () => {
-    const { cartState } = useCart();
+    const { cartState } = UseCart();
     
     let totalItemsInCart = 0;
     

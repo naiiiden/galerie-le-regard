@@ -1,10 +1,10 @@
 import CartDropdown from "../CartDropdown/CartDropdown";
-import { useCart } from "../../context/CartContext";
+import { UseCart } from "../../context/CartContext";
 import { NavLink } from "react-router-dom";
 import { OpenCart } from "../../context/OpenCartContext";
 
 const Header = () => {
-    const { cartState } = useCart();
+    const { cartState } = UseCart();
 
     const { openedCart, openCart, closeCart } = OpenCart();
 
