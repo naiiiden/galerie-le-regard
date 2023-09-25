@@ -70,6 +70,7 @@ const cartReducer = (state, action) => {
         }
       }
       return state;
+
     case 'REMOVE_FROM_CART':
       const removedProductId = action.payload.id;
       const removedCartItem = state.cartItems.find((cartItem) => cartItem.id === removedProductId);
@@ -91,6 +92,7 @@ const cartReducer = (state, action) => {
         };
       }
       return state;
+      
     case 'UPDATE_QUANTITY':
       const { itemToUpdate, newQuantity } = action.payload;
 
@@ -126,6 +128,15 @@ const cartReducer = (state, action) => {
       }
 
       return state;
+
+    case 'CLEAR_CART':
+      return {
+        ...state,
+        cartItems: [],
+        // not sure about products
+        products: productData,
+        alert: `Cart has been cleared`,
+      };
 
     case 'SET_ALERT':
       return {

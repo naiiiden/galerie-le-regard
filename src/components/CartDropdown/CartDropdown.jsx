@@ -27,6 +27,7 @@ const CartDropdown = ({ className, onClick }) => {
                         ))}
                     </ul>
                     <TotalPriceAndItems/>
+                    <button onClick={() => dispatch({ type: 'CLEAR_CART' }, clearAlert(dispatch))}>clear cart</button>
                 </>
             ) : (
                 <p>Your cart is empty.</p>
