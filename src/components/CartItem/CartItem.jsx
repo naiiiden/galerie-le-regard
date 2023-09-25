@@ -12,10 +12,9 @@ const CartItem = ({ item, onQuantityChange, onRemove }) => {
   // DEBUGGING
   const { cartState } = UseCart(); 
   const productInCart = cartState.products.find((product) => product.name === item.name);
-  console.log(productInCart.name + ' product left quantity ' + productInCart.quantity);
-
-  console.log('product', productInCart);
-
+  console.log(productInCart);
+  console.log('end');
+  // cartItem is rerendered after global alert ends
 
   return (
     <li key={item.id} style={{
