@@ -26,6 +26,7 @@ const SingleProduct = () => {
                     dispatch({ type: 'ADD_TO_CART', payload: product }, 
                     clearAlert(dispatch)
                   )}
+                  disabled={product.quantity === 0 ? true : false}
                 >Add to cart</button>
               </div>
             </div>}
