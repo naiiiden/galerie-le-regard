@@ -1,15 +1,10 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react';
 import { UseCart } from '../../context/CartContext';
 
 const CartItem = ({ item, onQuantityChange, onRemove }) => {
-  const [quantity, setQuantity] = useState(item.quantity);
-
-  
   const handleQuantityChange = (event) => {
     const newQuantity = parseInt(event.target.value, 10);
     if (!isNaN(newQuantity) && newQuantity >= 1 && newQuantity <= item.availableQuantity) {
-      setQuantity(newQuantity);
       onQuantityChange(item, newQuantity);
     }
   };
@@ -21,7 +16,6 @@ const CartItem = ({ item, onQuantityChange, onRemove }) => {
 
   console.log('product', productInCart);
 
-  console.log('quantity', quantity);
 
   return (
     <li key={item.id} style={{
