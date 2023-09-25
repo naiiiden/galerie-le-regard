@@ -19,6 +19,10 @@ const CartItem = ({ item, onQuantityChange, onRemove }) => {
   const productInCart = cartState.products.find((product) => product.name === item.name);
   console.log(productInCart.name + ' product left quantity ' + productInCart.quantity);
 
+  console.log('product', productInCart);
+
+  console.log('quantity', quantity);
+
   return (
     <li key={item.id} style={{
         border: '1px solid red',
@@ -32,7 +36,7 @@ const CartItem = ({ item, onQuantityChange, onRemove }) => {
       <input
         id={`quantity-product-${item.id}`}
         type='number'
-        value={quantity}
+        value={item.quantity}
         onChange={handleQuantityChange}
         min='1'
         max={item.availableQuantity}
