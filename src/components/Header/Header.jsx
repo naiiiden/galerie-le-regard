@@ -24,7 +24,11 @@ const Header = () => {
                     {
                         location.pathname === "/" 
                         ? <h1>Cart functionality</h1>
-                        : <Link to="/">Go back</Link>
+                        : 
+                        <>
+                            <h1 className="sr-only">Cart functionality</h1>
+                            <Link to="/">Go back</Link>
+                        </>
                     }
                 <nav>
                     <NavLink inert={openedCart ? '' : undefined} to="/" style={{ marginRight: '1rem' }}>All Products</NavLink>
