@@ -3,13 +3,16 @@ import { UseCart } from '../../context/CartContext'
 import CartItem from '../CartItem/CartItem';
 import TotalPriceAndItems from '../TotalPriceAndItems/TotalPriceAndItems';
 import clearAlert from '../../helpers/clearAlert';
+import { OpenCart } from "../../context/OpenCartContext";
 
 const CartDropdown = ({ className, onClick }) => {
 
   const { cartState, dispatch } = UseCart(); 
 
+  const { openedCart, openCart, closeCart } = OpenCart();
+
   return (
-    <div className={`${className} cart-menu-closed`}>
+    <div inert={!openedCart ? '' : undefined} className={`${className} cart-menu-closed`}>
         <button onClick={onClick}>close</button>
         {cartState.cartItems.length !== 0 ? (
                 <>
