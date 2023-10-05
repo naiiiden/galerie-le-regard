@@ -1,15 +1,15 @@
 [
   {
     "id": 1,
-    "name": "Abstract Artwork - Blue Harmony",
+    "name": "Starry Night",
     "category": "Abstract",
-    "price": 299.99,
-    "quantity": 10,
-    "description": "A stunning abstract artwork in shades of blue.",
+    "price": null,
+    "quantity": null,
+    "description": "A famous abstract painting by Vincent van Gogh.",
     "images": [
-      "src/assets/blue_harmony1.jpg",
-      "src/assets/blue_harmony2.jpg",
-      "src/assets/blue_harmony3.jpg"
+      "src/assets/starry_night1.jpg",
+      "src/assets/starry_night2.jpg",
+      "src/assets/starry_night3.jpg"
     ]
   },
   {

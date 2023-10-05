@@ -11,10 +11,11 @@ const ProductItem = ({ product, linkHref }) => {
       }}>
         <Link to={linkHref} style={{ color: 'black' }}>
           <img src={product.images[0]} alt='' style={{ width: "300px" }}/>
-          <p style={{
-            margin: '0 0 .5rem 0',
-          }}>{product.name} - ${product.price}</p>
-          <p>Quantity: {product.quantity}</p>
+          <p style={{margin: '0 0 .5rem 0'}}>
+            <span>{product.name}</span>
+            <span>{product.price === null ? null : ` - ${product.price}`}</span>
+            </p>
+          {product.quantity === null ? null : <p>Quantity: {product.quantity}</p>}
           <p>Category: {product.category}</p>
         </Link>
         {/* <button onClick={onClick} disabled={product.quantity === 0} aria-label={`Add ${product.name} to cart`}>Add to cart</button> */}
