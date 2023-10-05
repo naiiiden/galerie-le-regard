@@ -4,7 +4,7 @@
     "name": "Starry Night",
     "category": "Abstract",
     "price": null,
-    "quantity": null,
+    "quantity": 1,
     "description": "A famous abstract painting by Vincent van Gogh.",
     "images": [
       "src/assets/starry_night1.jpg",
