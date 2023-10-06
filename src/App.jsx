@@ -17,7 +17,7 @@ const App = () => {
       <main inert={openedCart ? '' : undefined}>
         <Routes>
           <Route path="/" element={<Products/>}/>
-          <Route path="/:productName" element={<SingleProduct onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}/>}/>
+          <Route path="/products/:productName" element={<SingleProduct onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}/>}/>
         </Routes>
       </main>
     </div>
