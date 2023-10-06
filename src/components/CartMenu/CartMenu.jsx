@@ -6,7 +6,7 @@ import TotalPriceAndItems from '../TotalPriceAndItems/TotalPriceAndItems';
 import clearAlert from '../../helpers/clearAlert';
 import { OpenCart } from "../../context/OpenCartContext";
 
-const CartDropdown = ({ className, onClick }) => {
+const CartMenu = ({ className, onClick }) => {
 
   const { cartState, dispatch } = UseCart(); 
 
@@ -14,7 +14,10 @@ const CartDropdown = ({ className, onClick }) => {
 
   return (
     <div inert={!openedCart ? '' : undefined} className={`${className} cart-menu-closed`}>
-        <button onClick={onClick}>close</button>
+        <div>
+            <h2>Your Cart</h2>
+            <button onClick={onClick}>close X</button>
+        </div>
         {cartState.cartItems.length !== 0 ? (
                 <>
                     <ul>
@@ -40,4 +43,4 @@ const CartDropdown = ({ className, onClick }) => {
   )
 }
 
-export default CartDropdown
+export default CartMenu
