@@ -5,6 +5,7 @@ import SingleProduct from "./pages/SingleProduct/SingleProduct";
 import Products from "./pages/Products/Products";
 import Header from "./components/Header/Header";
 import './styles/general.css';
+import Landing from "./pages/Landing/Landing";
 
 const App = () => {
   const { dispatch } = UseCart();
@@ -17,7 +18,8 @@ const App = () => {
       <main inert={openedCart ? '' : undefined}>
         <Routes>
           <Route path="*" element={<h1>not found (page WIP)</h1>}/>
-          <Route path="/" element={<Products/>}/>
+          <Route path="/" element={<Landing/>}/>
+          <Route path="/products" element={<Products/>}/>
           <Route path="/products/:productName" element={<SingleProduct onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}/>}/>
         </Routes>
       </main>
