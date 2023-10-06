@@ -8,6 +8,8 @@ const SingleProduct = () => {
 
   const product = cartState.products.find((product) => product.name === productName);
 
+  document.title = product.name;
+
   return (
     <div>
         {!product 
