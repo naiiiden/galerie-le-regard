@@ -1,8 +1,8 @@
 import { UseCart } from "./context/CartContext";
 import { OpenCart } from "./context/OpenCartContext";
 import { Routes, Route } from "react-router-dom";
-import SingleProduct from "./pages/SingleProduct/SingleProduct";
-import Products from "./pages/Products/Products";
+import SinglePainting from "./pages/SinglePainting/SinglePainting";
+import AllPaintings from "./pages/AllPaintings/AllPaintings";
 import Header from "./components/Header/Header";
 import './styles/general.css';
 import Landing from "./pages/Landing/Landing";
@@ -19,8 +19,8 @@ const App = () => {
         <Routes>
           <Route path="*" element={<h1>not found (page WIP)</h1>}/>
           <Route path="/" element={<Landing/>}/>
-          <Route path="/paintings" element={<Products/>}/>
-          <Route path="/:productName" element={<SingleProduct onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}/>}/>
+          <Route path="/paintings" element={<AllPaintings/>}/>
+          <Route path="/paintings/:productName" element={<SinglePainting onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}/>}/>
         </Routes>
       </main>
     </div>
