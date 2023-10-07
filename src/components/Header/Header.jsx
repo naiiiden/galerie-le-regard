@@ -1,6 +1,6 @@
 import CartMenu from "../CartMenu/CartMenu";
 import { UseCart } from "../../context/CartContext";
-import { NavLink, useLocation, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { OpenCart } from "../../context/OpenCartContext";
 
 const Header = () => {
@@ -9,8 +9,6 @@ const Header = () => {
     const { openedCart, openCart, closeCart } = OpenCart();
 
     openedCart ? document.body.style.overflow = "hidden" : document.body.style.overflow = "";
-
-    const location = useLocation();
 
     return (
         <>
@@ -21,15 +19,7 @@ const Header = () => {
                 justifyContent: 'space-between',
                 border: '1px solid red',
                 }}>
-                    {
-                        location.pathname === "/" 
-                        ? <h1>Cart functionality</h1>
-                        : 
-                        <>
-                            <h1 className="sr-only">Cart functionality</h1>
-                            <Link to="/">Go back</Link>
-                        </>
-                    }
+                <h1>Cart functionality</h1>
                 <nav>
                     <NavLink inert={openedCart ? '' : undefined} to="/paintings" style={{ marginRight: '1rem' }}>All Products</NavLink>
                     <button inert={openedCart ? '' : undefined} onClick={() => openCart()} style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }} aria-label={openedCart ? "Close Cart" : "Open Cart"} aria-live="polite">
