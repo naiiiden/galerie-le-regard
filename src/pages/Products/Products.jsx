@@ -24,7 +24,7 @@ const Products = ({ style }) => {
             <ul style={style}>
             {filteredProducts.map((product) => (
                 <ProductItem 
-                    linkHref={`products/${product.name}`}
+                    linkHref={`/${product.name}`}
                     product={product} 
                     key={product.id}
                     onClick={() => 

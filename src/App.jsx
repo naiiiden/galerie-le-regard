@@ -19,8 +19,8 @@ const App = () => {
         <Routes>
           <Route path="*" element={<h1>not found (page WIP)</h1>}/>
           <Route path="/" element={<Landing/>}/>
-          <Route path="/products" element={<Products/>}/>
-          <Route path="/products/:productName" element={<SingleProduct onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}/>}/>
+          <Route path="/paintings" element={<Products/>}/>
+          <Route path="/:productName" element={<SingleProduct onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}/>}/>
         </Routes>
       </main>
     </div>

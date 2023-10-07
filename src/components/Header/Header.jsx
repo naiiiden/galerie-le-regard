@@ -31,7 +31,7 @@ const Header = () => {
                         </>
                     }
                 <nav>
-                    <NavLink inert={openedCart ? '' : undefined} to="/" style={{ marginRight: '1rem' }}>All Products</NavLink>
+                    <NavLink inert={openedCart ? '' : undefined} to="/paintings" style={{ marginRight: '1rem' }}>All Products</NavLink>
                     <button inert={openedCart ? '' : undefined} onClick={() => openCart()} style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }} aria-label={openedCart ? "Close Cart" : "Open Cart"} aria-live="polite">
                         Cart
                     </button>
