@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { UseCart } from '../../context/CartContext';
 import clearAlert from '../../helpers/clearAlert';
 
@@ -7,6 +7,17 @@ const SingleProduct = () => {
   const { cartState, dispatch } = UseCart(); 
 
   const product = cartState.products.find((product) => product.name === productName);
+
+  const currentItem = cartState.products.findIndex((item) => item.name === product.name)
+
+  const previousItem = currentItem - 1;
+  const nextItem = currentItem + 1;
+
+  const previousProduct = previousItem >= 0 ? cartState.products[previousItem] : null;
+  const nextProduct = nextItem < cartState.products.length ? cartState.products[nextItem] : null;
+
+  console.log('Previous Product:', previousProduct);
+  console.log('Next Product:', nextProduct);
 
   document.title = product.name;
 
@@ -31,6 +42,8 @@ const SingleProduct = () => {
                   disabled={product.quantity === 0 || product.quantity === null || product.price === null ? true : false}
                 >Add to cart</button>
               </div>
+              <Link to={`/paintings/${previousProduct?.category}/${previousProduct?.name}`}>previous painting</Link>
+              <Link to={`/paintings/${nextProduct?.category}/${nextProduct?.name}`}>next painting</Link>
             </div>}
     </div>
   );
