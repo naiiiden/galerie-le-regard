@@ -36,7 +36,7 @@ const AllPaintings = ({ style }) => {
       <ul style={style}>
         {filteredProducts.map((product) => (
           <ProductItem 
-            linkHref={`/paintings/${product.name}`}
+            linkHref={`/paintings/${product.category}/${product.name}`}
             product={product} 
             key={product.id}
             onClick={() => 

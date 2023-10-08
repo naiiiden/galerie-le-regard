@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/" element={<Landing/>}/>
           <Route path="/paintings" element={<AllPaintings/>}/>
           <Route path="/paintings/:category" element={<AllPaintings/>}/>
-          <Route path="/paintings/:productName" element={<SinglePainting onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}/>}/>
+          <Route path="/paintings/:category/:productName" element={<SinglePainting onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}/>}/>
         </Routes>
       </main>
     </div>
