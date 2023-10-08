@@ -19,7 +19,7 @@ const Header = () => {
                 justifyContent: 'space-between',
                 border: '1px solid red',
                 }}>
-                <h1>Cart functionality</h1>
+                <NavLink to="/">Cart functionality</NavLink>
                 <nav>
                     <NavLink inert={openedCart ? '' : undefined} to="/paintings" style={{ marginRight: '1rem' }}>All Products</NavLink>
                     <button inert={openedCart ? '' : undefined} onClick={() => openCart()} style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }} aria-label={openedCart ? "Close Cart" : "Open Cart"} aria-live="polite">
