@@ -10,14 +10,18 @@ const SingleProduct = () => {
 
   const currentItem = cartState.products.findIndex((item) => item.name === product.name)
 
-  const previousItem = currentItem - 1;
-  const nextItem = currentItem + 1;
+  let previousItem = currentItem - 1;
+  let nextItem = currentItem + 1;
+
+  previousItem < 0 
+    ? previousItem = cartState.products.length - 1 
+    : previousItem = currentItem -1;
+  nextItem >= cartState.products.length 
+    ? nextItem = 0 
+    : nextItem = currentItem + 1;
 
   const previousProduct = previousItem >= 0 ? cartState.products[previousItem] : null;
   const nextProduct = nextItem < cartState.products.length ? cartState.products[nextItem] : null;
-
-  console.log('Previous Product:', previousProduct);
-  console.log('Next Product:', nextProduct);
 
   document.title = product.name;
 
