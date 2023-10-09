@@ -1,11 +1,12 @@
 import CartMenu from "../CartMenu/CartMenu";
 import { UseCart } from "../../context/CartContext";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 import { OpenCart } from "../../context/OpenCartContext";
 
 const Header = () => {
-    const { cartState } = UseCart();
+    const location = useLocation();
 
+    const { cartState } = UseCart();
     const { openedCart, openCart, closeCart } = OpenCart();
 
     openedCart ? document.body.style.overflow = "hidden" : document.body.style.overflow = "";
@@ -21,7 +22,7 @@ const Header = () => {
                 }}>
                 <NavLink to="/">Cart functionality</NavLink>
                 <nav>
-                    <NavLink inert={openedCart ? '' : undefined} to="/paintings" style={{ marginRight: '1rem' }}>All Products</NavLink>
+                    <Link inert={openedCart ? '' : undefined} to="/paintings" style={{ marginRight: '1rem' }} aria-current={location.pathname === '/paintings' ? 'page' : undefined}>All Products</Link>
                     <button inert={openedCart ? '' : undefined} onClick={() => openCart()} style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }} aria-label={openedCart ? "Close Cart" : "Open Cart"} aria-live="polite">
                         Cart
                     </button>
