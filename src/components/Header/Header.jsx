@@ -22,7 +22,9 @@ const Header = () => {
                 }}>
                 <NavLink to="/">Cart functionality</NavLink>
                 <nav>
-                    <Link inert={openedCart ? '' : undefined} to="/paintings" style={{ marginRight: '1rem' }} aria-current={location.pathname === '/paintings' ? 'page' : undefined}>All Products</Link>
+                    {location.pathname === "/" ? 
+                        undefined 
+                        : <Link inert={openedCart ? '' : undefined} to="/paintings" style={{ marginRight: '1rem' }} aria-current={location.pathname === '/paintings' ? 'page' : undefined}>All Products</Link>}
                     <button inert={openedCart ? '' : undefined} onClick={() => openCart()} style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }} aria-label={openedCart ? "Close Cart" : "Open Cart"} aria-live="polite">
                         Cart
                         <span>{cartState.cartItems.length}</span>
