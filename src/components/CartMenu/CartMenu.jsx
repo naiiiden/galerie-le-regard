@@ -10,13 +10,13 @@ const CartMenu = ({ className, onClick }) => {
 
   const { cartState, dispatch } = UseCart(); 
 
-  const { openedCart, openCart, closeCart } = OpenCart();
+  const { openedCart } = OpenCart();
 
   return (
     <div inert={!openedCart ? '' : undefined} className={`${className} cart-menu-closed`}>
         <div>
             <h2>Your Cart</h2>
-            <button onClick={onClick}>close X</button>
+            <button onClick={onClick} aria-label="Close cart">Close <span>X</span></button>
         </div>
         {cartState.cartItems.length !== 0 ? (
                 <>
@@ -34,7 +34,7 @@ const CartMenu = ({ className, onClick }) => {
                         ))}
                     </ul>
                     <TotalPriceAndItems/>
-                    <button onClick={() => dispatch({ type: 'CLEAR_CART' }, clearAlert(dispatch))}>clear cart</button>
+                    <button onClick={() => dispatch({ type: 'CLEAR_CART' }, clearAlert(dispatch))} aria-label="Remove all items from cart">Clear cart</button>
                 </>
             ) : (
                 <p>Your cart is empty.</p>
