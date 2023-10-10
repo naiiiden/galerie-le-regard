@@ -2,6 +2,7 @@ import CartMenu from "../CartMenu/CartMenu";
 import { UseCart } from "../../context/CartContext";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import { OpenCart } from "../../context/OpenCartContext";
+import TotalProductsInCart from "../TotalProductsInCart/TotalProductsInCart";
 
 const Header = () => {
     const location = useLocation();
@@ -27,7 +28,7 @@ const Header = () => {
                         : <Link inert={openedCart ? '' : undefined} to="/paintings" style={{ marginRight: '1rem' }} aria-current={location.pathname === '/paintings' ? 'page' : undefined}>All Products</Link>}
                     <button inert={openedCart ? '' : undefined} onClick={() => openCart()} style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }} aria-label={openedCart ? "Close Cart" : "Open Cart"} aria-live="polite">
                         Cart
-                        <span>{cartState.cartItems.length}</span>
+                        <TotalProductsInCart/>
                     </button>
                     <CartMenu className={openedCart ? 'cart-menu-open' : 'cart-menu-closed'} onClick={() => closeCart()}/>
                     {cartState.alert === null ? null : <p id="global-alert" key={Math.random()} aria-live="polite">{cartState.alert}</p>}
