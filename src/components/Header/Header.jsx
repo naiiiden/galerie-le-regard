@@ -25,6 +25,7 @@ const Header = () => {
                     <Link inert={openedCart ? '' : undefined} to="/paintings" style={{ marginRight: '1rem' }} aria-current={location.pathname === '/paintings' ? 'page' : undefined}>All Products</Link>
                     <button inert={openedCart ? '' : undefined} onClick={() => openCart()} style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }} aria-label={openedCart ? "Close Cart" : "Open Cart"} aria-live="polite">
                         Cart
+                        <span>{cartState.cartItems.length}</span>
                     </button>
                     <CartMenu className={openedCart ? 'cart-menu-open' : 'cart-menu-closed'} onClick={() => closeCart()}/>
                     {cartState.alert === null ? null : <p id="global-alert" key={Math.random()} aria-live="polite">{cartState.alert}</p>}
