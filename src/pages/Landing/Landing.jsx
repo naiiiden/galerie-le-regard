@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 const Landing = () => {
     return (
         <>
-            <h1>Galerie de l'Art Exquis</h1>
+            <h1>Le Regard</h1>
             <Link to="/paintings"><b>paintings</b></Link>
         </>
     )

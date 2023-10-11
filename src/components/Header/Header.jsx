@@ -21,7 +21,7 @@ const Header = () => {
                 justifyContent: 'space-between',
                 border: '1px solid red',
                 }}>
-                <NavLink to="/">Cart functionality</NavLink>
+                <NavLink to="/">Le Regard</NavLink>
                 <nav>
                     {location.pathname === "/" ? 
                         undefined 
