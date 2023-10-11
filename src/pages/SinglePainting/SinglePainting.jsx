@@ -23,7 +23,7 @@ const SingleProduct = () => {
   const previousProduct = previousItem >= 0 ? cartState.products[previousItem] : null;
   const nextProduct = nextItem < cartState.products.length ? cartState.products[nextItem] : null;
 
-  document.title = product.name;
+  document.title = `${product.name} | Le Regard`;
 
   return (
     <div>

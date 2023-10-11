@@ -19,6 +19,9 @@ const AllPaintings = ({ style }) => {
 
   useEffect(() => {
     setSelectedCategory(category || '');
+    category === undefined 
+      ? document.title = 'All Paintings | Le Regard'   
+      : document.title = `All ${category} Paintings | Le Regard` 
   }, [category]);
 
   return (
