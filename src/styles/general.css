@@ -127,7 +127,8 @@ header {
 }
 
 body {
-  font-family: "Roboto-Regular";
+  background: #f9f9f9;
+  color: #111;
 }
 
 #global-alert {
@@ -168,6 +169,20 @@ body {
 .landing-page-container p {
   font-family: "Roboto-Thin";
   font-size: 5.5555555556vw;
+}
+.landing-page-container a {
+  font-family: "Roboto-ThinItalic";
+  text-decoration: underline;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+}
+.landing-page-container a:hover {
+  text-decoration: none;
+}
+.landing-page-container a:focus-visible, .landing-page-container a:active {
+  outline: 3px dashed #111;
+  background: #111;
+  color: #f9f9f9;
 }
 
 .click-outside.close {

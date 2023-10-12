@@ -15,4 +15,20 @@
         font-family: "Roboto-Thin";
         font-size: calc(25vw / 4.5);
     }
+
+    a {
+        font-family: "Roboto-ThinItalic";
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &:focus-visible, &:active {
+            outline: 3px dashed #111;
+            background: #111;
+            color: #f9f9f9;
+        }
+    }
 }
