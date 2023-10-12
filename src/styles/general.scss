@@ -1,11 +1,12 @@
 @import '../../node_modules/naiden-css-reset/reset.scss';
+@import './fonts/fonts';
 
 header {
     padding: 1.25rem;
 }
 
 body {
-    font-family: Helvetica;
+    font-family: "Roboto-Regular";
 }
 
 #global-alert {
