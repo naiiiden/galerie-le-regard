@@ -78,6 +78,10 @@ header {
   padding: 1.25rem;
 }
 
+body {
+  font-family: Helvetica;
+}
+
 #global-alert {
   background: red;
   position: relative;
