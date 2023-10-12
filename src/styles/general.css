@@ -154,6 +154,22 @@ body {
   color: green !important;
 }
 
+.landing-page-container {
+  border: 1px solid red;
+}
+.landing-page-container h1 {
+  font-family: "Roboto-Regular";
+  font-size: 22.2222222222vw;
+  font-weight: 400;
+}
+.landing-page-container h1, .landing-page-container p {
+  line-height: 1;
+}
+.landing-page-container p {
+  font-family: "Roboto-Thin";
+  font-size: 5.5555555556vw;
+}
+
 .click-outside.close {
   background: transparent;
   height: 1000vh;
