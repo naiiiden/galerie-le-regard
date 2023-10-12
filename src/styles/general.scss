@@ -1,13 +1,10 @@
 @import '../../node_modules/naiden-css-reset/reset.scss';
 @import './fonts/fonts';
-
-header {
-    padding: 1.25rem;
-}
+@import './variables/variables';
 
 body {
-    background: #eee;
-    color: #111;
+    background: $white;
+    color: $black;
 }
 
 #global-alert {

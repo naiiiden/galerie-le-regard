@@ -122,12 +122,8 @@ html {
   font-family: "Roboto-ThinItalic";
   src: url("./fonts/Roboto/Roboto-ThinItalic.ttf");
 }
-header {
-  padding: 1.25rem;
-}
-
 body {
-  background: #eee;
+  background: #f9f9f9;
   color: #111;
 }
 
@@ -182,7 +178,7 @@ body {
 .landing-page-container a:focus-visible, .landing-page-container a:active {
   outline: 3px dashed #111;
   background: #111;
-  color: #eee;
+  color: #f9f9f9;
 }
 
 .click-outside.close {
