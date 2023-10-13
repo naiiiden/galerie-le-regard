@@ -5,6 +5,8 @@
 body {
     background: $white;
     color: $black;
+    font-family: "Roboto-Regular";
+    font-size: 1.25rem;
 
     .App {
         min-height: 100vh;
@@ -46,8 +48,13 @@ body {
 }
 
 .active {
-    color: green !important;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
 }
 
+// pages
 @import './pages/landingPage';
+
+// components
+@import './components/header/header';
 @import './cartdropdown';

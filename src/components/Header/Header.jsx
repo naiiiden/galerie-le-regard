@@ -12,24 +12,19 @@ const Header = () => {
 
     openedCart ? document.body.style.overflow = "hidden" : document.body.style.overflow = "";
 
-    if (location.pathname !== "/") {
+    if (location.pathname !== "/asd") {
         return (
             <>
                 <div className={`click-outside ${openedCart ? "close" : ""}`} onClick={() => closeCart()}></div>
-                <header style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    border: '1px solid red',
-                    }}>
+                <header>
                     <NavLink to="/">Le Regard</NavLink>
                     <nav>
                         {location.pathname === "/" ? 
                             undefined 
-                            : <Link inert={openedCart ? '' : undefined} to="/paintings" style={{ marginRight: '1rem' }} aria-current={location.pathname === '/paintings' ? 'page' : undefined}>All Products</Link>}
-                        <button inert={openedCart ? '' : undefined} onClick={() => openCart()} style={{ display: 'inline-flex', alignItems: 'center', gap: '.5rem' }} aria-label={openedCart ? "Close Cart" : "Open Cart"} aria-live="polite">
+                            : <Link inert={openedCart ? '' : undefined} to="/paintings" aria-current={location.pathname === '/paintings' ? 'page' : undefined}>All Products</Link>}
+                        <button inert={openedCart ? '' : undefined} onClick={() => openCart()} aria-label={openedCart ? "Close Cart" : "Open Cart"} aria-live="polite">
                             Cart
-                            <TotalProductsInCart/>
+                            (<TotalProductsInCart/>)
                         </button>
                         <CartMenu className={openedCart ? 'cart-menu-open' : 'cart-menu-closed'} onClick={() => closeCart()}/>
                         {cartState.alert === null ? null : <p id="global-alert" key={Math.random()} aria-live="polite">{cartState.alert}</p>}
