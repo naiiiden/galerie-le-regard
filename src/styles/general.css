@@ -126,6 +126,15 @@ body {
   background: #f9f9f9;
   color: #111;
 }
+body .App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+body .App main {
+  flex-grow: 1;
+  display: flex;
+}
 
 ::-moz-selection {
   background: #111;
@@ -162,9 +171,8 @@ body {
 }
 
 .landing-page-container {
-  min-height: 100vh;
-  display: grid;
-  align-content: center;
+  margin: auto 0;
+  border: 1px solid red;
   padding: 0 clamp(0.25rem, 2.5vw, 1rem);
 }
 .landing-page-container h1 {

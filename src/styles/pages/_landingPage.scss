@@ -1,9 +1,8 @@
 @import '../variables/variables';
 
 .landing-page-container {
-    min-height: 100vh;
-    display: grid;
-    align-content: center;
+    margin: auto 0;
+    border: 1px solid red;
     padding: 0 clamp(.25rem, 2.5vw, 1rem);
 
     h1 {
