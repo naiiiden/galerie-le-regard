@@ -13,8 +13,8 @@
 .cart-menu-closed {
     position: fixed;
     right: -50rem;    
-    border: 1px solid red;
-    background: green;
+    border-left: 2px solid $black;
+    background: $white;
     top: 0;
     bottom: 0;
     z-index: 99;
@@ -26,5 +26,17 @@
         max-width: 450px;
         box-shadow: 0 0 100rem 100vw rgba(0,0,0,.75);
         transition: .2s, box-shadow .1s;
+
+        div:first-child {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            border-bottom: 1px solid $black;
+
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
     }
 }
