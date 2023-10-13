@@ -21,7 +21,7 @@ const Header = () => {
                     <nav>
                         {location.pathname === "/" ? 
                             undefined 
-                            : <Link inert={openedCart ? '' : undefined} to="/paintings" aria-current={location.pathname === '/paintings' ? 'page' : undefined}>All Products</Link>}
+                            : <Link inert={openedCart ? '' : undefined} to="/paintings" aria-current={location.pathname === '/paintings' ? 'page' : undefined}>Paintings</Link>}
                         <button inert={openedCart ? '' : undefined} onClick={() => openCart()} aria-label={openedCart ? "Close Cart" : "Open Cart"} aria-live="polite">
                             Cart
                             (<TotalProductsInCart/>)

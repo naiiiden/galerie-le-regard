@@ -245,7 +245,7 @@ header button {
 .cart-menu-closed {
   position: fixed;
   right: -50rem;
-  border-left: 2px solid #111;
+  border-left: 1px solid #111;
   background: #f9f9f9;
   top: 0;
   bottom: 0;
@@ -268,4 +268,6 @@ header button {
 }
 .cart-menu-closed.cart-menu-open div:first-child h2 {
   font-size: 1.25rem;
+  text-transform: uppercase;
+  font-family: "Roboto-Thin";
 }/*# sourceMappingURL=general.css.map */
