@@ -152,19 +152,22 @@ body {
 }
 
 .landing-page-container {
-  border: 1px solid red;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
 }
 .landing-page-container h1 {
-  font-family: "Roboto-Regular";
-  font-size: 22.2222222222vw;
+  font-family: "Roboto-Black";
+  font-size: clamp(3.5rem, 10vw, 10rem);
   font-weight: 400;
+  text-transform: uppercase;
 }
 .landing-page-container h1, .landing-page-container p {
   line-height: 1;
 }
 .landing-page-container p {
   font-family: "Roboto-Thin";
-  font-size: 5.5555555556vw;
+  font-size: clamp(1rem, 5vw, 3rem);
 }
 .landing-page-container a {
   font-family: "Roboto-ThinItalic";
