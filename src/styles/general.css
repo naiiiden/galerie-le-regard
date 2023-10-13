@@ -127,6 +127,16 @@ body {
   color: #111;
 }
 
+::-moz-selection {
+  background: #111;
+  color: #f9f9f9;
+}
+
+::selection {
+  background: #111;
+  color: #f9f9f9;
+}
+
 #global-alert {
   background: red;
   position: relative;
