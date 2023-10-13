@@ -190,9 +190,11 @@ body .App main {
 .landing-page-container a {
   font-family: "Roboto-LightItalic";
   text-decoration: underline;
+  display: inline-block;
 }
 .landing-page-container a:hover {
   text-decoration: none;
+  transform: skewX(-15deg);
 }
 .landing-page-container a:focus-visible, .landing-page-container a:active {
   outline: 3px dashed #111;

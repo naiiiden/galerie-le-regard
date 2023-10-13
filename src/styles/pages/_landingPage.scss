@@ -23,9 +23,11 @@
     a {
         font-family: "Roboto-LightItalic";
         text-decoration: underline;
+        display: inline-block;
 
         &:hover {
             text-decoration: none;
+            transform: skewX(-15deg);
         }
 
         &:focus-visible, &:active {
