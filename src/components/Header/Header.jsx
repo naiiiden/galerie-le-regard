@@ -12,7 +12,7 @@ const Header = () => {
 
     openedCart ? document.body.style.overflow = "hidden" : document.body.style.overflow = "";
 
-    if (location.pathname !== "/asd") {
+    if (location.pathname !== "/") {
         return (
             <>
                 <div className={`click-outside ${openedCart ? "close" : ""}`} onClick={() => closeCart()}></div>
