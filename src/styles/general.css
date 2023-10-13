@@ -164,26 +164,26 @@ body {
 .landing-page-container {
   min-height: 100vh;
   display: grid;
-  place-content: center;
+  align-content: center;
+  padding: 0 clamp(0.25rem, 2.5vw, 1rem);
 }
 .landing-page-container h1 {
   font-family: "Roboto-Black";
-  font-size: clamp(3.5rem, 10vw, 10rem);
+  font-size: clamp(3.625rem, 10vw, 10rem);
   font-weight: 400;
-  text-transform: uppercase;
-}
-.landing-page-container h1, .landing-page-container p {
   line-height: 1;
 }
+.landing-page-container h1, .landing-page-container p {
+  text-transform: uppercase;
+}
 .landing-page-container p {
-  font-family: "Roboto-Thin";
+  font-family: "Roboto-Medium";
   font-size: clamp(1rem, 5vw, 3rem);
+  line-height: 1.375;
 }
 .landing-page-container a {
-  font-family: "Roboto-ThinItalic";
+  font-family: "Roboto-MediumItalic";
   text-decoration: underline;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
 }
 .landing-page-container a:hover {
   text-decoration: none;
