@@ -19,20 +19,20 @@ const Header = () => {
                 <NavLink to="/">
                     <span aria-hidden="true">LR</span>  
                     <span>Galerie <br/>Le Regard</span></NavLink>
-                <nav>
                     {location.pathname === "/"
                         ? undefined
                         : <>
-                            <Link inert={openedCart ? '' : undefined} to="/paintings" aria-current={location.pathname === '/paintings' ? 'page' : undefined}>Paintings</Link>
-                            <button inert={openedCart ? '' : undefined} onClick={() => openCart()} aria-label={openedCart ? "Close Cart" : "Open Cart"} aria-live="polite">
-                                Cart
-                                (<TotalProductsInCart/>)
-                            </button>
-                        </>
+                            <nav>
+                                <Link inert={openedCart ? '' : undefined} to="/paintings" aria-current={location.pathname === '/paintings' ? 'page' : undefined}>Paintings</Link>
+                                <button inert={openedCart ? '' : undefined} onClick={() => openCart()} aria-label={openedCart ? "Close Cart" : "Open Cart"} aria-live="polite">
+                                    Cart
+                                    (<TotalProductsInCart/>)
+                                </button>
+                                <CartMenu className={openedCart ? 'cart-menu-open' : 'cart-menu-closed'} onClick={() => closeCart()}/>
+                            </nav>
+                            {cartState.alert === null ? null : <p id="global-alert" key={Math.random()} aria-live="polite">{cartState.alert}</p>}
+                        </> 
                     }
-                    <CartMenu className={openedCart ? 'cart-menu-open' : 'cart-menu-closed'} onClick={() => closeCart()}/>
-                    {cartState.alert === null ? null : <p id="global-alert" key={Math.random()} aria-live="polite">{cartState.alert}</p>}
-                </nav>
             </header>
         </>
     )
