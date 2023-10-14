@@ -14,7 +14,9 @@ const Header = () => {
 
     return (
         <>
-            <div className={`click-outside ${openedCart ? "close" : ""}`} onClick={() => closeCart()}></div>
+            {location.pathname === "/" 
+                ? undefined 
+                : <div className={`click-outside ${openedCart ? "close" : ""}`} onClick={() => closeCart()}></div>}
             <header>
                 <NavLink to="/">
                     <span aria-hidden="true">LR</span>  
