@@ -209,11 +209,10 @@ body .App main {
   }
 }
 header {
-  padding: 1rem;
+  padding: clamp(0.25rem, 2.5vw, 1rem);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #111;
 }
 header a[href="/"] {
   background: #111;
@@ -241,8 +240,8 @@ header a[href="/"] span:not(:first-child) {
   padding: 0 0.25rem;
   line-height: 0.875;
   border-left: 0.25rem solid #f9f9f9;
-  font-size: 1rem;
   font-family: "Roboto-Medium";
+  font-size: 1rem;
 }
 header button {
   margin-left: 1rem;

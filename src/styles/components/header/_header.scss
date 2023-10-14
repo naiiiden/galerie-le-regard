@@ -1,11 +1,11 @@
 @import '../../variables/variables';
 
 header {
-    padding: 1rem;
+    padding: clamp(0.25rem, 2.5vw, 1rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid $black;
+    // border-bottom: 1px solid $black;
 
     a[href='/'] {
         background: $black;
@@ -33,8 +33,8 @@ header {
             padding: 0 .25rem;
             line-height: .875;
             border-left: .25rem solid $white;
-            font-size: 1rem;
             font-family: "Roboto-Medium";
+            font-size: 1rem;
         }
     }
 
