@@ -36,6 +36,11 @@ header {
             font-family: "Roboto-Medium";
             font-size: 1rem;
         }
+
+        &:focus-visible, &:active {
+            outline: 3px dashed $black;
+            outline-offset: .125rem;
+        }
     }
 
     button {

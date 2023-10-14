@@ -243,6 +243,10 @@ header a[href="/"] span:not(:first-child) {
   font-family: "Roboto-Medium";
   font-size: 1rem;
 }
+header a[href="/"]:focus-visible, header a[href="/"]:active {
+  outline: 3px dashed #111;
+  outline-offset: 0.125rem;
+}
 header button {
   margin-left: 1rem;
   border: none;
