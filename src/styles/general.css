@@ -176,6 +176,7 @@ body .App main {
   font-family: "Roboto-Black";
   font-size: clamp(3.625rem, 10vw, 10rem);
   line-height: 1;
+  letter-spacing: -0.375vw;
 }
 .landing-page-container h1, .landing-page-container p {
   text-transform: uppercase;
@@ -184,6 +185,7 @@ body .App main {
   font-family: "Roboto-Light";
   font-size: clamp(1rem, 5vw, 3rem);
   line-height: 1.375;
+  letter-spacing: -0.1875vw;
 }
 .landing-page-container a {
   font-family: "Roboto-LightItalic";
@@ -203,6 +205,7 @@ body .App main {
 @media screen and (min-width: 600px) {
   .landing-page-container p {
     font-family: "Roboto-Thin";
+    letter-spacing: -0.09375vw;
   }
   .landing-page-container a {
     font-family: "Roboto-ThinItalic";

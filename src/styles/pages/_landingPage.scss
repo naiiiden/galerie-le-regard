@@ -8,6 +8,7 @@
         font-family: "Roboto-Black";
         font-size: clamp(3.625rem, 10vw, 10rem);
         line-height: 1;
+        letter-spacing: calc(-.75vw / 2);
     }
 
     h1, p {
@@ -18,6 +19,7 @@
         font-family: "Roboto-Light";
         font-size: clamp(1rem, 5vw, 3rem);
         line-height: 1.375;
+        letter-spacing: calc(-.75vw / 4);
     }
 
     a {
@@ -42,6 +44,7 @@
     .landing-page-container {
         p {
             font-family: "Roboto-Thin";
+            letter-spacing: calc(-.75vw / 8);
         }
 
         a {
