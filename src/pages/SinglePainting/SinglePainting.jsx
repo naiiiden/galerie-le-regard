@@ -32,19 +32,26 @@ const SingleProduct = () => {
           : 
           <div className="single-painting-container">
             <div>
-              <img src={product.images[0]} alt='' style={{ width: '300px' }}/>
-              <h2>{product.name}</h2>
-              <p>{product.description}</p>
-              {product.price === null ? null : <p>Price: ${product.price}</p>}
-              {product.quantity === null ? null : <p>Quantity: {product.quantity}</p>}
-              <p>Category: {product.category}</p>
-              <button
-                onClick={() => 
-                  dispatch({ type: 'ADD_TO_CART', payload: product }, 
-                  clearAlert(dispatch)
-                )}
-                disabled={product.quantity === 0 || product.quantity === null || product.price === null ? true : false}
-              >Add to cart</button>
+              <img src={`/${product.images[0]}`} alt={product.name}/>
+              <div className="painting-information">
+                <span aria-hidden="true">{product.id}</span>
+                <h1>Title: {product.name}</h1>
+                <p>Artist: {product.artist}</p>
+                <p>Year: {product.year}</p>
+                <p>Dimensions: {product.dimensions}</p>
+                <p>Medium: {product.medium}</p>
+                <p>Location: {product.location}</p>
+                {product.price === null ? null : <p>Price: ${product.price}</p>}
+                <p>Category: {product.category}</p>
+                <p>Description: {product.description}</p>
+                <button
+                  onClick={() => 
+                    dispatch({ type: 'ADD_TO_CART', payload: product }, 
+                    clearAlert(dispatch)
+                  )}
+                  disabled={product.quantity === 0 || product.quantity === null || product.price === null ? true : false}
+                >Add to cart</button>
+              </div>
             </div>
             <div className="painting-controls-container">
               <Link to={`/paintings/${previousProduct?.category}/${previousProduct?.name}`}>previous painting</Link>
