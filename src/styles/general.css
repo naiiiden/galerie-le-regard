@@ -223,9 +223,9 @@ header button {
   background: none;
 }
 
-.logo {
+a[href="/"] {
   background: #111;
-  color: #f9f9f9 !important;
+  color: #f9f9f9;
   font-family: "Roboto-Bold";
   font-size: 1.75rem;
   display: flex;
@@ -235,22 +235,16 @@ header button {
      -moz-user-select: none;
           user-select: none;
 }
-.logo div {
-  height: 2.5rem;
-  width: 2.5rem;
-  position: relative;
-}
-.logo span, .logo div {
+a[href="/"] span {
   display: grid;
   place-content: center;
 }
-.logo span:first-child {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1, 1.25);
+a[href="/"] span:first-child {
+  height: 2.5rem;
+  width: 2.5rem;
+  transform: scale(1, 1.2875) translateY(0.25px);
 }
-.logo span:not(:first-child) {
+a[href="/"] span:not(:first-child) {
   height: 2.5rem;
   padding: 0 0.25rem;
   line-height: 0.875;
@@ -258,7 +252,7 @@ header button {
   font-family: "Roboto-Medium";
   font-size: 1rem;
 }
-.logo:focus-visible, .logo:active {
+a[href="/"]:focus-visible, a[href="/"]:active {
   outline: 3px dashed #111;
   outline-offset: 0.125rem;
 }

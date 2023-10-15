@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom"
 const Logo = () => {
   return (
     <NavLink to="/" className="logo">
-        <div aria-hidden="true"><span>LR</span></div>  
+        <span aria-hidden="true">LR</span>  
         <span>Galerie <br/>Le Regard</span>
     </NavLink>
   )
