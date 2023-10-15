@@ -235,14 +235,20 @@ header button {
      -moz-user-select: none;
           user-select: none;
 }
-.logo span {
+.logo div {
+  height: 2.5rem;
+  width: 2.5rem;
+  position: relative;
+}
+.logo span, .logo div {
   display: grid;
   place-content: center;
 }
 .logo span:first-child {
-  height: 2.5rem;
-  width: 2.5rem;
-  transform: scale(1, 1.25);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1, 1.25);
 }
 .logo span:not(:first-child) {
   height: 2.5rem;
