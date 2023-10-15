@@ -1,8 +1,9 @@
 import CartMenu from "../CartMenu/CartMenu";
 import { UseCart } from "../../context/CartContext";
-import { NavLink, Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { OpenCart } from "../../context/OpenCartContext";
 import TotalProductsInCart from "../TotalProductsInCart/TotalProductsInCart";
+import Logo from "../Logo/Logo";
 
 const Header = () => {
     const location = useLocation();
@@ -18,23 +19,21 @@ const Header = () => {
                 ? undefined 
                 : <div className={`click-outside ${openedCart ? "close" : ""}`} onClick={() => closeCart()}></div>}
             <header>
-                <NavLink to="/">
-                    <span aria-hidden="true">LR</span>  
-                    <span>Galerie <br/>Le Regard</span></NavLink>
-                    {location.pathname === "/"
-                        ? undefined
-                        : <>
-                            <nav>
-                                <Link inert={openedCart ? '' : undefined} to="/paintings" aria-current={location.pathname === '/paintings' ? 'page' : undefined}>Paintings</Link>
-                                <button inert={openedCart ? '' : undefined} onClick={() => openCart()} aria-label={openedCart ? "Close Cart" : "Open Cart"} aria-live="polite">
-                                    Cart
-                                    (<TotalProductsInCart/>)
-                                </button>
-                                <CartMenu className={openedCart ? 'cart-menu-open' : 'cart-menu-closed'} onClick={() => closeCart()}/>
-                            </nav>
-                            {cartState.alert === null ? null : <p id="global-alert" key={Math.random()} aria-live="polite">{cartState.alert}</p>}
-                        </> 
-                    }
+                <Logo/>
+                {location.pathname === "/"
+                    ? undefined
+                    : <>
+                        <nav>
+                            <Link inert={openedCart ? '' : undefined} to="/paintings" aria-current={location.pathname === '/paintings' ? 'page' : undefined}>Paintings</Link>
+                            <button inert={openedCart ? '' : undefined} onClick={() => openCart()} aria-label={openedCart ? "Close Cart" : "Open Cart"} aria-live="polite">
+                                Cart
+                                (<TotalProductsInCart/>)
+                            </button>
+                            <CartMenu className={openedCart ? 'cart-menu-open' : 'cart-menu-closed'} onClick={() => closeCart()}/>
+                        </nav>
+                        {cartState.alert === null ? null : <p id="global-alert" key={Math.random()} aria-live="polite">{cartState.alert}</p>}
+                    </> 
+                }
             </header>
         </>
     )
