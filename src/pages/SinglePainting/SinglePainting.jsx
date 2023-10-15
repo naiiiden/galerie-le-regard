@@ -31,7 +31,6 @@ const SingleProduct = () => {
           ? <div>Product not found</div> 
           : 
           <div className="single-painting-container">
-            <div>
               <img src={`/${product.images[0]}`} alt={product.name}/>
               <div className="painting-information">
                 <span aria-hidden="true">{product.id}</span>
@@ -52,7 +51,6 @@ const SingleProduct = () => {
                   disabled={product.quantity === 0 || product.quantity === null || product.price === null ? true : false}
                 >Add to cart</button>
               </div>
-            </div>
             <div className="painting-controls-container">
               <Link to={`/paintings/${previousProduct?.category}/${previousProduct?.name}`}>previous painting</Link>
               <Link to={`/paintings/${nextProduct?.category}/${nextProduct?.name}`}>next painting</Link>
