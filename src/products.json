@@ -1,13 +1,18 @@
 [
   {
     "id": 1,
-    "name": "Starry Night",
+    "name": "The Kiss (Klimt)",
+    "artist": "Gustav Klimt",
+    "year": "1907-1908",
+    "dimensions": "180 cm × 180 cm (71 in × 71 in)",
+    "location": "Österreichische Galerie Belvedere, Vienna, Austria",
     "category": "Abstract",
-    "price": null,
-    "quantity": 1,
+    "medium": "Oil and gold leaf on canvas",
     "description": "A famous abstract painting by Vincent van Gogh.",
+    "price": 85300000,
+    "quantity": 1,
     "images": [
-      "src/assets/starry_night1.jpg",
+      "src/assets/the_kiss.jpg",
       "src/assets/starry_night2.jpg",
       "src/assets/starry_night3.jpg"
     ]
