@@ -34,15 +34,15 @@ const SingleProduct = () => {
               <img src={`/${product.images[0]}`} alt={product.name}/>
               <div className="painting-information">
                 <span aria-hidden="true">{product.id}</span>
-                <h1>Title: {product.name}</h1>
-                <p>Artist: {product.artist}</p>
-                <p>Year: {product.year}</p>
-                <p>Dimensions: {product.dimensions}</p>
-                <p>Medium: {product.medium}</p>
-                <p>Location: {product.location}</p>
-                <p>Category: {product.category}</p>
-                <p>Description: {product.description}</p>
-                {product.price === null ? null : <p>Price: ${product.price}</p>}
+                <h1><span>Title:</span> {product.name}</h1>
+                <p><span>Artist:</span> {product.artist}</p>
+                <p><span>Year:</span> {product.year}</p>
+                <p><span>Dimensions:</span> {product.dimensions}</p>
+                <p><span>Medium:</span> {product.medium}</p>
+                <p><span>Location:</span> {product.location}</p>
+                <p><span>Category:</span> {product.category}</p>
+                <p><span>Description:</span> {product.description}</p>
+                {product.price === null ? null : <p><span>Price:</span> ${product.price}</p>}
                 <button
                   onClick={() => 
                     dispatch({ type: 'ADD_TO_CART', payload: product }, 
