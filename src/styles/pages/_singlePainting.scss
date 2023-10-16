@@ -11,8 +11,13 @@
         }
 
         .painting-controls-container {
-            // temporary hidden
-            display: none;
+            background: red;
+            border: 1px solid red;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 50%;
+
         }
     }
 }

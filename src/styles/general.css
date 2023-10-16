@@ -223,7 +223,12 @@ body .App main {
        object-fit: cover;
   }
   .single-painting-container .painting-controls-container {
-    display: none;
+    background: red;
+    border: 1px solid red;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 50%;
   }
 }
 header {
