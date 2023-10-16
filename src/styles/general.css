@@ -215,6 +215,13 @@ body .App main {
   padding: 0 clamp(0.25rem, 2.5vw, 1rem);
   font-size: clamp(0.75rem, 1vw, 1rem);
   text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+.painting-information p {
+  display: flex;
+}
+.painting-information p span {
+  min-width: clamp(6.25rem, 10vw, 7.5rem);
 }
 
 .painting-controls-container {
