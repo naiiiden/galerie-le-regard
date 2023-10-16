@@ -211,6 +211,12 @@ body .App main {
     font-family: "Roboto-ThinItalic";
   }
 }
+.painting-information {
+  padding: 0 clamp(0.25rem, 2.5vw, 1rem);
+  font-size: clamp(0.75rem, 1vw, 1.125rem);
+  text-transform: uppercase;
+}
+
 @media screen and (min-width: 768px) {
   .single-painting-container {
     display: flex;

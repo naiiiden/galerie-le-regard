@@ -40,9 +40,9 @@ const SingleProduct = () => {
                 <p>Dimensions: {product.dimensions}</p>
                 <p>Medium: {product.medium}</p>
                 <p>Location: {product.location}</p>
-                {product.price === null ? null : <p>Price: ${product.price}</p>}
                 <p>Category: {product.category}</p>
                 <p>Description: {product.description}</p>
+                {product.price === null ? null : <p>Price: ${product.price}</p>}
                 <button
                   onClick={() => 
                     dispatch({ type: 'ADD_TO_CART', payload: product }, 
