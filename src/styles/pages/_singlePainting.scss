@@ -1,0 +1,18 @@
+@media screen and (min-width: 768px) {
+    .single-painting-container {
+        display: flex;
+
+        img, .painting-information {
+            width: 50%;
+        }
+
+        img {
+            object-fit: cover;
+        }
+
+        .painting-controls-container {
+            // temporary hidden
+            display: none;
+        }
+    }
+}

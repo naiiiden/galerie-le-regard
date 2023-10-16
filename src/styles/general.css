@@ -211,6 +211,21 @@ body .App main {
     font-family: "Roboto-ThinItalic";
   }
 }
+@media screen and (min-width: 768px) {
+  .single-painting-container {
+    display: flex;
+  }
+  .single-painting-container img, .single-painting-container .painting-information {
+    width: 50%;
+  }
+  .single-painting-container img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .single-painting-container .painting-controls-container {
+    display: none;
+  }
+}
 header {
   padding: clamp(0.25rem, 2.5vw, 1rem);
   display: flex;
