@@ -26,17 +26,10 @@
     a {
         display: flex;
         justify-content: space-between;
+        align-items: center;
 
         &.previous-painting {
             border-right: 1px solid $black;
-        }
-
-        &.previous-painting:hover {
-            cursor: url('./../assets/west.svg'), auto;
-        }
-
-        &.next-painting {
-            cursor: url('./../assets/east.svg'), auto;
         }
 
         img {
@@ -45,23 +38,30 @@
             object-fit: cover;
         }
 
-        // .previous-painting-arrow, .next-painting-arrow {
-        //     display: block;
-        //     margin: 30px auto;
-        //     width: 25px;
-        //     height: 25px;
-        //     border-top: 2px solid #000;
-        //     border-left: 2px solid #000;
+        .arrow {
+            display: block;
+            width: 1.25rem;
+            height: 1.25rem;
+            border-top: .125rem solid $black;
+            border-left: .125rem solid $black;
 
-        //     &::after {
-        //         content: "";
-        //         display: block;
-        //         width: 2px;
-        //         height: 45px;
-        //         background-color: black;
-        //         transform: rotate(-45deg) translate(15px, 4px);
-        //     }
-        // }
+            &::after {
+                content: "";
+                display: block;
+                width: .125rem;
+                height: 3rem;
+                background: $black;
+                transform: rotate(-45deg) translate(1rem, .25rem);
+            }
+
+            &.previous-painting-arrow {
+                transform: rotate(-45deg);
+            }
+
+            &.next-painting-arrow {
+                transform: rotate(135deg);
+            }
+        }
     }
 }
 

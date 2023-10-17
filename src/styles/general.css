@@ -238,21 +238,37 @@ body .App main {
 .painting-controls-container a {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .painting-controls-container a.previous-painting {
   border-right: 1px solid #111;
-}
-.painting-controls-container a.previous-painting:hover {
-  cursor: url("./../assets/west.svg"), auto;
-}
-.painting-controls-container a.next-painting {
-  cursor: url("./../assets/east.svg"), auto;
 }
 .painting-controls-container a img {
   width: clamp(3rem, 5vw, 4rem);
   height: clamp(3rem, 5vw, 4rem);
   -o-object-fit: cover;
      object-fit: cover;
+}
+.painting-controls-container a .arrow {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-top: 0.125rem solid #111;
+  border-left: 0.125rem solid #111;
+}
+.painting-controls-container a .arrow::after {
+  content: "";
+  display: block;
+  width: 0.125rem;
+  height: 3rem;
+  background: #111;
+  transform: rotate(-45deg) translate(1rem, 0.25rem);
+}
+.painting-controls-container a .arrow.previous-painting-arrow {
+  transform: rotate(-45deg);
+}
+.painting-controls-container a .arrow.next-painting-arrow {
+  transform: rotate(135deg);
 }
 
 @media screen and (min-width: 768px) {
