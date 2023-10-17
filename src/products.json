@@ -19,13 +19,13 @@
   },
   {
     "id": 2,
-    "name": "Realism - Sunset Splendor",
+    "name": "Sunset Splendor",
     "category": "Realism",
     "price": 499.99,
     "quantity": 8,
     "description": "A mesmerizing oil painting capturing the beauty of a sunset.",
     "images": [
-      "src/assets/sunset_splendor1.jpg",
+      "src/assets/mondrian.jpeg",
       "src/assets/sunset_splendor2.jpg",
       "src/assets/sunset_splendor3.jpg"
     ]
@@ -318,13 +318,13 @@
   },
   {
     "id": 25,
-    "name": "Abstract Artwork - Ethereal Dreams",
+    "name": "Ethereal Dreams",
     "category": "Abstract",
     "price": 449.99,
     "quantity": 8,
     "description": "An abstract artwork that embodies ethereal dreams.",
     "images": [
-      "src/assets/ethereal_dreams1.jpg",
+      "src/assets/mondrian.jpeg",
       "src/assets/ethereal_dreams2.jpg",
       "src/assets/ethereal_dreams3.jpg"
     ]

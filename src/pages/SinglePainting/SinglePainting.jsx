@@ -52,8 +52,16 @@ const SingleProduct = () => {
                 >Add to cart</button>
               </div>
             <div className="painting-controls-container">
-              <Link to={`/paintings/${previousProduct?.category}/${previousProduct?.name}`}>previous painting</Link>
-              <Link to={`/paintings/${nextProduct?.category}/${nextProduct?.name}`}>next painting</Link>
+              <Link className="previous-painting" to={`/paintings/${previousProduct?.category}/${previousProduct?.name}`}>
+                <img src={`/${previousProduct.images[0]}`} alt=""/>
+                <span className="previous-painting-arrow arrow">←</span>
+                {previousProduct.name}
+              </Link>
+              <Link className="next-painting" to={`/paintings/${nextProduct?.category}/${nextProduct?.name}`}>
+                {nextProduct.name}
+                <span className="next-painting-arrow arrow">→</span>
+                <img src={`/${nextProduct.images[0]}`} alt=""/>
+              </Link>
             </div>
           </div>}
     </>
