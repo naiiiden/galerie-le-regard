@@ -242,15 +242,17 @@ body .App main {
 .painting-controls-container a.previous-painting {
   border-right: 1px solid #111;
 }
+.painting-controls-container a.previous-painting:hover {
+  cursor: url("./../assets/west.svg"), auto;
+}
+.painting-controls-container a.next-painting {
+  cursor: url("./../assets/east.svg"), auto;
+}
 .painting-controls-container a img {
   width: clamp(3rem, 5vw, 4rem);
   height: clamp(3rem, 5vw, 4rem);
   -o-object-fit: cover;
      object-fit: cover;
-}
-.painting-controls-container a .arrow {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: clamp(1.25rem, 2.5vw, 2.5rem);
 }
 
 @media screen and (min-width: 768px) {

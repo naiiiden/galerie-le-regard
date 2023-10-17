@@ -54,12 +54,12 @@ const SingleProduct = () => {
             <div className="painting-controls-container">
               <Link className="previous-painting" to={`/paintings/${previousProduct?.category}/${previousProduct?.name}`}>
                 <img src={`/${previousProduct.images[0]}`} alt=""/>
-                <span className="previous-painting-arrow arrow">←</span>
+                <div className="long-arrow-left previous-painting-arrow arrow"></div>
                 {previousProduct.name}
               </Link>
               <Link className="next-painting" to={`/paintings/${nextProduct?.category}/${nextProduct?.name}`}>
                 {nextProduct.name}
-                <span className="next-painting-arrow arrow">→</span>
+                <div className="long-arrow-right next-painting-arrow arrow"></div>
                 <img src={`/${nextProduct.images[0]}`} alt=""/>
               </Link>
             </div>
