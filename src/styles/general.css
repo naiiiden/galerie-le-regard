@@ -240,6 +240,7 @@ body .App main {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  cursor: none;
 }
 .painting-controls-container a.previous-painting {
   border-right: 1px solid #111;
@@ -256,6 +257,7 @@ body .App main {
   height: 1.25rem;
   border-top: 0.125rem solid #111;
   border-left: 0.125rem solid #111;
+  position: absolute;
 }
 .painting-controls-container a .arrow::after {
   content: "";
@@ -270,28 +272,6 @@ body .App main {
 }
 .painting-controls-container a .arrow.next-painting-arrow {
   transform: rotate(135deg);
-}
-.painting-controls-container a .arrow {
-  position: absolute;
-  transition: transform 0.3s ease;
-  transform-origin: center;
-}
-.painting-controls-container a .arrow-follow-cursor {
-  z-index: 1;
-}
-.painting-controls-container a .previous-painting .arrow {
-  /* Styles for the previous arrow */
-  width: 20px; /* Adjust as needed */
-  height: 20px; /* Adjust as needed */
-  background-color: red; /* Adjust as needed */
-  /* Other styles */
-}
-.painting-controls-container a .next-painting .arrow {
-  /* Styles for the next arrow */
-  width: 20px; /* Adjust as needed */
-  height: 20px; /* Adjust as needed */
-  background-color: blue; /* Adjust as needed */
-  /* Other styles */
 }
 
 @media screen and (min-width: 768px) {
