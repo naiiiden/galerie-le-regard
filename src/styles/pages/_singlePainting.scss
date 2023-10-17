@@ -27,6 +27,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
 
         &.previous-painting {
             border-right: 1px solid $black;
@@ -62,6 +63,32 @@
                 transform: rotate(135deg);
             }
         }
+
+        .arrow {
+            position: absolute;
+            transition: transform 0.3s ease;
+            transform-origin: center;
+          }
+          
+          .arrow-follow-cursor {
+            z-index: 1;
+          }
+          
+          .previous-painting .arrow {
+            /* Styles for the previous arrow */
+            width: 20px; /* Adjust as needed */
+            height: 20px; /* Adjust as needed */
+            background-color: red; /* Adjust as needed */
+            /* Other styles */
+          }
+          
+          .next-painting .arrow {
+            /* Styles for the next arrow */
+            width: 20px; /* Adjust as needed */
+            height: 20px; /* Adjust as needed */
+            background-color: blue; /* Adjust as needed */
+            /* Other styles */
+          }
     }
 }
 
