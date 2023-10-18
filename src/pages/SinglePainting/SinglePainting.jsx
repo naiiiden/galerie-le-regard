@@ -26,19 +26,15 @@ const SingleProduct = () => {
 
   document.title = `${product.name} | Le Regard`;
 
-  const [arrowPositionPrevious, setArrowPositionPrevious] = useState({ top: 0, left: 0, position: "relative" });
-  const [arrowPositionNext, setArrowPositionNext] = useState({ top: 0, left: 0, position: "relative" });
+  const [arrowPosition, setArrowPosition] = useState({ top: 0, left: 0 });
 
-  const updateArrowPosition = (e, setPosition) => {
+  const updateArrowPosition = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const cursorX = e.clientX - rect.left;
     const cursorY = e.clientY - rect.top;
 
-    setPosition({ top: `${cursorY}px`, left: `${cursorX}px`, position: "absolute" });
+    setArrowPosition({ top: `${cursorY}px`, left: `${cursorX}px` });
   };
-
-  const updateArrowPositionPrevious = (e) => updateArrowPosition(e, setArrowPositionPrevious);
-  const updateArrowPositionNext = (e) => updateArrowPosition(e, setArrowPositionNext);
 
   return (
     <>
@@ -66,15 +62,16 @@ const SingleProduct = () => {
                   disabled={product.quantity === 0 || product.quantity === null || product.price === null ? true : false}
                 >Add to cart</button>
               </div>
-            <div className="painting-controls-container">
-              <Link className="previous-painting" to={`/paintings/${previousProduct?.category}/${previousProduct?.name}`} onMouseMove={updateArrowPositionPrevious} onMouseLeave={() => setArrowPositionPrevious({top: 0, left: 0, position: "relative"})}>
+            <div className="painting-controls-container" onMouseMove={updateArrowPosition}>
+              <div className="previous-painting-arrow arrow" style={arrowPosition}></div>
+              <Link className="previous-painting" to={`/paintings/${previousProduct?.category}/${previousProduct?.name}`}>
                 <img src={`/${previousProduct.images[0]}`} alt=""/>
-                <div className="previous-painting-arrow arrow" style={arrowPositionPrevious}></div>
+                {/* <div className="previous-painting-arrow arrow"></div> */}
                 {previousProduct.name}
               </Link>
-              <Link className="next-painting" to={`/paintings/${nextProduct?.category}/${nextProduct?.name}`} onMouseMove={updateArrowPositionNext} onMouseLeave={() => setArrowPositionNext({top: 0, left: 0, position: "relative"})}>
+              <Link className="next-painting" to={`/paintings/${nextProduct?.category}/${nextProduct?.name}`}>
                 {nextProduct.name}
-                <div className="next-painting-arrow arrow" style={arrowPositionNext}></div>
+                {/* <div className="next-painting-arrow arrow"></div> */}
                 <img src={`/${nextProduct.images[0]}`} alt=""/>
               </Link>
             </div>

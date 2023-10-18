@@ -251,15 +251,15 @@ body .App main {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.painting-controls-container a .arrow {
+.painting-controls-container .arrow {
   display: block;
   width: 1.25rem;
   height: 1.25rem;
   border-top: 0.125rem solid #111;
   border-left: 0.125rem solid #111;
-  position: relative;
+  position: absolute;
 }
-.painting-controls-container a .arrow::after {
+.painting-controls-container .arrow::after {
   content: "";
   display: block;
   width: 0.125rem;
@@ -267,10 +267,10 @@ body .App main {
   background: #111;
   transform: rotate(-45deg) translate(1rem, 0.25rem);
 }
-.painting-controls-container a .arrow.previous-painting-arrow {
+.painting-controls-container .arrow.previous-painting-arrow {
   transform: rotate(-45deg);
 }
-.painting-controls-container a .arrow.next-painting-arrow {
+.painting-controls-container .arrow.next-painting-arrow {
   transform: rotate(135deg);
 }
 
