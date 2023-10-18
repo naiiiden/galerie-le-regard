@@ -270,12 +270,6 @@ body .App main {
   background: #111;
   transform: rotate(-45deg) translate(1rem, 0.25rem);
 }
-.painting-controls-container .arrow.previous-painting-arrow {
-  transform: rotate(-45deg);
-}
-.painting-controls-container .arrow.next-painting-arrow {
-  transform: rotate(135deg);
-}
 
 @media screen and (min-width: 768px) {
   .single-painting-container {
