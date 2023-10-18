@@ -29,37 +29,16 @@ const SingleProduct = () => {
   const [arrowPositionPrevious, setArrowPositionPrevious] = useState({ top: 0, left: 0, position: "relative" });
   const [arrowPositionNext, setArrowPositionNext] = useState({ top: 0, left: 0, position: "relative" });
 
-  const updateArrowPositionPrevious = (e) => {
-    const container = e.currentTarget;
-    const rect = container.getBoundingClientRect();
-  
+  const updateArrowPosition = (e, setPosition) => {
+    const rect = e.currentTarget.getBoundingClientRect();
     const cursorX = e.clientX - rect.left;
     const cursorY = e.clientY - rect.top;
-    
-    const arrowPositionPrevious = {
-      top: cursorY + 'px',
-      left: cursorX + 'px',
-      position: "absolute",
-    };
-  
-    setArrowPositionPrevious(arrowPositionPrevious);
+
+    setPosition({ top: `${cursorY}px`, left: `${cursorX}px`, position: "absolute" });
   };
 
-  const updateArrowPositionNext = (e) => {
-    const container = e.currentTarget;
-    const rect = container.getBoundingClientRect();
-  
-    const cursorX = e.clientX - rect.left;
-    const cursorY = e.clientY - rect.top;
-  
-    const arrowPositionNext = {
-      top: cursorY + 'px',
-      left: cursorX + 'px',
-      position: "absolute",
-    };
-  
-    setArrowPositionNext(arrowPositionNext);
-  };
+  const updateArrowPositionPrevious = (e) => updateArrowPosition(e, setArrowPositionPrevious);
+  const updateArrowPositionNext = (e) => updateArrowPosition(e, setArrowPositionNext);
 
   return (
     <>
