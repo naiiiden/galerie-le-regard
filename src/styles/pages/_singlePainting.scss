@@ -47,7 +47,10 @@
         height: 1.25rem;
         border-top: .125rem solid $black;
         border-left: .125rem solid $black;
-        position: absolute;
+        
+        &.cursor-arrow {
+            position: absolute;
+        }
 
         &::after {
             content: "";

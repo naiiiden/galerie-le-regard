@@ -27,6 +27,7 @@ const SingleProduct = () => {
   document.title = `${product.name} | Le Regard`;
 
   const [arrowPosition, setArrowPosition] = useState({ top: 0, left: 0 });
+  const [hideDecArrows, setHideDecArrows] = useState(true);
 
   const updateArrowPosition = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -62,16 +63,16 @@ const SingleProduct = () => {
                   disabled={product.quantity === 0 || product.quantity === null || product.price === null ? true : false}
                 >Add to cart</button>
               </div>
-            <div className="painting-controls-container" onMouseMove={updateArrowPosition}>
-              <div className="previous-painting-arrow arrow" style={arrowPosition}></div>
+            <div className="painting-controls-container" onMouseMove={updateArrowPosition} onMouseEnter={() => setHideDecArrows(false)} onMouseLeave={() => setHideDecArrows(true)}>
+              {/* <div className="cursor-arrow arrow" style={arrowPosition}></div> */}
               <Link className="previous-painting" to={`/paintings/${previousProduct?.category}/${previousProduct?.name}`}>
                 <img src={`/${previousProduct.images[0]}`} alt=""/>
-                {/* <div className="previous-painting-arrow arrow"></div> */}
+                <div className="previous-painting-arrow arrow" style={{ display: !hideDecArrows ? "none" : "unset" }}></div>
                 {previousProduct.name}
               </Link>
               <Link className="next-painting" to={`/paintings/${nextProduct?.category}/${nextProduct?.name}`}>
                 {nextProduct.name}
-                {/* <div className="next-painting-arrow arrow"></div> */}
+                <div className="next-painting-arrow arrow" style={{ display: !hideDecArrows ? "none" : "unset" }}></div>
                 <img src={`/${nextProduct.images[0]}`} alt=""/>
               </Link>
             </div>
