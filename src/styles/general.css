@@ -254,24 +254,25 @@ body .App main {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.painting-controls-container .arrow {
-  display: block;
-  width: 1.25rem;
-  height: 1.25rem;
-  border-top: 0.125rem solid #111;
-  border-left: 0.125rem solid #111;
-}
-.painting-controls-container .arrow.cursor-arrow {
-  position: absolute;
-  transition: transform 0.2s;
-}
-.painting-controls-container .arrow::after {
-  content: "";
-  display: block;
-  width: 0.125rem;
-  height: 3rem;
-  background: #111;
-  transform: rotate(-45deg) translate(1rem, 0.25rem);
+@media (pointer: fine) {
+  .painting-controls-container .arrow {
+    width: 1.25rem;
+    height: 1.25rem;
+    border-top: 0.125rem solid #111;
+    border-left: 0.125rem solid #111;
+  }
+  .painting-controls-container .arrow.cursor-arrow {
+    position: absolute;
+    transition: transform 0.2s;
+  }
+  .painting-controls-container .arrow::after {
+    content: "";
+    display: block;
+    width: 0.125rem;
+    height: 3rem;
+    background: #111;
+    transform: rotate(-45deg) translate(1rem, 0.25rem);
+  }
 }
 
 @media screen and (min-width: 768px) {

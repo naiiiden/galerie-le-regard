@@ -45,33 +45,34 @@
         }
     }
 
-    a:active ~ .arrow {
-        &::after {
-            // height: 5rem;
-            // transform: rotate(-45deg) translate(1.725rem, .5rem);
-            // transition: height .1s;
+    @media (pointer: fine) {
+        a:active ~ .arrow {
+            &::after {
+                // height: 5rem;
+                // transform: rotate(-45deg) translate(1.725rem, .5rem);
+                // transition: height .1s;
+            }
         }
-    }
-
-    .arrow {
-        display: block;
-        width: 1.25rem;
-        height: 1.25rem;
-        border-top: .125rem solid $black;
-        border-left: .125rem solid $black;
-        
-        &.cursor-arrow {
-            position: absolute;
-            transition: transform .2s;
-        }
-
-        &::after {
-            content: "";
-            display: block;
-            width: .125rem;
-            height: 3rem;
-            background: $black;
-            transform: rotate(-45deg) translate(1rem, .25rem);
+    
+        .arrow {
+            width: 1.25rem;
+            height: 1.25rem;
+            border-top: .125rem solid $black;
+            border-left: .125rem solid $black;
+            
+            &.cursor-arrow {
+                position: absolute;
+                transition: transform .2s;
+            }
+    
+            &::after {
+                content: "";
+                display: block;
+                width: .125rem;
+                height: 3rem;
+                background: $black;
+                transform: rotate(-45deg) translate(1rem, .25rem);
+            }
         }
     }
 }
