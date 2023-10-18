@@ -30,6 +30,10 @@
         position: relative;
         cursor: none;
 
+        span {
+            flex-grow: 1;
+        }
+
         &.previous-painting {
             border-right: 1px solid $black;
         }

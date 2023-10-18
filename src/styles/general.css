@@ -242,6 +242,9 @@ body .App main {
   position: relative;
   cursor: none;
 }
+.painting-controls-container a span {
+  flex-grow: 1;
+}
 .painting-controls-container a.previous-painting {
   border-right: 1px solid #111;
 }

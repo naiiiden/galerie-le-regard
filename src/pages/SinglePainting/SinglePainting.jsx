@@ -26,7 +26,7 @@ const SingleProduct = () => {
 
   document.title = `${product.name} | Le Regard`;
 
-  const [arrowPosition, setArrowPosition] = useState({ top: 0, left: 0, transform: "unset" });
+  const [arrowPosition, setArrowPosition] = useState({ top: 0, left: 0, transform: "rotate(45deg)" });
   const [hideDecArrows, setHideDecArrows] = useState(true);
   const [arrowTransform, setArrowTransform] = useState('none');
 
@@ -67,10 +67,10 @@ const SingleProduct = () => {
             <div className="painting-controls-container" onMouseMove={updateArrowPosition} onMouseEnter={() => setHideDecArrows(false)} onMouseLeave={() => setHideDecArrows(true)}>
               <Link className="previous-painting" to={`/paintings/${previousProduct?.category}/${previousProduct?.name}`} onMouseEnter={() => setArrowTransform("rotate(-45deg)")}>
                 <img src={`/${previousProduct.images[0]}`} alt=""/>
-                {previousProduct.name}
+                <span>{previousProduct.name}</span>
               </Link>
               <Link className="next-painting" to={`/paintings/${nextProduct?.category}/${nextProduct?.name}`} onMouseEnter={() => setArrowTransform("rotate(135deg)")}>
-                {nextProduct.name}
+                <span>{nextProduct.name}</span>
                 <img src={`/${nextProduct.images[0]}`} alt=""/>
               </Link>
               <div className="cursor-arrow arrow" style={{ ...arrowPosition, transform: arrowTransform, display: hideDecArrows ? "none" : "unset" }}></div>
