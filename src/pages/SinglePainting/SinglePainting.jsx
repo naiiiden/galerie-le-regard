@@ -35,7 +35,7 @@ const SingleProduct = () => {
     const cursorX = e.clientX - rect.left;
     const cursorY = e.clientY - rect.top;
 
-    setArrowPosition({ ...arrowPosition, top: `${cursorY}px`, left: `${cursorX}px` });
+    setArrowPosition({ top: `${cursorY}px`, left: `${cursorX}px` });
   };
 
   return (
@@ -65,7 +65,7 @@ const SingleProduct = () => {
                 >Add to cart</button>
               </div>
             <div className="painting-controls-container" onMouseMove={updateArrowPosition} onMouseEnter={() => setHideDecArrows(false)} onMouseLeave={() => setHideDecArrows(true)}>
-              <div className="cursor-arrow arrow" style={{ ...arrowPosition, transform: arrowTransform }}></div>
+              <div className="cursor-arrow arrow" style={{ ...arrowPosition, transform: arrowTransform, display: hideDecArrows ? "none" : "unset" }}></div>
               <Link className="previous-painting" to={`/paintings/${previousProduct?.category}/${previousProduct?.name}`} onMouseEnter={() => setArrowTransform("rotate(-45deg)")}>
                 <img src={`/${previousProduct.images[0]}`} alt=""/>
                 <div className="previous-painting-arrow arrow" style={{ display: !hideDecArrows ? "none" : "unset" }}></div>
