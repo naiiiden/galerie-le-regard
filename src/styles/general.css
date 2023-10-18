@@ -257,7 +257,7 @@ body .App main {
   height: 1.25rem;
   border-top: 0.125rem solid #111;
   border-left: 0.125rem solid #111;
-  position: absolute;
+  position: relative;
 }
 .painting-controls-container a .arrow::after {
   content: "";

@@ -46,7 +46,7 @@
             height: 1.25rem;
             border-top: .125rem solid $black;
             border-left: .125rem solid $black;
-            position: absolute;
+            position: relative;
 
             &::after {
                 content: "";
