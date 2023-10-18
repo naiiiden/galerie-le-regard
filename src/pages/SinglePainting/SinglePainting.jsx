@@ -26,9 +26,8 @@ const SingleProduct = () => {
 
   document.title = `${product.name} | Le Regard`;
 
-  const [arrowPosition, setArrowPosition] = useState({ top: 0, left: 0, transform: "rotate(45deg)" });
-  const [hideDecArrows, setHideDecArrows] = useState(true);
-  const [arrowTransform, setArrowTransform] = useState('none');
+  const [arrowPosition, setArrowPosition] = useState({ top: 0, left: 0 });
+  const [showCursorAndDirection, setShowCursorAndDirection] = useState({ transform: "rotate(45deg)", display: "none" });
 
   const updateArrowPosition = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -64,16 +63,16 @@ const SingleProduct = () => {
                   disabled={product.quantity === 0 || product.quantity === null || product.price === null ? true : false}
                 >Add to cart</button>
               </div>
-            <div className="painting-controls-container" onMouseMove={updateArrowPosition} onMouseEnter={() => setHideDecArrows(false)} onMouseLeave={() => setHideDecArrows(true)}>
-              <Link className="previous-painting" to={`/paintings/${previousProduct?.category}/${previousProduct?.name}`} onMouseEnter={() => setArrowTransform("rotate(-45deg)")}>
+            <div className="painting-controls-container" onMouseMove={updateArrowPosition} onMouseEnter={() => setShowCursorAndDirection({ ...showCursorAndDirection, display: "unset" })} onMouseLeave={() => setShowCursorAndDirection({ ...showCursorAndDirection, display: "none" })}>
+              <Link className="previous-painting" to={`/paintings/${previousProduct?.category}/${previousProduct?.name}`} onMouseEnter={() => setShowCursorAndDirection({ ...showCursorAndDirection, transform: "rotate(-45deg)"})}>
                 <img src={`/${previousProduct.images[0]}`} alt=""/>
                 <span>{previousProduct.name}</span>
               </Link>
-              <Link className="next-painting" to={`/paintings/${nextProduct?.category}/${nextProduct?.name}`} onMouseEnter={() => setArrowTransform("rotate(135deg)")}>
+              <Link className="next-painting" to={`/paintings/${nextProduct?.category}/${nextProduct?.name}`} onMouseEnter={() => setShowCursorAndDirection({ ...showCursorAndDirection, transform: "rotate(135deg)"})}>
                 <span>{nextProduct.name}</span>
                 <img src={`/${nextProduct.images[0]}`} alt=""/>
               </Link>
-              <div className="cursor-arrow arrow" style={{ ...arrowPosition, transform: arrowTransform, display: hideDecArrows ? "none" : "unset" }}></div>
+              <div className="cursor-arrow arrow" style={{ ...arrowPosition, ...showCursorAndDirection }}></div>
             </div>
           </div>}
     </>
