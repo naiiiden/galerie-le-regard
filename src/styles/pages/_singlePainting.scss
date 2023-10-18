@@ -50,6 +50,7 @@
         
         &.cursor-arrow {
             position: absolute;
+            transition: transform .2s;
         }
 
         &::after {

@@ -260,6 +260,7 @@ body .App main {
 }
 .painting-controls-container .arrow.cursor-arrow {
   position: absolute;
+  transition: transform 0.2s;
 }
 .painting-controls-container .arrow::after {
   content: "";
