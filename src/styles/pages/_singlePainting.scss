@@ -14,7 +14,6 @@
 }
 
 .painting-controls-container {
-    border-top: 1px solid $black;
     position: fixed;
     inset: auto 0 0 0;
     display: grid;
@@ -22,6 +21,7 @@
     text-align: center;
     font-size: clamp(.75rem, 1vw, 1rem);
     backdrop-filter: blur(.125rem);
+    border-top: 1px solid $black;
 
     a {
         display: flex;
@@ -32,6 +32,7 @@
 
         span {
             flex-grow: 1;
+            transition: .2s;
         }
 
         &.previous-painting {
@@ -43,17 +44,40 @@
             height: clamp(3rem, 5vw, 4rem);
             object-fit: cover;
         }
-    }
 
-    @media (pointer: fine) {
-        a:active ~ .arrow {
+        &:active, &:focus-within {
+            outline: none;
+            position: relative;
+            
+            &::before, &::after {
+                position: absolute;
+                content: "";
+                border: 2px dashed $black;
+            }
+
+            &::before {
+                top: 0;
+                bottom: 0;
+                right: 0;
+            }
+            
             &::after {
-                // height: 5rem;
-                // transform: rotate(-45deg) translate(1.725rem, .5rem);
-                // transition: height .1s;
+                width: 100%;
+                top: -.375rem;
+            }            
+        }
+
+        &.next-painting {
+            &:active, &:focus-within {
+                &::before {
+                    left: 0;
+                    right: unset;
+                }
             }
         }
-    
+    }
+
+    @media (pointer: fine) {    
         .arrow {
             width: 1.25rem;
             height: 1.25rem;

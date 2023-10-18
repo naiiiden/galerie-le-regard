@@ -225,7 +225,6 @@ body .App main {
 }
 
 .painting-controls-container {
-  border-top: 1px solid #111;
   position: fixed;
   inset: auto 0 0 0;
   display: grid;
@@ -234,6 +233,7 @@ body .App main {
   font-size: clamp(0.75rem, 1vw, 1rem);
   -webkit-backdrop-filter: blur(0.125rem);
           backdrop-filter: blur(0.125rem);
+  border-top: 1px solid #111;
 }
 .painting-controls-container a {
   display: flex;
@@ -244,6 +244,7 @@ body .App main {
 }
 .painting-controls-container a span {
   flex-grow: 1;
+  transition: 0.2s;
 }
 .painting-controls-container a.previous-painting {
   border-right: 1px solid #111;
@@ -253,6 +254,28 @@ body .App main {
   height: clamp(3rem, 5vw, 4rem);
   -o-object-fit: cover;
      object-fit: cover;
+}
+.painting-controls-container a:active, .painting-controls-container a:focus-within {
+  outline: none;
+  position: relative;
+}
+.painting-controls-container a:active::before, .painting-controls-container a:active::after, .painting-controls-container a:focus-within::before, .painting-controls-container a:focus-within::after {
+  position: absolute;
+  content: "";
+  border: 2px dashed #111;
+}
+.painting-controls-container a:active::before, .painting-controls-container a:focus-within::before {
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+.painting-controls-container a:active::after, .painting-controls-container a:focus-within::after {
+  width: 100%;
+  top: -0.375rem;
+}
+.painting-controls-container a.next-painting:active::before, .painting-controls-container a.next-painting:focus-within::before {
+  left: 0;
+  right: unset;
 }
 @media (pointer: fine) {
   .painting-controls-container .arrow {
