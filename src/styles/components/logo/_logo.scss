@@ -33,4 +33,14 @@ a[href='/'] {
         outline: 3px dashed $black;
         outline-offset: .125rem;
     }
+
+    &.opacity {
+        opacity: .5;
+        transition: opacity .2s;
+
+        &:focus-visible, &:active, &:hover {
+            opacity: 1;
+            transition: opacity .2s;
+        }
+    }
 }

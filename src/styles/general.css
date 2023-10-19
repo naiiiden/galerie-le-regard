@@ -392,6 +392,14 @@ a[href="/"]:focus-visible, a[href="/"]:active {
   outline: 3px dashed #111;
   outline-offset: 0.125rem;
 }
+a[href="/"].opacity {
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+a[href="/"].opacity:focus-visible, a[href="/"].opacity:active, a[href="/"].opacity:hover {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
 
 .click-outside.close {
   background: transparent;
