@@ -53,7 +53,7 @@ const SingleProduct = () => {
                   <p className="painting-medium"><span>Medium:</span> {product.medium}</p>
                   <p className="painting-location"><span>Location:</span> {product.location}</p>
                   <p className="painting-category"><span>Category:</span> {product.category}</p>
-                  <p className="painting-description"><span>Description:</span> {product.description}</p>
+                  <p className="painting-description"><span>Description:</span> <div>{product.description}</div></p>
                   {product.price === null ? null : <p><span>Price:</span> ${product.price}</p>}
                   <button
                     onClick={() => 
