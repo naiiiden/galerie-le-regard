@@ -43,7 +43,7 @@ const SingleProduct = () => {
           ? <div>Product not found</div> 
           : 
           <div className="single-painting-container">
-              <img src={`/${product.images[0]}`} alt={product.name}/>
+              <img className="painting-image" src={`/${product.images[0]}`} alt={product.name}/>
               <div className="painting-information">
                 <h1><span>Title:</span> {product.name}</h1>
                 <p className="painting-artist"><span>Artist:</span> {product.artist}</p>
@@ -53,14 +53,14 @@ const SingleProduct = () => {
                 <p className="painting-location"><span>Location:</span> {product.location}</p>
                 <p className="painting-category"><span>Category:</span> {product.category}</p>
                 <p className="painting-description"><span>Description:</span> {product.description}</p>
-                {/* {product.price === null ? null : <p><span>Price:</span> ${product.price}</p>} */}
-                {/* <button
+                {product.price === null ? null : <p><span>Price:</span> ${product.price}</p>}
+                <button
                   onClick={() => 
                     dispatch({ type: 'ADD_TO_CART', payload: product }, 
                     clearAlert(dispatch)
                   )}
                   disabled={product.quantity === 0 || product.quantity === null || product.price === null ? true : false}
-                >Add to cart</button> */}
+                >Add to cart</button>
               </div>
             <div className="painting-controls-container" onMouseMove={updateArrowPosition} onMouseEnter={() => setShowCursorAndDirection({ ...showCursorAndDirection, display: "unset" })} onMouseLeave={() => setShowCursorAndDirection({ ...showCursorAndDirection, display: "none" })}>
               <Link className="previous-painting" to={`/paintings/${previousProduct?.category}/${previousProduct?.name}`} onMouseEnter={() => setShowCursorAndDirection({ ...showCursorAndDirection, transform: "rotate(-45deg)"})}>

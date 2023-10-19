@@ -311,9 +311,15 @@ body .App main {
   .single-painting-container img, .single-painting-container .painting-information {
     width: 50%;
   }
+  .single-painting-container .painting-image {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    height: 100vh;
+  }
   .single-painting-container .painting-information {
     padding: 0 clamp(0.25rem, 2.5vw, 1rem);
-    max-width: 500px;
+    margin-left: auto;
   }
   .single-painting-container img {
     -o-object-fit: cover;
