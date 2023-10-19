@@ -211,6 +211,12 @@ body .App main {
     font-family: "Roboto-ThinItalic";
   }
 }
+.painting-image {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
 .painting-information {
   padding: clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem) 0 clamp(0.25rem, 2.5vw, 1rem);
   font-size: clamp(0.75rem, 1vw, 0.9375rem);
