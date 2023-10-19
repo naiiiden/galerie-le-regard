@@ -10,7 +10,6 @@
 
     p {
         display: flex;
-        max-width: 500px;
 
         &.painting-artist, &.painting-dimensions, &.painting-location, &.painting-description {
             margin-top: 1.5rem;
@@ -120,6 +119,7 @@
 
         .painting-information {
             padding: 0 clamp(0.25rem, 2.5vw, 1rem);
+            max-width: 500px;
         }
 
         img {
