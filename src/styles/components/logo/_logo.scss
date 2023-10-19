@@ -1,35 +1,36 @@
 a[href='/'] {
+    color: $white;
+    font-family: "Roboto-Bold";        
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    gap: 4px;
+    user-select: none;
+    overflow: hidden;
+
+    span {
+        display: grid;
+        place-content: center;
         background: $black;
-        color: $white;
-        font-family: "Roboto-Bold";        
-        font-size: 1.75rem;
-        display: flex;
-        align-items: center;
-        line-height: 1;
-        user-select: none;
-
-        span {
-            display: grid;
-            place-content: center;
-        }
-
-        span:first-child {
-            height: 2.5rem;
-            width: 2.5rem;
-            transform: scale(1, 1.2875) translateY(.25px);
-        }
-
-        span:not(:first-child) {
-            height: 2.5rem;
-            padding: 0 .25rem;
-            line-height: .875;
-            border-left: .25rem solid $white;
-            font-family: "Roboto-Medium";
-            font-size: 1rem;
-        }
-
-        &:focus-visible, &:active {
-            outline: 3px dashed $black;
-            outline-offset: .125rem;
-        }
     }
+
+    span:first-child {
+        height: 2.5rem;
+        width: 2.5rem;
+        transform: scale(1, 1.2875) translateY(.25px);
+    }
+
+    span:not(:first-child) {
+        height: 2.5rem;
+        padding: 0 .25rem;
+        line-height: .875;
+        font-family: "Roboto-Medium";
+        font-size: 1rem;
+    }
+
+    &:focus-visible, &:active {
+        outline: 3px dashed $black;
+        outline-offset: .125rem;
+    }
+}
