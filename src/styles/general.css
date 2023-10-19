@@ -216,8 +216,16 @@ body .App main {
   font-size: clamp(0.75rem, 1vw, 0.9375rem);
   margin-bottom: 3rem;
 }
+.painting-information h1 {
+  font-family: "Roboto-Thin";
+  font-size: clamp(1.5rem, 3vw, 1.75rem);
+}
 .painting-information p {
   display: flex;
+  max-width: 500px;
+}
+.painting-information p.painting-artist, .painting-information p.painting-dimensions, .painting-information p.painting-location, .painting-information p.painting-description {
+  margin-top: 1.5rem;
 }
 .painting-information p span {
   min-width: clamp(6.25rem, 10vw, 7.5rem);
