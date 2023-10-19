@@ -21,6 +21,10 @@
 
         span {
             min-width: clamp(6.25rem, 10vw, 7.5rem);
+        
+            &:nth-child(2) {
+                min-width: unset;
+            }
         }
     }
 }

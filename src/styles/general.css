@@ -235,6 +235,9 @@ body .App main {
 .painting-information p span {
   min-width: clamp(6.25rem, 10vw, 7.5rem);
 }
+.painting-information p span:nth-child(2) {
+  min-width: unset;
+}
 
 .painting-controls-container {
   position: fixed;

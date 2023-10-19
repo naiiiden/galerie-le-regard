@@ -43,17 +43,17 @@ const SingleProduct = () => {
           ? <div>Product not found</div> 
           : 
           <div className="single-painting-container">
-              <img className="painting-image" src={`/${product.images[0]}`} alt={product.name}/>
+              <img className="painting-image" src={`/${product.images[0]}`} aria-labelledby="painting-title"/>
               <div className="painting-information">
                 <div className="painting-information-inner-wrapper">
-                  <h1><span>Title:</span> {product.name}</h1>
-                  <p className="painting-artist"><span>Artist:</span> {product.artist}</p>
-                  <p className="painting-year"><span>Year:</span> {product.year}</p>
-                  <p className="painting-dimensions"><span>Dimensions:</span> {product.dimensions}</p>
-                  <p className="painting-medium"><span>Medium:</span> {product.medium}</p>
-                  <p className="painting-location"><span>Location:</span> {product.location}</p>
-                  <p className="painting-category"><span>Category:</span> {product.category}</p>
-                  <p className="painting-description"><span>Description:</span> <div>{product.description}</div></p>
+                  <h1 id="painting-title">{product.name}</h1>
+                  {product.artist && <p className="painting-artist"><span>Artist:</span> {product.artist}</p>}
+                  {product.year && <p className="painting-year"><span>Year:</span> {product.year}</p>}
+                  {product.dimensions && <p className="painting-dimensions"><span>Dimensions:</span> {product.dimensions}</p>}
+                  {product.medium && <p className="painting-medium"><span>Medium:</span> {product.medium}</p>}
+                  {product.location && <p className="painting-location"><span>Location:</span> {product.location}</p>}
+                  {product.category && <p className="painting-category"><span>Category:</span> {product.category}</p>}
+                  {product.description && <p className="painting-description"><span>Description:</span> <span>{product.description}</span></p>}
                   {product.price === null ? null : <p><span>Price:</span> ${product.price}</p>}
                   <button
                     onClick={() => 
