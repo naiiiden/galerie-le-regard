@@ -1,7 +1,6 @@
 .painting-information {
-    padding: 0 clamp(0.25rem, 2.5vw, 1rem);
-    font-size: clamp(.75rem, 1vw, 1rem);
-    text-transform: uppercase;
+    padding: clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem) 0 clamp(0.25rem, 2.5vw, 1rem);
+    font-size: clamp(.75rem, 1vw, .9375rem);
     margin-bottom: 3rem;
 
     p {
@@ -107,6 +106,10 @@
 
         img, .painting-information {
             width: 50%;
+        }
+
+        .painting-information {
+            padding: 0 clamp(0.25rem, 2.5vw, 1rem);
         }
 
         img {

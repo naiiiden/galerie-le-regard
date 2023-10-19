@@ -45,7 +45,6 @@ const SingleProduct = () => {
           <div className="single-painting-container">
               <img src={`/${product.images[0]}`} alt={product.name}/>
               <div className="painting-information">
-                <span aria-hidden="true">{product.id}</span>
                 <h1><span>Title:</span> {product.name}</h1>
                 <p><span>Artist:</span> {product.artist}</p>
                 <p><span>Year:</span> {product.year}</p>
