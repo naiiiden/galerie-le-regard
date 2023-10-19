@@ -307,6 +307,7 @@ body .App main {
 @media screen and (min-width: 768px) {
   .single-painting-container {
     display: flex;
+    width: 100%;
   }
   .single-painting-container img, .single-painting-container .painting-information {
     width: 50%;
@@ -320,6 +321,9 @@ body .App main {
   .single-painting-container .painting-information {
     padding: 0 clamp(0.25rem, 2.5vw, 1rem);
     margin-left: auto;
+  }
+  .single-painting-container .painting-information .painting-information-inner-wrapper {
+    max-width: 500px;
   }
   .single-painting-container img {
     -o-object-fit: cover;
