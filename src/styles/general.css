@@ -365,7 +365,7 @@ body .App main {
 }
 @media screen and (min-width: 768px) and (max-height: 700px) {
   .overflow-wrapper {
-    max-height: 400px;
+    max-height: 300px;
     overflow: scroll;
   }
 }
