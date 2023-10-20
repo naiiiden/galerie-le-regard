@@ -219,7 +219,7 @@ body .App main {
 
 .painting-information {
   padding: clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem) 0 clamp(0.25rem, 2.5vw, 1rem);
-  font-size: clamp(0.75rem, 1vw, 0.9375rem);
+  font-size: clamp(0.75rem, 1vw, 1rem);
   margin-bottom: 3.875rem;
 }
 .painting-information h1 {
@@ -234,9 +234,11 @@ body .App main {
 }
 .painting-information p span {
   min-width: clamp(6.25rem, 10vw, 7.5rem);
+  font-family: "Roboto-Medium";
 }
 .painting-information p span:nth-child(2) {
   min-width: unset;
+  font-family: "Roboto-Regular";
 }
 .painting-information .painting-button-price-wrapper {
   margin-top: 1.5rem;
