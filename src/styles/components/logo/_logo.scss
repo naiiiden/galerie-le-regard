@@ -1,6 +1,6 @@
 a[href='/'] {
     color: $white;
-    font-family: "Roboto-Bold";        
+    font-family: "Roboto-Bold", Helvetica;        
     font-size: 1.75rem;
     display: flex;
     align-items: center;
@@ -25,7 +25,7 @@ a[href='/'] {
         height: 2.5rem;
         padding: 0 .25rem;
         line-height: .875;
-        font-family: "Roboto-Medium";
+        font-family: "Roboto-Medium", Helvetica;
         font-size: 1rem;
     }
 

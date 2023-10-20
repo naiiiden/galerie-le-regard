@@ -8,7 +8,7 @@
     margin-bottom: 3.875rem;
 
     h1 {
-        font-family: "Roboto-Thin";
+        font-family: "Roboto-Thin", Helvetica;
         font-size: clamp(1.5rem, 3vw, 1.75rem);
     }
 
@@ -21,11 +21,11 @@
 
         span {
             min-width: clamp(6.25rem, 10vw, 7.5rem);
-            font-family: "Roboto-Medium";
+            font-family: "Roboto-Medium", Helvetica;
         
             &:nth-child(2) {
                 min-width: unset;
-                font-family: "Roboto-Regular";
+                font-family: "Roboto-Regular", Helvetica;
             }
         }
     }

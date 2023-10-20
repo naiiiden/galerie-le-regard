@@ -5,7 +5,7 @@
     padding: 0 clamp(.25rem, 2.5vw, 1rem);
 
     h1 {
-        font-family: "Roboto-Black";
+        font-family: "Roboto-Black", Helvetica;
         font-size: clamp(3.625rem, 10vw, 10rem);
         line-height: 1;
         letter-spacing: calc(-.75vw / 2);
@@ -16,14 +16,14 @@
     }
     
     p {
-        font-family: "Roboto-Light";
+        font-family: "Roboto-Light", Helvetica;
         font-size: clamp(1rem, 5vw, 3rem);
         line-height: 1.375;
         letter-spacing: calc(-.75vw / 4);
     }
 
     a {
-        font-family: "Roboto-LightItalic";
+        font-family: "Roboto-LightItalic", Helvetica;
         text-decoration: underline;
         display: inline-block;
 
@@ -43,12 +43,12 @@
 @media screen and (min-width: 600px) {
     .landing-page-container {
         p {
-            font-family: "Roboto-Thin";
+            font-family: "Roboto-Thin", Helvetica;
             letter-spacing: calc(-.75vw / 8);
         }
 
         a {
-            font-family: "Roboto-ThinItalic";
+            font-family: "Roboto-ThinItalic", Helvetica;
         }
     }
 }

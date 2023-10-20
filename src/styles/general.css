@@ -125,7 +125,7 @@ html {
 body {
   background: #f9f9f9;
   color: #111;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto-Regular", Helvetica;
   font-size: 1.25rem;
 }
 body .App {
@@ -173,7 +173,7 @@ body .App main {
   padding: 0 clamp(0.25rem, 2.5vw, 1rem);
 }
 .landing-page-container h1 {
-  font-family: "Roboto-Black";
+  font-family: "Roboto-Black", Helvetica;
   font-size: clamp(3.625rem, 10vw, 10rem);
   line-height: 1;
   letter-spacing: -0.375vw;
@@ -182,13 +182,13 @@ body .App main {
   text-transform: uppercase;
 }
 .landing-page-container p {
-  font-family: "Roboto-Light";
+  font-family: "Roboto-Light", Helvetica;
   font-size: clamp(1rem, 5vw, 3rem);
   line-height: 1.375;
   letter-spacing: -0.1875vw;
 }
 .landing-page-container a {
-  font-family: "Roboto-LightItalic";
+  font-family: "Roboto-LightItalic", Helvetica;
   text-decoration: underline;
   display: inline-block;
 }
@@ -204,11 +204,11 @@ body .App main {
 
 @media screen and (min-width: 600px) {
   .landing-page-container p {
-    font-family: "Roboto-Thin";
+    font-family: "Roboto-Thin", Helvetica;
     letter-spacing: -0.09375vw;
   }
   .landing-page-container a {
-    font-family: "Roboto-ThinItalic";
+    font-family: "Roboto-ThinItalic", Helvetica;
   }
 }
 .painting-image {
@@ -223,7 +223,7 @@ body .App main {
   margin-bottom: 3.875rem;
 }
 .painting-information h1 {
-  font-family: "Roboto-Thin";
+  font-family: "Roboto-Thin", Helvetica;
   font-size: clamp(1.5rem, 3vw, 1.75rem);
 }
 .painting-information p {
@@ -234,11 +234,11 @@ body .App main {
 }
 .painting-information p span {
   min-width: clamp(6.25rem, 10vw, 7.5rem);
-  font-family: "Roboto-Medium";
+  font-family: "Roboto-Medium", Helvetica;
 }
 .painting-information p span:nth-child(2) {
   min-width: unset;
-  font-family: "Roboto-Regular";
+  font-family: "Roboto-Regular", Helvetica;
 }
 .painting-information .painting-button-price-wrapper {
   margin-top: 1.5rem;
@@ -391,7 +391,7 @@ header button {
 
 a[href="/"] {
   color: #f9f9f9;
-  font-family: "Roboto-Bold";
+  font-family: "Roboto-Bold", Helvetica;
   font-size: 1.75rem;
   display: flex;
   align-items: center;
@@ -416,7 +416,7 @@ a[href="/"] span:not(:first-child) {
   height: 2.5rem;
   padding: 0 0.25rem;
   line-height: 0.875;
-  font-family: "Roboto-Medium";
+  font-family: "Roboto-Medium", Helvetica;
   font-size: 1rem;
 }
 a[href="/"]:focus-visible, a[href="/"]:active {
