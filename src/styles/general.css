@@ -220,7 +220,7 @@ body .App main {
 .painting-information {
   padding: clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem) 0 clamp(0.25rem, 2.5vw, 1rem);
   font-size: clamp(0.75rem, 1vw, 0.9375rem);
-  margin-bottom: 3rem;
+  margin-bottom: 3.875rem;
 }
 .painting-information h1 {
   font-family: "Roboto-Thin";
