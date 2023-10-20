@@ -44,7 +44,7 @@ const SingleProduct = () => {
           ? <div>Product not found</div> 
           : 
           <div className="single-painting-container">
-              <img className="painting-image" src={`/${product.images[0]}`} aria-labelledby="painting-title"/>
+              <img className="painting-image" src={`/${product.image}`} aria-labelledby="painting-title"/>
               <div className="painting-information">
                 <div className="painting-information-inner-wrapper">
                   <h1 id="painting-title">{product.name}</h1>
@@ -71,12 +71,12 @@ const SingleProduct = () => {
               </div>
             <div className="painting-controls-container" onMouseMove={updateArrowPosition} onMouseEnter={() => setShowCursor({ display: "unset" })} onMouseLeave={() => setShowCursor({ display: "none" })}>
               <Link className="previous-painting" to={`/paintings/${previousProduct?.category}/${previousProduct?.name}`} onMouseEnter={() => setDirection({ ...showDirection, transform: "rotate(-45deg)"})}>
-                <img src={`/${previousProduct.images[0]}`} alt=""/>
+                <img src={`/${previousProduct.image}`} alt=""/>
                 <span>{previousProduct.name}</span>
               </Link>
               <Link className="next-painting" to={`/paintings/${nextProduct?.category}/${nextProduct?.name}`} onMouseEnter={() => setDirection({ ...showDirection, transform: "rotate(135deg)"})}>
                 <span>{nextProduct.name}</span>
-                <img src={`/${nextProduct.images[0]}`} alt=""/>
+                <img src={`/${nextProduct.image}`} alt=""/>
               </Link>
               <div className="cursor-arrow arrow" style={{ ...arrowPosition, ...showDirection, ...showCursor }}></div>
             </div>
