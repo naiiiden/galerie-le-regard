@@ -247,10 +247,16 @@ body .App main {
 .painting-information .painting-button-price-wrapper button {
   border: 1px solid #111;
   border-radius: 100rem;
-  background: none;
   background: #111;
   color: #f9f9f9;
   padding: 0.25rem 0.5rem;
+}
+.painting-information .painting-button-price-wrapper button:not([disabled]):active, .painting-information .painting-button-price-wrapper button:not([disabled]):focus-visible {
+  outline: 3px dashed #111;
+  outline-offset: 0.125rem;
+}
+.painting-information .painting-button-price-wrapper button[disabled] {
+  opacity: 0.25;
 }
 
 .painting-controls-container {
