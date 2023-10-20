@@ -51,7 +51,6 @@
             }
         }
     }
-
 }
 
 .painting-controls-container {
@@ -178,9 +177,16 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-height: 960px) {
+@media screen and (min-width: 768px) and (max-height: 700px) {
+    .overflow-wrapper {
+        max-height: 400px;
+        overflow: scroll;
+    }
+}
+
+@media screen and (min-width: 768px) and (min-height: 701px) and (max-height: 960px) {
     .painting-description {
-        div {
+        span:nth-child(2) {
             overflow: scroll;
             height: 250px;
         }
