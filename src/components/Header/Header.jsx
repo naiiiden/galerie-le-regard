@@ -19,7 +19,7 @@ const Header = () => {
                 ? undefined 
                 : <div className={`click-outside ${openedCart ? "close" : ""}`} onClick={() => closeCart()}></div>}
             <header>
-                <Logo className={location.pathname.startsWith("/paintings/") ? "opacity" : ""}/>
+                <Logo className={location.pathname.split("/").length === 4 ? "opacity" : ""}/>
                 {location.pathname === "/"
                     ? undefined
                     : <>
