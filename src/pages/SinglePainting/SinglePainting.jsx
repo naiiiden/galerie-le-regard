@@ -55,14 +55,16 @@ const SingleProduct = () => {
                   {product.location && <p className="painting-location"><span>Location:</span> {product.location}</p>}
                   {product.category && <p className="painting-category"><span>Category:</span> {product.category}</p>}
                   {product.description && <p className="painting-description"><span>Description:</span> <span>{product.description}</span></p>}
-                  {product.price === null ? null : <p><span>Price:</span> ${product.price}</p>}
-                  <button
-                    onClick={() => 
-                      dispatch({ type: 'ADD_TO_CART', payload: product }, 
-                      clearAlert(dispatch)
-                    )}
-                    disabled={product.quantity === 0 || product.quantity === null || product.price === null ? true : false}
-                  >Add to cart</button>
+                  <div className="painting-button-price-wrapper">
+                    {product.price === null ? null : <p className="painting-price"><span>Price:</span> ${product.price}</p>}
+                    <button
+                      onClick={() => 
+                        dispatch({ type: 'ADD_TO_CART', payload: product }, 
+                        clearAlert(dispatch)
+                      )}
+                      disabled={product.quantity === 0 || product.quantity === null || product.price === null ? true : false}
+                    >Add to cart</button>
+                  </div>
                 </div>
               </div>
             <div className="painting-controls-container" onMouseMove={updateArrowPosition} onMouseEnter={() => setShowCursor({ display: "unset" })} onMouseLeave={() => setShowCursor({ display: "none" })}>

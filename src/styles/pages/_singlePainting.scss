@@ -27,6 +27,23 @@
             }
         }
     }
+
+    .painting-button-price-wrapper {
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        
+        button {
+            border: 1px solid $black;
+            border-radius: 100rem;
+            background: none;
+            background: $black;
+            color: $white;
+            padding: .25rem .5rem;
+        }
+    }
+
 }
 
 .painting-controls-container {

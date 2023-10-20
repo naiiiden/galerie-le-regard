@@ -238,6 +238,20 @@ body .App main {
 .painting-information p span:nth-child(2) {
   min-width: unset;
 }
+.painting-information .painting-button-price-wrapper {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.painting-information .painting-button-price-wrapper button {
+  border: 1px solid #111;
+  border-radius: 100rem;
+  background: none;
+  background: #111;
+  color: #f9f9f9;
+  padding: 0.25rem 0.5rem;
+}
 
 .painting-controls-container {
   position: fixed;
