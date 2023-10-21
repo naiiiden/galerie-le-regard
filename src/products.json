@@ -194,5 +194,47 @@
     "price": 7500000,
     "quantity": 50,
     "image": "src/assets/harmony_in_flesh_colour_and_red.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Man from Naples",
+    "artist": "Jean-Michel Basquiat",
+    "year": "1982",
+    "dimensions": "w244.5 x h122 cm",
+    "location": "Guggenheim Bilbao, Spain",
+    "category": "Neo-expressionism",
+    "medium": "Acrylic and collage on wood",
+    "description": "Created in 1982—a particularly important moment in the career of Jean-Michel Basquiat, after his discovery as an artist, and before his period of maximum productivity—Man from Naples is an essential work for understanding the development of Basquiat's painting during the 1980s. In Man from Naples, the artist apparently regarded the entire surface of the canvas as a big blackboard where he could scribble and mix signs. The title of the painting comes from a phrase written over the head of a red pig which, although surrounded by countless inscriptions, splashes of color, cross-outs, and elementary signs, dominates the composition like a totemic image. Humor, irony, and primitivism define this forceful, representative painting.",
+    "price": 10000000,
+    "quantity": 50,
+    "image": "src/assets/man_from_naples.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Moses and the Egyptians",
+    "artist": "Jean-Michel Basquiat",
+    "year": "1982",
+    "dimensions": "185.9 x 137 x 4 cm",
+    "location": "Guggenheim Bilbao, Spain",
+    "category": "Neo-expressionism",
+    "medium": "Acrylic and oil stick on canvas",
+    "description": "Moses and the Egyptians and Man from Naples, both completed in 1982, were created at a particularly important moment in the career of Jean-Michel Basquiat, after his discovery as an artist, and before his period of maximum productivity. Both pieces are essential for understanding the development of his painting during the 1980s. At the center of the composition, one can distinguish the profile of Moses suggested with some white lines that appear to be the result of an instantaneous, unpremeditated impulse. This same color not only envelops the gigantic tablets of the law, but extend around the prophet’s profile in the form of expressive drips and drops. The tablets also contain a series of inscriptions in an arrangement that looks more orderly and contained, unlike the one in Man from Naples. This work obviously alludes to a biblical episode that can also be related to the history of Africa.",
+    "price": 5000000,
+    "quantity": 50,
+    "image": "src/assets/moses_and_the_egyptians.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Title Unknown",
+    "artist": "Paul Guiragossian",
+    "year": "1962",
+    "dimensions": "70 x 80 cm",
+    "location": "Contemporary Art Platform (CAP) Kuwait",
+    "category": "Neo-expressionism",
+    "medium": "Oil on canvas",
+    "description": "His technical versatility is apparent in his diverse works on paper and canvas, primarily in oil, watercolor, and pen. Guiragossian's pieces move between abstraction and figuration to capture the essence of the human form. Guiragossian uses long, vertical brushstrokes to depict the bodies of his figures as abstracted and elongated so that the imagery has echoes of Byzantine icons. A true Modernist, Guiragossian began producing during the late sixties complete abstract paintings. Applying bright, bold color in blocks to the canvas, Guiragossian then left parts of the surface untouched, generating depth and movement through a creative embrace of negative space.",
+    "price": 900000,
+    "quantity": 50,
+    "image": "src/assets/title_unknown.jpg"
   }
 ]
