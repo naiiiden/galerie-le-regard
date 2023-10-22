@@ -502,5 +502,47 @@
     "price": 71000000,
     "quantity": 50,
     "image": "src/assets/grid.jpg"
+  },
+  {
+    "id": 37,
+    "name": "Bi-Cheyt",
+    "artist": "Victor Vasarely",
+    "year": "1980s",
+    "dimensions": "27 1/2 in. x 25 1/4 in.",
+    "location": "Inter-American Development Bank, Washington",
+    "category": "Op art",
+    "medium": "lithograph (59/250)",
+    "description": "“I did not experience a true revelation of ‘the abstract’ until 1947,” Vasarely reflected, “when I came to realize that pure form and pure color can suggest the world.” From that moment, he began to investigate the optical effects made possible by the mathematical organization of form and color within the picture plane. These discoveries formed the basis of his concept of “plastic unity,” defined by the integration of geometric forms and colors to convey effects of depth and movement. In Bi-Cheyt, the combined geometric patterns of a square and a rhombus create the illusion of four circles projecting outwards. This construction of multiple planes suggests expansive and receding motion, while the contrast between bright tones of blue, green, pink and orange makes the two-dimensional shapes appear to vibrate in space. Throughout his career, Vasarely produced large and significant series of prints, producing variations of the same pattern. Although his notion of “multiples” did not reject the principle of uniqueness, he considered printmaking a medium that furthered the democratization of art. This text was created in collaboration with the University of Maryland Department of Art History & Archaeology and written by Patricia Ortega-Miranda.",
+    "price": 500000,
+    "quantity": 50,
+    "image": "src/assets/bi_cheyt.jpg"
+  },
+  {
+    "id": 38,
+    "name": "Arrest 2",
+    "artist": "Bridget Riley",
+    "year": "1965",
+    "dimensions": "w1905 x h1949.45 in (Unframed)",
+    "location": "The Nelson-Atkins Museum of Art, Kansas City, Missouri",
+    "category": "Op art",
+    "medium": "Acrylic on linen",
+    "description": "Bridget Riley defines nature as a \"dynamism of visual forces—an event rather than an appearance.\" Her aim is to express these forces in abstract depictions of rhythms, tempos, contrasts and reversals that parallel the range of human emotion. The rippling, vertical lines in Arrest 2 modulate from black to cool gray, creating vibrant spatial illusions that both delight and frustrate the eye. Art critics of the 1960s dubbed Riley's optical painting style Op Art. By the time her work was exhibited at the Museum of Modern Art in New York in 1965, it already had been embraced by the fashion and design industry. Today her paintings are inspiring a new generation of abstractionists because of what they say about the magic of seeing.",
+    "price": 750000,
+    "quantity": 50,
+    "image": "src/assets/arrest.jpg"
+  },
+  {
+    "id": 39,
+    "name": "Conversation",
+    "artist": "Bridget Riley",
+    "year": "1992",
+    "dimensions": "126 x 92 cm",
+    "location": "Lakeland Arts - Abbot Hall Art Gallery and Museum, Kendal",
+    "category": "Op art",
+    "medium": "Oil on linen",
+    "description": "Bridget Riley is one of Britain's leading abstract painters. Over the past 35 years her approach to painting has developed and evolved, from the celebrated Op Art works of the 1960's to the richly coloured paintings she is producing in the 1990's. Conversation (1992) belongs to a new body of work inspired by the natural colours and pigments that Bridget Riley experienced on her travels through Egypt and India in the 1980's. A diagonal element has been added to the earlier stripe paintings. Bands of complex colours are arranged vertically in varying depths allowing rhythms to be set up and flow in several different directions at the same time. The bands of colour act diagonally to cut and overlap the verticals, creating a complex illusion of planes beyond the painting's surface, reminiscent of the different layers of sound produced by an orchestra. As with music, Conversation acts in a purely abstract way to evoke sensations we may previously have experienced in a different context.",
+    "price": 925000,
+    "quantity": 50,
+    "image": "src/assets/conversation.jpg"
   }
 ]
