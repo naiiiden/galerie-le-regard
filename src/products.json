@@ -754,5 +754,19 @@
     "price": 65500000,
     "quantity": 50,
     "image": "src/assets/archeologists.jpg"
+  },
+  {
+    "id": 55,
+    "name": "Orange Car Crash (5 Deaths 11 Times in Orange) (Orange Disaster)",
+    "artist": "Andy Warhol",
+    "year": "1963",
+    "dimensions": "w210 x h220 cm",
+    "location": "Galleria Civica d'Arte Moderna e Contemporanea, Torino",
+    "category": "Pop art",
+    "medium": "Acrylic paint, canvas",
+    "description": "This first of this series, entitled Death and Disaster, was still painted by hand: 129 Die in Jet (Museum Ludwig, Cologne), from 1962, was a faithful reproduction of the front page of the “New York Mirror” of the 4 June of that year, reporting an air disaster in which 129 people died. This first work was followed by scenes of road accidents, suicides, operating theatres, electric chairs, mug shots of criminals, weapons and skulls. The idea underlying this artistic process - extrapolation of a fragment of reality perceived within the bounds of different, aesthetic values – is the basis for Orange Car Crash: it samples a piece of life – albeit a second take – through the umpteenth photograph of a road accident from 1959, published by the United Press International Corporation. By replicating an image several times on fabric, normally with very bright backgrounds, in accordance with the colour schemes of advertising language, Warhol engenders a sort of visual habituation and consequently a dramatic emptying of the sequence, almost as a antidote to the powerful emotions of existence.",
+    "price": 25500000,
+    "quantity": 50,
+    "image": "src/assets/crash.jpg"
   }
 ]
