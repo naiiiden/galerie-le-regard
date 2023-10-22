@@ -1132,5 +1132,61 @@
     "price": 1500000,
     "quantity": 50,
     "image": "src/assets/heads.jpg"
+  },
+  {
+    "id": 82,
+    "name": "Nighthawks",
+    "artist": "Edward Hopper",
+    "year": "1942",
+    "dimensions": "84.1 × 152.4 cm (33 1/8 × 60 in.)",
+    "location": "The Art Institute of Chicago",
+    "category": "Realism",
+    "medium": "Oil on canvas",
+    "description": "Edward Hopper said that “Nighthawks” was inspired by “a restaurant on New York’s Greenwich Avenue where two streets meet,” but the image—with its carefully constructed composition and lack of narrative—has a timeless, universal quality that transcends its particular locale. One of the best-known images of twentieth-century art, the painting depicts an all-night diner in which three customers, all lost in their own thoughts, have congregated. Hopper’s understanding of the expressive possibilities of light playing on simplified shapes gives the painting its beauty. Fluorescent lights had just come into use in the early 1940s, and the all-night diner emits an eerie glow, like a beacon on the dark street corner. Hopper eliminated any reference to an entrance, and the viewer, drawn to the light, is shut out from the scene by a seamless wedge of glass. The four anonymous and uncommunicative night owls seem as separate and remote from the viewer as they are from one another. (The red-haired woman was actually modeled by the artist’s wife, Jo.) Hopper denied that he purposefully infused this or any other of his paintings with symbols of human isolation and urban emptiness, but he acknowledged that in “Nighthawks” “unconsciously, probably, I was painting the loneliness of a large city.”",
+    "price": 10000000,
+    "quantity": 50,
+    "image": "src/assets/nighthawks.jpg"
+  },
+  {
+    "id": 83,
+    "name": "Luncheon on the Grass",
+    "artist": "Édouard Manet",
+    "year": "1863",
+    "dimensions": "208 x 264.5 cm",
+    "location": "Musée d’Orsay, Paris",
+    "category": "Realism",
+    "medium": "Oil on canvas",
+    "description": "Rejected by the jury of the 1863 Salon, Manet exhibited Le déjeuner sur l’herbe under the title Le Bain at the Salon des Refusés (initiated the same year by Napoléon III) where it became the principal attraction, generating both laughter and scandal. Yet in Le déjeuner sur l'herbe, Manet was paying tribute to Europe's artistic heritage, borrowing his subject from the Concert champêtre – a painting by Titian attributed at the time to Giorgione (Louvre) – and taking his inspiration for the composition of the central group from the Marcantonio Raimondi engraving after Raphael's Judgement of Paris.But the classical references were counterbalanced by Manet's boldness. The presence of a nude woman among clothed men is justified neither by mythological nor allegorical precedents. This, and the contemporary dress, rendered the strange and almost unreal scene obscene in the eyes of the public of the day. Manet himself jokingly nicknamed his painting \"la partie carrée\". In those days, Manet's style and treatment were considered as shocking as the subject itself. He made no transition between the light and dark elements of the picture, abandoning the usual subtle gradations in favour of brutal contrasts, thereby drawing reproaches for his \"mania for seeing in blocks\". And the characters seem to fit uncomfortably in the sketchy background of woods from which Manet has deliberately excluded both depth and perspective. Le déjeuner sur l'herbe - testimony to Manet's refusal to conform to convention and his initiation of a new freedom from traditional subjects and modes of representation - can perhaps be considered as the departure point for Modern Art.",
+    "price": 62000000,
+    "quantity": 50,
+    "image": "src/assets/luncheon.jpg"
+  },
+  {
+    "id": 84,
+    "name": "The Floor Planers",
+    "artist": "Gustave Caillebotte",
+    "year": "1875",
+    "dimensions": "w1470 x h1020 mm",
+    "location": "Musée d’Orsay, Paris",
+    "category": "Realism",
+    "medium": "Oil on canvas",
+    "description": "This painting is one of the first representations of urban proletariat. Whereas peasants (Gleaners by Millet) or country workers (Stone Breakers by Courbet) had often been shown, city workers had seldom been painted. Unlike Courbet or Millet, Caillebotte does not incorporate any social, moralising or political message in his work. His thorough documentary study (gestures, tools, accessories) justifies his position among the most accomplished realists. Caillebotte had undergone a completely academic training, studying with Bonnat. The perspective, accentuated by the high angle shot and the alignment of floorboards complies with tradition. The artist drew one by one all the parts of his painting, according to the academic method, before reporting them using the square method on the canvas. The nude torsos of the planers are those of heroes of Antiquity, it would be unimaginable for Parisian workers of those times. But far from closeting himself in academic exercises, Caillebotte exploited their rigour in order to explore the contemporary universe in a completely new way.",
+    "price": 96000000,
+    "quantity": 50,
+    "image": "src/assets/floor.jpg"
+  },
+  {
+    "id": 85,
+    "name": "The Iron Rolling Mill (Modern Cyclopes)",
+    "artist": "Adolph Menzel",
+    "year": "1872-1875",
+    "dimensions": "w254.0 x h158.0 cm",
+    "location": "Musée d’Orsay, Paris",
+    "category": "Realism",
+    "medium": "Oil on canvas",
+    "description": "The theme of physical labor had already made its entry into the pictorial world of the nineteenth century with Gustave Courbet’s Stonebreakers of 1851. Menzel made his first drawings of an industrial setting, the Heckmann Brassworks in Berlin, in 1869. The impulse for The Iron Rolling Mill most probably came from Menzel’s friend Paul Meyerheim, who was working on a series on the history of the railways for the industrialist Albert Borsig. In 1872 Menzel travelled to Königshütte in Upper Silesia in order to familiarize himself with factory conditions there, and spent weeks making hun-dreds of preparatory sketches. Drawing on the creative powers he had gained from his rich experience of painting large group scenes, here Menzel creates a composition positively filled with figures demonstrating the force of modern industrial work. In the steam-filled gloom, flickering lights and bizarre shadows merge to become a demonic drama depicting the struggle between men and machines. The animated, tonally dynamic central section of the picture is set against the calmer upper third of the composition with its diffuse daylight. The apparent chaos of the complicated iron rolling equipment emphasizes the dependence of the workers, who must submit to the unbending workings of the machinery. Yet Menzel’s main concern was not the socially critical aspect of this scene, but the artistic challenge of portraying the production process and the groups of people involved in it. He was interested in everyday life, not in representing the existential threat to humanity posed by the age of the machine. In The Iron Rolling Mill, Menzel’s artistic skills have reached their greatest heights.",
+    "price": 33000000,
+    "quantity": 50,
+    "image": "src/assets/iron.jpg"
   }
 ]
