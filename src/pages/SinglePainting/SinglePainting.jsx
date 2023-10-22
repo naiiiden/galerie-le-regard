@@ -60,6 +60,7 @@ const SingleProduct = () => {
                   <div className="painting-button-price-wrapper">
                     {product.price === null ? null : <p className="painting-price"><span>Price:</span> ${product.price.toLocaleString()}</p>}
                     <button
+                      className="black-btn"
                       onClick={() => 
                         dispatch({ type: 'ADD_TO_CART', payload: product }, 
                         clearAlert(dispatch)

@@ -38,7 +38,7 @@ const CartMenu = ({ className, onClick }) => {
                         ))}
                     </ul>
                     <TotalPriceAndItems/>
-                    <button onClick={() => dispatch({ type: 'CLEAR_CART' }, clearAlert(dispatch))} aria-label="Remove all items from cart">Clear cart</button>
+                    <button className="black-btn" onClick={() => dispatch({ type: 'CLEAR_CART' }, clearAlert(dispatch))} aria-label="Remove all items from cart">Clear cart</button>
                 </>
             ) : (
                 <p>Your cart is empty.</p>

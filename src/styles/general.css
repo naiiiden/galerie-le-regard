@@ -246,20 +246,6 @@ body .App main {
   align-items: center;
   gap: 1rem;
 }
-.painting-information .painting-button-price-wrapper button {
-  border: 1px solid #111;
-  border-radius: 100rem;
-  background: #111;
-  color: #f9f9f9;
-  padding: 0.25rem 0.5rem;
-}
-.painting-information .painting-button-price-wrapper button:not([disabled]):active, .painting-information .painting-button-price-wrapper button:not([disabled]):focus-visible {
-  outline: 3px dashed #111;
-  outline-offset: 0.125rem;
-}
-.painting-information .painting-button-price-wrapper button[disabled] {
-  opacity: 0.25;
-}
 
 .painting-controls-container {
   position: fixed;
@@ -474,4 +460,19 @@ a[href="/"]:focus-visible, a[href="/"]:active {
   font-size: 1.25rem;
   text-transform: uppercase;
   font-family: "Roboto-Thin";
+}
+
+.black-btn {
+  border: 1px solid #111;
+  border-radius: 100rem;
+  background: #111;
+  color: #f9f9f9;
+  padding: 0.25rem 0.5rem;
+}
+.black-btn:not([disabled]):active, .black-btn:not([disabled]):focus-visible {
+  outline: 3px dashed #111;
+  outline-offset: 0.125rem;
+}
+.black-btn[disabled] {
+  opacity: 0.25;
 }/*# sourceMappingURL=general.css.map */
