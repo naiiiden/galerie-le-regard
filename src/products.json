@@ -1258,5 +1258,61 @@
     "price": 72000000,
     "quantity": 50,
     "image": "src/assets/parasol.jpg"
+  },
+  {
+    "id": 91,
+    "name": "Rousse",
+    "artist": "Henri de Toulouse-Lautrec",
+    "year": "1889",
+    "dimensions": "w540 x h670 cm",
+    "location": "Musée d’Orsay, Paris",
+    "category": "Art nouveau",
+    "medium": "Oil on cardboard",
+    "description": "Toulouse-Lautrec has left countless pictures of women in private moments, often at their toilet. Here the woman fills the centre of the composition and is shown close up, offering the spectator a view of a sculptural back. The wicker chairs around her suggest that the scene took place in the artist's studio, rue Caulaincourt. Although at the time the theme of a woman at her toilet was often treated, especially by Mary Cassatt and Bonnard, it was above all the naturalist influence of Degas which dominates in this painting by Lautrec. The neglect of the academic pose and the accelerated perspective rather unusual in Lautrec's work sound like an echo to the series of women at their toilet that Degas presented at the eighth and last Impressionist exhibition in 1886. The framing of the scene and the high viewpoint bring to mind the masterly pastels by Degas whom Lautrec deeply admired. Like his elder, Lautrec showed women \"without their frills\" as if he were \"peeping through the keyhole\". However, he differs from Degas in the humanity with which he observed and painted them. This painting has led to a number of misunderstandings. Indeed, it has had several titles and its date has been changed. It has now been established that it was painted in 1889 and not in 1896 as is stated in the old catalogues. It is certainly this work which Lautrec exhibited under the name of \"Rousse\" in the Exhibition of the XX in Brussels in 1890. This title, chosen by the artist himself, recalls his preference for the red-haired models he painted all his life.",
+    "price": 10000000,
+    "quantity": 50,
+    "image": "src/assets/rousse.jpg"
+  },
+  {
+    "id": 92,
+    "name": "Divan Japonais",
+    "artist": "Henri de Toulouse-Lautrec",
+    "year": "1892",
+    "dimensions": "w60.8 x h80.8 cm",
+    "location": "Musée d’Orsay, Paris",
+    "category": "Art nouveau",
+    "medium": "Lithograph on paper",
+    "description": "Initially, Lautrec studied under the León Bonnat and Fernand Cormon who specialized in academic and traditional art and were recognized as two of the great painters of their time. However, he was greatly influenced by the work of Manet, Degas and his fellow-student under Cormon, Van Gogh, resulting in him using styles and subjects that were far removed from the royal road of academic art. For instance, he frequently experimented in new ways of expressing the customs he came across in cafés, cabarets, theatres and circuses. This work was produced as a poster for a club in the Montmartre area of Paris named Divan Japonais. The woman in black, who is absorbed in the show, appears to be Jane Avril, a dancer who often appears on Lautrec’s work, while the man who is watching her appears to be the critic, Edouard Dujardin. The black gloves of the woman singing on the stage indicate that she is Yvette Guilbert. The bold composition, with the figures dominating the center of the picture, the simplification of outlines, and the combination of areas of flat color are all typical of the innovative posters that were developed by Lautrec. Simultaneously, it could be argued that it also demonstrates the influence of the Japanese woodblock prints of which he was a great admirer.",
+    "price": 5000000,
+    "quantity": 50,
+    "image": "src/assets/divan.jpg"
+  },
+  {
+    "id": 93,
+    "name": "Rousse",
+    "artist": "Henri de Toulouse-Lautrec",
+    "year": "1889",
+    "dimensions": "w540 x h670 cm",
+    "location": "Musée d’Orsay, Paris",
+    "category": "Art nouveau",
+    "medium": "Oil on cardboard",
+    "description": "Toulouse-Lautrec has left countless pictures of women in private moments, often at their toilet. Here the woman fills the centre of the composition and is shown close up, offering the spectator a view of a sculptural back. The wicker chairs around her suggest that the scene took place in the artist's studio, rue Caulaincourt. Although at the time the theme of a woman at her toilet was often treated, especially by Mary Cassatt and Bonnard, it was above all the naturalist influence of Degas which dominates in this painting by Lautrec. The neglect of the academic pose and the accelerated perspective rather unusual in Lautrec's work sound like an echo to the series of women at their toilet that Degas presented at the eighth and last Impressionist exhibition in 1886. The framing of the scene and the high viewpoint bring to mind the masterly pastels by Degas whom Lautrec deeply admired. Like his elder, Lautrec showed women \"without their frills\" as if he were \"peeping through the keyhole\". However, he differs from Degas in the humanity with which he observed and painted them. This painting has led to a number of misunderstandings. Indeed, it has had several titles and its date has been changed. It has now been established that it was painted in 1889 and not in 1896 as is stated in the old catalogues. It is certainly this work which Lautrec exhibited under the name of \"Rousse\" in the Exhibition of the XX in Brussels in 1890. This title, chosen by the artist himself, recalls his preference for the red-haired models he painted all his life.",
+    "price": 10000000,
+    "quantity": 50,
+    "image": "src/assets/rousse.jpg"
+  },
+  {
+    "id": 94,
+    "name": "Farm Garden with Sunflowers",
+    "artist": "Gustav Klimt",
+    "year": "1907",
+    "dimensions": "110 x 110 cm",
+    "location": "Belvedere, Vienna",
+    "category": "Art nouveau",
+    "medium": "Oil on canvas",
+    "description": "In his search for suitable motifs, Gustav Klimt repeatedly used a self-made square cardboard frame which helped him find the best possible detail from the landscapes around the Attersee, where the painter spent his summers. Due to the closeness of these landscape details, as in this painting of a flower garden, the landscape loses any sense of depth. The horizon and the sky are hidden. This allows Klimt to translate the spatial depth onto a two-dimensional picture surface, making the motifs appear as carefully elaborated flat patterns. Even his fellow painters noticed how similar this was to ornamental craft work. According to Viennese writer Hermann Bahr, German painter Max Liebermann stated that Viennese painting was not about paintings, but painted carpets. In the landscapes Gustav Klimt created in his later years, this characterization is applied to special effect.",
+    "price": 31000000,
+    "quantity": 50,
+    "image": "src/assets/garden.jpg"
   }
 ]
