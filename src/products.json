@@ -600,5 +600,47 @@
     "price": 7000000,
     "quantity": 50,
     "image": "src/assets/football.jpg"
+  },
+  {
+    "id": 44,
+    "name": "Portrait of Madame Matisse The Green Line",
+    "artist": "Henri Matisse",
+    "year": "1905",
+    "dimensions": "40,5 x 32,5 cm",
+    "location": "SMK - Statens Museum for Kunst, Copenhagen",
+    "category": "Fauvism",
+    "medium": "Oil on Canvas",
+    "description": "Portrait of Madame Matisse. The Green Line is a major work of art because it demonstrates how a painting can become hugely, powerfully expressive with very few, simple devices. The strong contrasts in colour, a typical feature of Matisse’s paintings from the beginning of the twentieth century, are instrumental in giving this small painting (40.5 x 32.5 cm) its great visual strength. ‘The picture was probably painted in the autumn of 1905, following Matisse’s return to Paris after having spent the summer in the fishing village of Collioure in the south of France. While there, he and his friend André Derain threw themselves into ever-wilder painterly experiments, seeking to release colour from its descriptive function, allowing it to act as an independent force,’ says chief curator and senior researcher Dorthe Aagesen. Indeed, the year 1905 sees Henri Matisse get his major breakthrough, partly due to the works painted that summer in the company of André Derain.",
+    "price": 44000000,
+    "quantity": 50,
+    "image": "src/assets/matisse.jpg"
+  },
+  {
+    "id": 45,
+    "name": "Scene in a Parisian Brasserie",
+    "artist": "Othon Friesz",
+    "year": "1906",
+    "dimensions": "49 x 45.5 cm",
+    "location": "Museum Barberini, Postdam",
+    "category": "Fauvism",
+    "medium": "Oil on Canvas",
+    "description": "Like the Impressionists, the Fauve Émile-Othon Friesz also painted scenes in Parisian cafés and brasseries. As in the earlier compositions of this genre, the three guests sit isolated at the table, as though they had nothing to do with each other. The choice of discordant colors seems as disconcerting as the apathetic meeting. The chandelier that is reflected in the mirror emphasizes the woman in the center who wears a red hat and provocatively stares out of the picture.",
+    "price": 2000000,
+    "quantity": 50,
+    "image": "src/assets/brasserie.jpg"
+  },
+  {
+    "id": 46,
+    "name": "Manolas",
+    "artist": "Francisco Iturrino",
+    "year": "1908-1909",
+    "dimensions": "w1410 x h1140 mm",
+    "location": "Fundación Banco Santander, Madrid",
+    "category": "Fauvism",
+    "medium": "Oil on Canvas",
+    "description": "Excellent composition of the series of groups of “manolas” that Iturrino often painted during the first decade of the 20th century, of which a good collection was displayed at the Paris Salon d'Automne in 1911. This period is more or less the time when Iturrino and Matisse were painting together in Andalusia. This is an oil painted with pure colours and apparently hurried brush strokes, which bears a very direct relation to contemporary Fauvism. Iturrino belonged to this movement to a certain extent, not only on account of his technique, but also because of his early friendship with the aforementioned Matisse and with Derain, making the artist from Santander one of the most progressive Spanish painters of his time.",
+    "price": 26000000,
+    "quantity": 50,
+    "image": "src/assets/manolas.jpg"
   }
 ]
