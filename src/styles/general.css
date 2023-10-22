@@ -462,6 +462,15 @@ a[href="/"]:focus-visible, a[href="/"]:active {
   font-family: "Roboto-Thin";
 }
 
+.cart-items-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.cart-items-wrapper .cart-empty-text {
+  margin: auto;
+}
+
 .black-btn {
   border: 1px solid #111;
   border-radius: 100rem;
