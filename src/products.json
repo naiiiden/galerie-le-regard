@@ -796,5 +796,47 @@
     "price": 5800000,
     "quantity": 50,
     "image": "src/assets/arrival.jpg"
+  },
+  {
+    "id": 58,
+    "name": "Zapata-style Landscape",
+    "artist": "Diego Rivera",
+    "year": "1915",
+    "dimensions": "w1250 x h1450 mm",
+    "location": "Museo Nacional de Arte, Mexico City",
+    "category": "Cubism",
+    "medium": "Oil on canvas",
+    "description": "It should be pointed out that, in 1915, when this work was executed, the First World War was raging in a Europe whose people were living through very difficult times, circumstances that directly affected Rivera, whose oeuvre reflected the very critical and difficult phase of his life through which he was passing. Perhaps this is why the present work was painted on the back of a canvas that had already been used on the other side, which the artist covered with a layer of paint so that he could reuse it. When Zapata-style Landscape was being restored in 1976, the staff of the National Center for the Conservation and Registration of Mexico's Artistic Heritage, noticing that the canvas was painted on both sides, set about restoring and recovering the lost work, finally fashioning a double-sided frame that enabled both paintings to be seen at the same time. The canvas entitled The Woman at the Well, which bears the painter's signature and the date, 1913, shows the artist's early incursions into Cubism. Rivera broke up his forms into geometrical elements, thus departing from a single perspective via his handling of the space in which the protagonist, a woman raising water from a well, is depicted from various angles. The painting entitled Zapatastyle Landscape (along with the hidden piece entitled The Woman at the Well) was bought by the Parisian collector, Léonce Rosemberg. In 1930 it was in the possession of Marte R. Gómez, whose collection was acquired by the National Fine Arts Institute in 1973. This double work has formed part of the MUNAL collection since 1982.",
+    "price": 8000000,
+    "quantity": 50,
+    "image": "src/assets/zapata.jpg"
+  },
+  {
+    "id": 59,
+    "name": "The Musician's Table",
+    "artist": "Juan Gris",
+    "year": "1926",
+    "dimensions": "w1000 x h810 mm",
+    "location": "Museo Reina Sofia, Madrid",
+    "category": "Cubism",
+    "medium": "Oil on canvas",
+    "description": "This picture was painted at the beginning of 1926, when the artist was already ill with the disease that would bring his death one year later. The artist's paintings engage in a rich dialogue with his drawings, in which a strong figurative component and a classical conception are never missing. This classicism and sense of order, which were very popular in the post-war period, is perhaps the most personal contribution that Juan Gris made to the Cubist movement, not so much as a reaction to the avant-garde, but as the capacity to give it a new way of seeing. The return to order becomes evident in works such as this one from 1926 and others in which the artist seems to make reference to a synaesthetic and melancholic allegory of art, where painting, music and sculpture coincide.",
+    "price": 395000,
+    "quantity": 50,
+    "image": "src/assets/musician.jpg"
+  },
+  {
+    "id": 60,
+    "name": "Portrait of Adolfo Best Maugard",
+    "artist": "Diego Rivera",
+    "year": "1913",
+    "dimensions": "w1615 x h2275 mm",
+    "location": "Museo Nacional de Arte, Mexico City",
+    "category": "Cubism",
+    "medium": "Oil on canvas",
+    "description": "Diego Rivera was living in Paris at the same time as Adolfo Best Maugard, who had been in Europe, at the behest of the Ministry of Education and Fine Arts, since 1912 for the purpose of making copies of Mexican archeological artifacts that were on exhibition in European museums. Rivera executed this metaphorically charged portrait, whose two planes display a strong stylistic contrast with each other, in 1913. The static, elongated, elegantly dressed protagonist stands out in the foreground, standing on a sort of red-railed balcony that distances him from, and raises him above the urban scene in the background i.e. the modern Paris of the time, with a train, factories whose chimneys billow forth clouds of smoke that give an impression of movement, urban buildings depicted in a Cubist style, a futuristically rapid train and, behind everything, a wheel of fortune spinning so dizzily that its spokes are blurred. The aforesaid wheel of fortune, reminiscent of the one built for the 1900 Paris Universal Exhibition, symbolizes technological progress. Rivera succeeded in connecting these two spaces, depicted in different styles, by using perspective to provide a visual link between the protagonist's forefinger and the center of the wheel of fortune, suggesting that man, from a higher plane and acting as a demiurge, directs and promotes progress. Portrait of Adolfo Best Maugard, (a.k.a. Young Man on the Balcony), was shown at the Paris Salon des Indépendents in 1913, and made known to Mexicans, via a photograph in the El Universal Ilustrado magazine, on the 24th of May, 1918. Having belonged to a private collection, this piece has formed part of the MUNAL collection since 1983, thanks to a generous donation in the will of Mr. Arturo Arnáiz y Freg.",
+    "price": 5395000,
+    "quantity": 50,
+    "image": "src/assets/adolfo.jpg"
   }
 ]
