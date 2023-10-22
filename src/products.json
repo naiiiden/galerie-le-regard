@@ -558,5 +558,47 @@
     "price": 25000000,
     "quantity": 50,
     "image": "src/assets/florist.jpg"
+  },
+  {
+    "id": 41,
+    "name": "Suprematism",
+    "artist": "Kazimir Malevich",
+    "year": "1915",
+    "dimensions": "w710 x h8050 mm",
+    "location": "The State Russian Museum, St. Petersburg",
+    "category": "Suprematism",
+    "medium": "Oil on Canvas",
+    "description": "This painting consists of dynamic links of coloured geometric figures — a rectangle, square, circle and cross. Intersecting one another and existing in harmony, they are the “letters” of the universal language invented by Kazimir Malevich and called Suprematism. Malevich’s Suprematist movement developed the idea of the “supremacy” of the ultra-personal essence of art. Hovering in the white space of the background, the “constructions” that comprise the composition of the picture personify the artist’s concept of an infinite universe. There is no top or bottom in the picture. The artist creates a new reality, a sort of das Ding an sich, the existence of which is confined to the frames of the canvas. The attempt to not only feel oneself part of the universe led Kazimir Malevich to employ in his art the experiences of the psychology of human perception.",
+    "price": 15000000,
+    "quantity": 50,
+    "image": "src/assets/suprematism.jpg"
+  },
+  {
+    "id": 42,
+    "name": "Stroyuschiysya dom [House under construction]",
+    "artist": "Kazimir Malevich",
+    "year": "1915-16",
+    "dimensions": "w445 x h970 cm",
+    "location": "National Gallery of Australia",
+    "category": "Suprematism",
+    "medium": "Oil on Canvas",
+    "description": "House under construction is one of the earliest examples of Suprematism, a movement that made its debut in Malevich's contribution to 'The Last Futurist Exhibition: 0, 10', held in St Petersburg from 17 December 1915 to 15 January 1916. It is not known if the Australian National Gallery's painting was shown in this exhibit, however, stylistic similarities strongly link it to works of this period.1 The title, House under construction, which is inscribed in the artist's hand on the back of the canvas, also links it with the first Suprematist works. The catalogue for the '0, 10' exhibition lists a number of titles which refer to a subject, for example, Pictorial realism of a football player, Pictorial realism of a boy with a knapsack, or Pictorial realism of a peasant woman in two dimensions. The majority of the works in the exhibition, however, are given less descriptive titles—either Pictorial masses in motion (nos 48–59), or Colour masses in two dimensions in a peaceful state (nos 60–77). After thisexhibition Malevich dropped discursive titles and listed his works simply as Suprematist painting.",
+    "price": 11000000,
+    "quantity": 50,
+    "image": "src/assets/house.jpg"
+  },
+  {
+    "id": 43,
+    "name": "Painterly Realism of a Football Player – Color Masses in the 4th Dimension",
+    "artist": "Kazimir Malevich",
+    "year": "1915",
+    "dimensions": "Original: 27 × 17 1/2 in. (71 × 44.5 cm); present: 27 5/8 × 17 5/16 in. (70.2 × 44.1 cm)",
+    "location": "The Art Institute of Chicago",
+    "category": "Suprematism",
+    "medium": "Oil on Canvas",
+    "description": "During the summer and fall of 1915, Kazimir Malevich secluded himself in his Moscow studio in order to prepare for the groundbreaking exhibition “0.10 (Zero- Ten) The Last Futurist Exhibition of Paintings.” Seeking to push the formal discoveries of Cubism and Futurism to their limits, to find the most essential core—the “zero”—of painting, Malevich produced a series of completely abstract works that he declared constituted an entirely new system of art. Suprematism, as he called the new style, eradicated all references to the natural world and focused instead on the inherent relationships between colored geometric shapes against the void of a subtly textured white background. In the catalogue to the exhibition, Malevich warned, “In naming some of the paintings I do not wish to point out what form to seek in them, but I wish to indicate that real forms were approached in many cases as the ground for formless painterly masses from which a painterly picture was created, quite unrelated to nature.” “Painterly Realism of a Football Player—Color Masses in the 4th Dimension” belongs to this very first group of Suprematist works. The second part of its title refers to the mathematical theory of fourth dimensional space, a concept appropriated by many early-twentieth-century artists to justify their representation of truths beyond immediate sensory perception.",
+    "price": 7000000,
+    "quantity": 50,
+    "image": "src/assets/football.jpg"
   }
 ]
