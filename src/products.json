@@ -474,5 +474,33 @@
     "price": 86000000,
     "quantity": 50,
     "image": "src/assets/cloud.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Composition with Red, Blue and Yellow",
+    "artist": "Piet Mondrian",
+    "year": "1930",
+    "dimensions": "45 x 45 cm",
+    "location": "Kunsthaus Zürich, Switzerland",
+    "category": "De Stijl",
+    "medium": "Oil on canvas",
+    "description": "Composition with Red, Blue and Yellow is dominated by a large red rectangle. In this type, developed by Piet Mondrian in around 1930, the edge of the painting is delimited by two wide, sub-divided strips. The criss-crossing black bars are displaced far from the centre and meet in a corner at the bottom left. Deep blue and lemon yellow separated by whitish-grey surfaces form the counterpoint to the red note. Like Kandinsky, Piet Mondrian came to abstraction via his work on landscape. Yet what emerged was completely different. After a Cubist phase built entirely on the contrast between light and dark, in 1920 Mondrian found his own style, which he dubbed ‘Neoplasticism’. In the construction of the picture, this process relied entirely on vertical and horizontal lines and the use of the primary colours red, blue and yellow. The aesthetic objective was to obtain an arrangement of balanced contrasts: non-colours/primary colours; vertical/horizontal. Mondrian sought to give expression to the ‘universal’ through the absolute harmony of the individual pictorial elements.",
+    "price": 99000000,
+    "quantity": 50,
+    "image": "src/assets/composition.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Composition with Grid Number One",
+    "artist": "Piet Mondrian",
+    "year": "1918",
+    "dimensions": "w49.8 x h80.2 cm (without frame)",
+    "location": "The Museum of Fine Arts, Houston",
+    "category": "De Stijl",
+    "medium": "Oil on canvas",
+    "description": "In 1917, Piet Mondrian helped to found the Dutch art group de Stijl (the Style), among the most idealistic and severe of the early Abstract movements. Driven by more than aesthetics, de Stijl aimed to unite the material and spiritual worlds through an art of pure geometry. For Mondrian, a grid-pattern composition of horizontal and vertical lines could represent the universal harmony of the world. He saw the grid as a resolution to the opposing demands of the material and spiritual. Although Composition with Grid 1, 1918 appears to be a random sequence of squares and rectangles, X-ray photography has revealed that Mondrian first sketched a perfectly uniform grid of rectangles based on the classical golden section. This underlying grid then formed the scaffolding for the superimposed composition, giving the work an exceptional harmony of proportion. A nuance of mood and tone is established through the variations in gray and ochre glazes so that the ultimate effect is one of subtly shifting planes of color.",
+    "price": 71000000,
+    "quantity": 50,
+    "image": "src/assets/grid.jpg"
   }
 ]
