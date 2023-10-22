@@ -740,5 +740,33 @@
     "price": 65500000,
     "quantity": 50,
     "image": "src/assets/waterfall.jpg"
+  },
+  {
+    "id": 53,
+    "name": "Waterfalls of Various Districts; Kirifuri-no-taki at Kurokami-yama in Shimotsuke Province",
+    "artist": "Hokusai",
+    "year": "1833",
+    "dimensions": "h38.6 × w26.0 cm",
+    "location": "Shimane Art Museum",
+    "category": "Ukiyo-e",
+    "medium": "Colour woodcut on paper",
+    "description": "In Hokusai's \"Waterfalls of Various Districts,\" in which he takes up the theme of renowned waterfalls from various regions, he distinguishes the diverse expressions that water possesses, including lines of water flowing downward, wave patterns spreading in deep pools, sheets of spray leaping up, and mist rising over bodies of water. The waterfall in this composition, with its impressive lines of water flowing between rocks, is \"Kirifuri-no-Taki,\" the famous waterfall in Nikkô. The bizarre presence of the lines of water, which spread out as to cover over half of the picture, is emphasized with the clear contrast between deep indigo and white.",
+    "price": 65500000,
+    "quantity": 50,
+    "image": "src/assets/waterfall.jpg"
+  },
+  {
+    "id": 54,
+    "name": "The Archaeologists",
+    "artist": "Giorgio de Chirico",
+    "year": "1927",
+    "dimensions": "w127 x h92 cm",
+    "location": "Museo Carlo Bilotti, Rome",
+    "category": "Metaphysical art",
+    "medium": "Oil on canvas",
+    "description": "Two figures, presented as antique, in an interior. Their laps are full of ruins and landscape elements, a fragment of sky with a cloud, rocky formations, indefinite shapes, perhaps of waves. The two absurd figures sit on an extremely traditional cushioned divan, to underline the gap between the normality of the household environment with two figures in friendly conversation, and the unreal nature of their physicality. The two are caught in the act of passing a tablet which is found in the hands of dechirican mannequins on other occasions, often incised with mysterious antique signs.",
+    "price": 65500000,
+    "quantity": 50,
+    "image": "src/assets/waterfall.jpg"
   }
 ]
