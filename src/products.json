@@ -544,5 +544,19 @@
     "price": 925000,
     "quantity": 50,
     "image": "src/assets/conversation.jpg"
+  },
+  {
+    "id": 40,
+    "name": "Helene's Florist",
+    "artist": "Richard Estes",
+    "year": "1971",
+    "dimensions": "H: 48 in. (121.9 cm); W: 72 in. (182.8 cm)",
+    "location": "The Toledo Museum of Art, Toledo",
+    "category": "Photorealism",
+    "medium": "Oil on Canvas",
+    "description": "When you add figures [to the painting] then people start relating to the figures and it’s an emotional relationship. The painting becomes too literal, whereas without the figure it’s more purely a visual experience. Richard Estes’ paintings are primarily celebrations of the visual complexity of the urban environment—though one without people. He used a photograph of Helene’s Florist Shop (at the time located on Columbus Avenue at 72nd Street in New York) as his source material for the painting. However, much as it may resemble a photograph, the painting has qualities not found in photography. No traditional film camera can achieve the simultaneous depth of field necessary to give such complete clarity at both close and far range. The cropped neon sign at the upper left seems perhaps a sly reference to the “purely visual experience” Estes intends—Op (short for “optical”) Art was a contemporaneous abstract art movement that emphasized optical illusions. Estes has cleverly incorporated his signature (Richard Estes 71) into a sign in the painting—can you find it?",
+    "price": 25000000,
+    "quantity": 50,
+    "image": "src/assets/florist.jpg"
   }
 ]
