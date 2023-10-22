@@ -737,7 +737,7 @@
     "category": "Ukiyo-e",
     "medium": "Colour woodcut on paper",
     "description": "In Hokusai's \"Waterfalls of Various Districts,\" in which he takes up the theme of renowned waterfalls from various regions, he distinguishes the diverse expressions that water possesses, including lines of water flowing downward, wave patterns spreading in deep pools, sheets of spray leaping up, and mist rising over bodies of water. The waterfall in this composition, with its impressive lines of water flowing between rocks, is \"Kirifuri-no-Taki,\" the famous waterfall in Nikkô. The bizarre presence of the lines of water, which spread out as to cover over half of the picture, is emphasized with the clear contrast between deep indigo and white.",
-    "price": 65500000,
+    "price": 1000000,
     "quantity": 50,
     "image": "src/assets/waterfall.jpg"
   },
@@ -751,7 +751,7 @@
     "category": "Metaphysical art",
     "medium": "Oil on canvas",
     "description": "Two figures, presented as antique, in an interior. Their laps are full of ruins and landscape elements, a fragment of sky with a cloud, rocky formations, indefinite shapes, perhaps of waves. The two absurd figures sit on an extremely traditional cushioned divan, to underline the gap between the normality of the household environment with two figures in friendly conversation, and the unreal nature of their physicality. The two are caught in the act of passing a tablet which is found in the hands of dechirican mannequins on other occasions, often incised with mysterious antique signs.",
-    "price": 65500000,
+    "price": 23500000,
     "quantity": 50,
     "image": "src/assets/archeologists.jpg"
   },
@@ -765,8 +765,36 @@
     "category": "Pop art",
     "medium": "Acrylic paint, canvas",
     "description": "This first of this series, entitled Death and Disaster, was still painted by hand: 129 Die in Jet (Museum Ludwig, Cologne), from 1962, was a faithful reproduction of the front page of the “New York Mirror” of the 4 June of that year, reporting an air disaster in which 129 people died. This first work was followed by scenes of road accidents, suicides, operating theatres, electric chairs, mug shots of criminals, weapons and skulls. The idea underlying this artistic process - extrapolation of a fragment of reality perceived within the bounds of different, aesthetic values – is the basis for Orange Car Crash: it samples a piece of life – albeit a second take – through the umpteenth photograph of a road accident from 1959, published by the United Press International Corporation. By replicating an image several times on fabric, normally with very bright backgrounds, in accordance with the colour schemes of advertising language, Warhol engenders a sort of visual habituation and consequently a dramatic emptying of the sequence, almost as a antidote to the powerful emotions of existence.",
-    "price": 25500000,
+    "price": 7900000,
     "quantity": 50,
     "image": "src/assets/crash.jpg"
+  },
+  {
+    "id": 56,
+    "name": "The Mud Bath",
+    "artist": "David Bomberg",
+    "year": "1914",
+    "dimensions": "1524 x 2242 mm",
+    "location": "Tate Britain, London",
+    "category": "Futurism",
+    "medium": "Oil on canvas",
+    "description": "The way in which Bomberg reduces the human figure to a series of geometric shapes may reflect his fascination with the machine age, which he shared with the Futurists and Vorticists. This painting could also represent the human form, stripped to its essential core.The scene is based on steam baths near Bomberg’s home in east London, which were used by the local Jewish population and which also had religious associations. They were, perhaps, a place for both physical and spiritual cleansing.",
+    "price": 1100000,
+    "quantity": 50,
+    "image": "src/assets/mud_bath.jpg"
+  },
+  {
+    "id": 57,
+    "name": "The Arrival",
+    "artist": "Christopher R. W. Nevinson",
+    "year": "1913",
+    "dimensions": "762 x 635 mm",
+    "location": "Tate Britain, London",
+    "category": "Futurism",
+    "medium": "Oil on canvas",
+    "description": "When this work was first exhibited a reviewer commented: ‘It resembles a Channel steamer after a violent collision with a pier. You detect funnels, smoke, gangplanks, distant hotels, numbers, posters all thrown into the melting-pot, so to speak. Mr. Nevinson acted as interpreter, explaining that it represented a state of simultaneous mind’.Nevinson co-wrote Vital English Art: A Futurist Manifesto. He was fascinated by the idea of ‘simultaneity’, championed by the French Orphists and Italian Futurists. This is shown here in his attempt to capture in one composition the multitude of views and movements happening at a single moment.",
+    "price": 5800000,
+    "quantity": 50,
+    "image": "src/assets/arrival.jpg"
   }
 ]
