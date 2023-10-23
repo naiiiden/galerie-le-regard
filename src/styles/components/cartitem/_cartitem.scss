@@ -1,7 +1,11 @@
 .cart-menu-closed {
     li {
         display: flex;
-        border-bottom: 1px solid $black;
+        border-top: 1px solid $black;
+
+        &:first-child {
+            border-top: unset;
+        }
 
         .cart-item-text {
             flex-grow: 1;
