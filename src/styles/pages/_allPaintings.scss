@@ -4,11 +4,15 @@
 
     ul {
         margin-top: clamp(0.25rem, 2.5vw, 1rem);
-        display: grid;
+
+        columns: 15rem;
+        gap: 1rem;    
 
         li {
             position: relative;
             user-select: none;
+            
+            margin-bottom: 1rem;
 
             p {
                 font-size: clamp(0.75rem, 1vw, 1rem);

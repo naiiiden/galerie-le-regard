@@ -373,13 +373,16 @@ body .App main {
 }
 .all-paintings-container ul {
   margin-top: clamp(0.25rem, 2.5vw, 1rem);
-  display: grid;
+  -moz-columns: 15rem;
+       columns: 15rem;
+  gap: 1rem;
 }
 .all-paintings-container ul li {
   position: relative;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  margin-bottom: 1rem;
 }
 .all-paintings-container ul li p {
   font-size: clamp(0.75rem, 1vw, 1rem);
