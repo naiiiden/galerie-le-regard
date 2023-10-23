@@ -1,0 +1,30 @@
+.cart-menu-open {
+    li {
+        display: flex;
+        border-bottom: 1px solid $black;
+
+        .cart-item-text {
+            flex-grow: 1;
+        }
+
+        div:first-child {
+            padding: clamp(0.25rem, 2.5vw, 1rem);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+
+        p {
+            font-size: .875rem;
+        }
+
+        input {
+            margin: 0 clamp(0.25rem, 2.5vw, 1rem);
+        }
+    }
+}

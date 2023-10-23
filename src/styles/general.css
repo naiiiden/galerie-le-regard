@@ -456,14 +456,14 @@ a[href="/"]:focus-visible, a[href="/"]:active {
   flex-grow: 1;
   overflow-y: scroll;
 }
-.cart-menu-closed.cart-menu-open div:first-child {
+.cart-menu-closed.cart-menu-open .cart-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
   border-bottom: 1px solid #111;
 }
-.cart-menu-closed.cart-menu-open div:first-child h2 {
+.cart-menu-closed.cart-menu-open .cart-header h2 {
   font-size: 1.25rem;
   text-transform: uppercase;
   font-family: "Roboto-Thin";
@@ -485,4 +485,29 @@ a[href="/"]:focus-visible, a[href="/"]:active {
 }
 .black-btn[disabled] {
   opacity: 0.25;
+}
+
+.cart-menu-open li {
+  display: flex;
+  border-bottom: 1px solid #111;
+}
+.cart-menu-open li .cart-item-text {
+  flex-grow: 1;
+}
+.cart-menu-open li div:first-child {
+  padding: clamp(0.25rem, 2.5vw, 1rem);
+  display: flex;
+  justify-content: space-between;
+}
+.cart-menu-open li img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cart-menu-open li p {
+  font-size: 0.875rem;
+}
+.cart-menu-open li input {
+  margin: 0 clamp(0.25rem, 2.5vw, 1rem);
 }/*# sourceMappingURL=general.css.map */

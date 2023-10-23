@@ -14,7 +14,7 @@ const CartMenu = ({ className, onClick }) => {
 
   return (
     <div inert={!openedCart ? '' : undefined} className={`${className} cart-menu-closed`}>
-        <div>
+        <div className="cart-header">
             <h2>Your Cart</h2>
             <button onClick={onClick} aria-label="Close cart">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width='20'>
