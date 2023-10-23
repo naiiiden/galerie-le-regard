@@ -25,27 +25,7 @@ body {
     color: $white;
 }
 
-#global-alert {
-    background: red;
-    position: relative;
-    
-    &::after {
-        content: "";
-        border: 1px solid black;
-        width: 100%;
-        position: absolute;
-        left: 0;
-        background: yellow;
-        animation-name: test;
-        animation-duration: 3s;
-    }
-    
-    @keyframes test {
-        100% {
-            width: 0;
-        }
-    }
-}
+
 
 // pages
 @import './pages/landingPage';
@@ -57,3 +37,4 @@ body {
 @import './components/cartmenu/cartmenu';
 @import './components/blackbtn/blackbtn';
 @import './components/cartitem/cartitem';
+@import './components/alert/alert';

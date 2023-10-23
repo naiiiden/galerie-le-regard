@@ -65,6 +65,8 @@
         }
 
         img {
+            min-width: 3rem;
+            min-height: 3rem;
             width: clamp(3rem, 5vw, 4rem);
             height: clamp(3rem, 5vw, 4rem);
             object-fit: cover;

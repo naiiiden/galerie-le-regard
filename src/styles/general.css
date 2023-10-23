@@ -148,26 +148,6 @@ body .App main {
   color: #f9f9f9;
 }
 
-#global-alert {
-  background: red;
-  position: relative;
-}
-#global-alert::after {
-  content: "";
-  border: 1px solid black;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  background: yellow;
-  animation-name: test;
-  animation-duration: 3s;
-}
-@keyframes test {
-  100% {
-    width: 0;
-  }
-}
-
 .landing-page-container {
   margin: auto 0;
   padding: 0 clamp(0.25rem, 2.5vw, 1rem);
@@ -273,6 +253,8 @@ body .App main {
   border-right: 1px solid #111;
 }
 .painting-controls-container a img {
+  min-width: 3rem;
+  min-height: 3rem;
   width: clamp(3rem, 5vw, 4rem);
   height: clamp(3rem, 5vw, 4rem);
   -o-object-fit: cover;
@@ -525,4 +507,37 @@ a[href="/"]:focus-visible, a[href="/"]:active {
 }
 .cart-menu-open li input {
   margin: 0 clamp(0.25rem, 2.5vw, 1rem);
+}
+
+@media screen and (max-width: 767px) {
+  #global-alert {
+    display: none;
+  }
+}
+#global-alert {
+  background: #f9f9f9;
+  border: 1px solid #111;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 0.25rem;
+  color: #111;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  padding: 0.25rem 0.5rem;
+  font-size: clamp(0.75rem, 1vw, 1rem);
+}
+#global-alert::after {
+  content: "";
+  border: 2px solid #111;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation-name: timeToDisappear;
+  animation-duration: 3s;
+}
+@keyframes timeToDisappear {
+  100% {
+    width: 0;
+  }
 }/*# sourceMappingURL=general.css.map */
