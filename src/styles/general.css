@@ -416,20 +416,20 @@ a[href="/"]:focus-visible, a[href="/"]:active {
 
 .cart-menu-closed {
   position: fixed;
-  right: -50rem;
+  right: -60rem;
   border-left: 1px solid #111;
   background: #f9f9f9;
   top: 0;
   bottom: 0;
   z-index: 99;
-  transition: 0.2s, box-shadow 0.1s;
+  transition: 0.275s, box-shadow 0.2s;
 }
 .cart-menu-closed.cart-menu-open {
   right: 0;
   width: 100%;
   max-width: 450px;
   box-shadow: 0 0 100rem 100vw rgba(0, 0, 0, 0.75);
-  transition: 0.2s, box-shadow 0.1s;
+  transition: 0.275s, box-shadow 0.2s;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

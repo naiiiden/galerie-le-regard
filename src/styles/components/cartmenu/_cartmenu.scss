@@ -12,20 +12,20 @@
 
 .cart-menu-closed {
     position: fixed;
-    right: -50rem;    
+    right: -60rem;    
     border-left: 1px solid $black;
     background: $white;
     top: 0;
     bottom: 0;
     z-index: 99;
-    transition: .2s, box-shadow .1s;
+    transition: .275s, box-shadow .2s;
     
     &.cart-menu-open {
         right : 0;
         width: 100%;
         max-width: 450px;
         box-shadow: 0 0 100rem 100vw rgba(0,0,0,.75);
-        transition: .2s, box-shadow .1s;
+        transition: .275s, box-shadow .2s;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
