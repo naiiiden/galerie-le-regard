@@ -4,6 +4,38 @@
 
     ul {
         margin-top: clamp(0.25rem, 2.5vw, 1rem);
-        border: 1px solid red;
+        display: grid;
+
+        li {
+            position: relative;
+            user-select: none;
+
+            p {
+                font-size: clamp(0.75rem, 1vw, 1rem);
+                background: $black;
+                color: $white;
+                position: absolute;
+                top: 50%;
+                right: 0;
+                left: 0;
+                z-index: -1;
+                text-align: center;
+            }
+
+            &:focus-within, &:hover {
+                a {
+                    outline: none;
+                }
+                
+                p {
+                    z-index: 1;
+                }
+            }
+            
+            &:focus-within {
+                outline: 3px dashed $black;
+                outline-offset: .125rem;
+            }
+        }
     }
 }

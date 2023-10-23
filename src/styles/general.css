@@ -373,7 +373,34 @@ body .App main {
 }
 .all-paintings-container ul {
   margin-top: clamp(0.25rem, 2.5vw, 1rem);
-  border: 1px solid red;
+  display: grid;
+}
+.all-paintings-container ul li {
+  position: relative;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.all-paintings-container ul li p {
+  font-size: clamp(0.75rem, 1vw, 1rem);
+  background: #111;
+  color: #f9f9f9;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  text-align: center;
+}
+.all-paintings-container ul li:focus-within a, .all-paintings-container ul li:hover a {
+  outline: none;
+}
+.all-paintings-container ul li:focus-within p, .all-paintings-container ul li:hover p {
+  z-index: 1;
+}
+.all-paintings-container ul li:focus-within {
+  outline: 3px dashed #111;
+  outline-offset: 0.125rem;
 }
 
 header {
