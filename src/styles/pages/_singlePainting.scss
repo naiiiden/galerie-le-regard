@@ -7,15 +7,6 @@
     font-size: clamp(.75rem, 1vw, 1rem);
     margin-bottom: 3.875rem;
 
-    ::-webkit-scrollbar {
-        width: .225rem;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background: rgba(17, 17, 17, .25);
-    }
-
     h1 {
         font-family: "Roboto-Thin", Helvetica;
         font-size: clamp(1.5rem, 3vw, 1.75rem);

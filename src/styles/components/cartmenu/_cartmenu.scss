@@ -29,45 +29,45 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+    
+    ul {
+        flex-grow: 1;
+        overflow-y: auto;
+    }
 
-        ul {
-            flex-grow: 1;
-            overflow-y: auto;
+    .cart-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: clamp(0.25rem, 2.5vw, 1rem);
+        border-bottom: 1px solid $black;
+
+        h2 {
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            font-family: "Roboto-Thin";
         }
+    }
 
-        .cart-header {
+    .cart-empty-text {
+        margin: auto;
+    }
+
+    .cart-total {
+        padding: clamp(0.25rem, 2.5vw, 1rem);
+        border-top: 1px solid $black;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        p {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            padding: clamp(0.25rem, 2.5vw, 1rem);
-            border-bottom: 1px solid $black;
-
-            h2 {
-                font-size: 1.25rem;
-                text-transform: uppercase;
-                font-family: "Roboto-Thin";
-            }
         }
 
-        .cart-empty-text {
-            margin: auto;
-        }
-
-        .cart-total {
-            padding: clamp(0.25rem, 2.5vw, 1rem);
-            border-top: 1px solid $black;
-            display: flex;
-            flex-direction: column;
-            gap: .5rem;
-
-            p {
-                display: flex;
-                justify-content: space-between;
-            }
-
-            button {
-                margin-top: 1rem;
-            }
+        button {
+            margin-top: 1rem;
         }
     }
 }

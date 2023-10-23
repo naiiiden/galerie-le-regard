@@ -25,12 +25,20 @@ body {
     color: $white;
 }
 
-// utility classes
+// reusable classes
 .text-overflow-fix {
     width: clamp(100px, 15vw, 250px);
     overflow:hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+    width: .375rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(17, 17, 17, .875);
 }
 
 // pages
