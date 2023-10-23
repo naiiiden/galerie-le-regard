@@ -73,10 +73,10 @@ const SingleProduct = () => {
             <div className="painting-controls-container" onMouseMove={updateArrowPosition} onMouseEnter={() => setShowCursor({ display: "unset" })} onMouseLeave={() => setShowCursor({ display: "none" })}>
               <Link className="previous-painting" to={`/paintings/${previousProduct?.category}/${previousProduct?.name}`} onMouseEnter={() => setDirection({ ...showDirection, transform: "rotate(-45deg)"})}>
                 <img src={`/${previousProduct.image}`} alt=""/>
-                <span>{previousProduct.name}</span>
+                <span className="text-overflow-fix">{previousProduct.name}</span>
               </Link>
               <Link className="next-painting" to={`/paintings/${nextProduct?.category}/${nextProduct?.name}`} onMouseEnter={() => setDirection({ ...showDirection, transform: "rotate(135deg)"})}>
-                <span>{nextProduct.name}</span>
+                <span className="text-overflow-fix">{nextProduct.name}</span>
                 <img src={`/${nextProduct.image}`} alt=""/>
               </Link>
               <div className="cursor-arrow arrow" style={{ ...arrowPosition, ...showDirection, ...showCursor }}></div>

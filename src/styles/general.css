@@ -148,6 +148,13 @@ body .App main {
   color: #f9f9f9;
 }
 
+.text-overflow-fix {
+  width: clamp(100px, 15vw, 250px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .landing-page-container {
   margin: auto 0;
   padding: 0 clamp(0.25rem, 2.5vw, 1rem);
@@ -246,6 +253,7 @@ body .App main {
   cursor: none;
 }
 .painting-controls-container a span {
+  padding: 0 clamp(0.25rem, 2.5vw, 1rem);
   flex-grow: 1;
   transition: 0.2s;
 }

@@ -21,7 +21,7 @@ const CartItem = ({ item, onQuantityChange, onRemove }) => {
       <img src={item.image} alt=""/>
       <div className="cart-item-text">
         <div>
-          <p className="cart-item-name">{item.name}</p>
+          <p className="text-overflow-fix">{item.name}</p>
           <button onClick={() => onRemove(item)} aria-label={`Remove ${item.name} from your cart`}>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" width='15'>
               <path stroke="currentColor" strokeLinejoin="round" strokeWidth="1.5" d="m2 2 20 20m0-20L2 22"></path>
