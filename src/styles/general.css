@@ -445,6 +445,7 @@ a[href="/"]:focus-visible, a[href="/"]:active {
   bottom: 0;
   z-index: 99;
   transition: 0.275s, box-shadow 0.2s;
+  font-size: clamp(0.75rem, 1vw, 1rem);
 }
 .cart-menu-closed.cart-menu-open {
   right: 0;
@@ -481,6 +482,9 @@ a[href="/"]:focus-visible, a[href="/"]:active {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+.cart-menu-closed .cart-total .total-price {
+  font-family: "Roboto-Medium", Helvetica;
 }
 .cart-menu-closed .cart-total p {
   display: flex;
@@ -538,7 +542,6 @@ a[href="/"]:focus-visible, a[href="/"]:active {
 }
 .cart-menu-closed li p, .cart-menu-closed li a, .cart-menu-closed li input {
   font-size: 0.875rem;
-  font-size: clamp(0.75rem, 1vw, 1rem);
 }
 .cart-menu-closed li a {
   font-family: "Roboto-Medium", Helvetica;
