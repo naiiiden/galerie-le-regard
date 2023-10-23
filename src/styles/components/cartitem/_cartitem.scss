@@ -1,7 +1,7 @@
 .cart-menu-closed {
-    li {
-        display: flex;
+    li {        
         border-top: 1px solid $black;
+        display: flex;
 
         &:first-child {
             border-top: unset;
@@ -10,6 +10,9 @@
         .cart-item-text {
             flex-grow: 1;
             padding: clamp(0.25rem, 2.5vw, 1rem);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         div:first-child {
@@ -24,26 +27,20 @@
         }
 
         .cart-item-price {
-            // margin-top: clamp(0.25rem, 2.5vw, 1rem);
-            margin-top: .5rem;
             display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
             align-items: center;
             line-height: 1;
         }
-        
-        .cart-item-name {
-            width: clamp(100px, 15vw, 250px);
-            overflow:hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
 
-        p, input {
+        p, a, input {
             font-size: .875rem;
+            font-size: clamp(0.75rem, 1vw, 1rem);
         }
 
-        input {
-            margin: 0 clamp(0.25rem, 2.5vw, 1rem);
+        a {
+            font-family: "Roboto-Medium", Helvetica;
         }
     }
 }
