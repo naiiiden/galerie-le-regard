@@ -5,7 +5,7 @@ import ProductItem from '../../components/ProductItem/ProductItem';
 import { useParams, useNavigate } from 'react-router-dom';
 
 /* eslint-disable react/prop-types */
-const AllPaintings = ({ style }) => {
+const AllPaintings = () => {
   const { cartState, dispatch } = UseCart();
   const { category } = useParams();
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ const AllPaintings = ({ style }) => {
   }, [category]);
 
   return (
-    <div>
+    <div className="all-paintings-container">
       <select
         onChange={(e) => e.target.value === '' ? navigate('/paintings') : navigate(`/paintings/${e.target.value}`)}
         value={selectedCategory || ''}
@@ -36,7 +36,7 @@ const AllPaintings = ({ style }) => {
             <option key={category} value={category}>{category}</option>
         )}
       </select>
-      <ul style={style}>
+      <ul>
         {filteredProducts.map((product) => (
           <ProductItem 
             linkHref={`/paintings/${product.category}/${product.name}`}

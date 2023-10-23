@@ -367,6 +367,15 @@ body .App main {
     overflow-y: auto;
   }
 }
+.all-paintings-container {
+  width: 100%;
+  padding: 0 clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem);
+}
+.all-paintings-container ul {
+  margin-top: clamp(0.25rem, 2.5vw, 1rem);
+  border: 1px solid red;
+}
+
 header {
   padding: clamp(0.25rem, 2.5vw, 1rem);
   display: flex;
