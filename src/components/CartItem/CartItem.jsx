@@ -19,9 +19,6 @@ const CartItem = ({ item, onQuantityChange, onRemove }) => {
   return (
     <li key={item.id} style={{
         border: '1px solid red',
-        width: 'fit-content',
-        padding: '1rem',
-        margin: '1rem',
       }}>
       <p>{item.name} - ${item.price}</p>
       <p>TEST available quantity left: {productInCart.quantity}</p>

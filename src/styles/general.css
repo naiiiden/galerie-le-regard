@@ -448,6 +448,8 @@ a[href="/"]:focus-visible, a[href="/"]:active {
   max-width: 450px;
   box-shadow: 0 0 100rem 100vw rgba(0, 0, 0, 0.75);
   transition: 0.2s, box-shadow 0.1s;
+  display: flex;
+  flex-direction: column;
 }
 .cart-menu-closed.cart-menu-open div:first-child {
   display: flex;
@@ -469,6 +471,9 @@ a[href="/"]:focus-visible, a[href="/"]:active {
 }
 .cart-items-wrapper .cart-empty-text {
   margin: auto;
+}
+.cart-items-wrapper div {
+  margin-top: auto;
 }
 
 .black-btn {
