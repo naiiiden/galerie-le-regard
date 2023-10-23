@@ -505,40 +505,40 @@ a[href="/"]:focus-visible, a[href="/"]:active {
   opacity: 0.25;
 }
 
-.cart-menu-open li {
+.cart-menu-closed li {
   display: flex;
   border-bottom: 1px solid #111;
 }
-.cart-menu-open li .cart-item-text {
+.cart-menu-closed li .cart-item-text {
   flex-grow: 1;
   padding: clamp(0.25rem, 2.5vw, 1rem);
 }
-.cart-menu-open li div:first-child {
+.cart-menu-closed li div:first-child {
   display: flex;
   justify-content: space-between;
 }
-.cart-menu-open li img {
+.cart-menu-closed li img {
   width: 100px;
   height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.cart-menu-open li .cart-item-price {
+.cart-menu-closed li .cart-item-price {
   margin-top: 0.5rem;
   display: flex;
   align-items: center;
   line-height: 1;
 }
-.cart-menu-open li .cart-item-name {
+.cart-menu-closed li .cart-item-name {
   width: clamp(100px, 15vw, 250px);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.cart-menu-open li p, .cart-menu-open li input {
+.cart-menu-closed li p, .cart-menu-closed li input {
   font-size: 0.875rem;
 }
-.cart-menu-open li input {
+.cart-menu-closed li input {
   margin: 0 clamp(0.25rem, 2.5vw, 1rem);
 }
 

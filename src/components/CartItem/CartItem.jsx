@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { UseCart } from '../../context/CartContext';
 
 const CartItem = ({ item, onQuantityChange, onRemove }) => {
   const handleQuantityChange = (event) => {
@@ -9,16 +8,9 @@ const CartItem = ({ item, onQuantityChange, onRemove }) => {
     }
   };
 
-  // DEBUGGING
-  const { cartState } = UseCart(); 
-  const productInCart = cartState.products.find((product) => product.name === item.name);
-  console.log(productInCart);
-  console.log('end');
-  // cartItem is rerendered after global alert ends
-
   return (
     <li key={item.id}>
-      <img src={item.image} alt=""/>
+      <img src={`/${item.image}`} alt=""/>
       <div className="cart-item-text">
         <div>
           <p className="text-overflow-fix">{item.name}</p>
