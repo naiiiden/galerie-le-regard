@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom"
 
 const Landing = () => {
+
+    document.title = "Le Regard"
+
     return (
         <div className="landing-page-container">
             <h1>Le Regard</h1>
