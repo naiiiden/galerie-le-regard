@@ -455,12 +455,13 @@ a[href="/"]:focus-visible, a[href="/"]:active {
 .cart-menu-closed.cart-menu-open ul {
   flex-grow: 1;
   overflow-y: scroll;
+  padding: clamp(0.25rem, 2.5vw, 1rem) 0 clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem);
 }
 .cart-menu-closed.cart-menu-open .cart-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: clamp(0.25rem, 2.5vw, 1rem);
   border-bottom: 1px solid #111;
 }
 .cart-menu-closed.cart-menu-open .cart-header h2 {
@@ -470,6 +471,10 @@ a[href="/"]:focus-visible, a[href="/"]:active {
 }
 .cart-menu-closed.cart-menu-open .cart-empty-text {
   margin: auto;
+}
+.cart-menu-closed.cart-menu-open .cart-total {
+  padding: clamp(0.25rem, 2.5vw, 1rem);
+  border-top: 1px solid #111;
 }
 
 .black-btn {
