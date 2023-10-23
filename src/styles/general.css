@@ -490,9 +490,9 @@ a[href="/"]:focus-visible, a[href="/"]:active {
 }
 .cart-menu-open li .cart-item-text {
   flex-grow: 1;
+  padding: clamp(0.25rem, 2.5vw, 1rem);
 }
 .cart-menu-open li div:first-child {
-  padding: clamp(0.25rem, 2.5vw, 1rem);
   display: flex;
   justify-content: space-between;
 }
@@ -502,7 +502,19 @@ a[href="/"]:focus-visible, a[href="/"]:active {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.cart-menu-open li p {
+.cart-menu-open li .cart-item-price {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+.cart-menu-open li .cart-item-name {
+  width: clamp(100px, 15vw, 250px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cart-menu-open li p, .cart-menu-open li input {
   font-size: 0.875rem;
 }
 .cart-menu-open li input {
