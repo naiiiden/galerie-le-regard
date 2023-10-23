@@ -17,9 +17,7 @@ const CartItem = ({ item, onQuantityChange, onRemove }) => {
   // cartItem is rerendered after global alert ends
 
   return (
-    <li key={item.id} style={{
-        border: '1px solid red',
-      }}>
+    <li key={item.id}>
       <p>{item.name} - ${item.price}</p>
       <p>TEST available quantity left: {productInCart.quantity}</p>
       <label htmlFor={`quantity-product-${item.id}`}>Quantity: </label>

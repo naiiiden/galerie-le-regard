@@ -28,7 +28,13 @@
         transition: .2s, box-shadow .1s;
         display: flex;
         flex-direction: column;
-        
+        justify-content: space-between;
+
+        ul {
+            flex-grow: 1;
+            overflow-y: scroll;
+        }
+
         div:first-child {
             display: flex;
             align-items: center;

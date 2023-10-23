@@ -22,24 +22,24 @@ const CartMenu = ({ className, onClick }) => {
                 </svg>
             </button>
         </div>
-        <div className="cart-items-wrapper">
-            {cartState.cartItems.length !== 0 
-            ? <>
-                <ul>
-                    {cartState.cartItems.map((item) => (
-                        <CartItem
-                            key={item.id}
-                            item={item}
-                            onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}
-                            onRemove={(itemToRemove) => dispatch({ type: 'REMOVE_FROM_CART', payload: { id: itemToRemove.id } }, clearAlert(dispatch))}
-                        />
-                    ))}
-                </ul>
+        {cartState.cartItems.length !== 0 
+        ? <>
+            <ul>
+                {cartState.cartItems.map((item) => (
+                    <CartItem
+                        key={item.id}
+                        item={item}
+                        onQuantityChange={(itemToUpdate, newQuantity) => dispatch({ type: 'UPDATE_QUANTITY', payload: { itemToUpdate, newQuantity } })}
+                        onRemove={(itemToRemove) => dispatch({ type: 'REMOVE_FROM_CART', payload: { id: itemToRemove.id } }, clearAlert(dispatch))}
+                    />
+                ))}
+            </ul>
+            <div>
                 <TotalPriceAndItems/>
                 <button className="black-btn" onClick={() => dispatch({ type: 'CLEAR_CART' }, clearAlert(dispatch))} aria-label="Remove all items from cart">Clear cart</button>
-            </>
-            : <p className="cart-empty-text">Your cart is empty.</p>}
-        </div>
+            </div>
+        </>
+        : <p className="cart-empty-text">Your cart is empty.</p>}
     </div>
   )
 }

@@ -450,6 +450,11 @@ a[href="/"]:focus-visible, a[href="/"]:active {
   transition: 0.2s, box-shadow 0.1s;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+.cart-menu-closed.cart-menu-open ul {
+  flex-grow: 1;
+  overflow-y: scroll;
 }
 .cart-menu-closed.cart-menu-open div:first-child {
   display: flex;
