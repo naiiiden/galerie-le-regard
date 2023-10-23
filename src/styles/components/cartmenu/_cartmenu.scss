@@ -48,19 +48,9 @@
                 font-family: "Roboto-Thin";
             }
         }
-    }
-}
 
-.cart-items-wrapper {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    
-    .cart-empty-text {
-        margin: auto;
-    }
-
-    div {
-        margin-top: auto;
+        .cart-empty-text {
+            margin: auto;
+        }
     }
 }

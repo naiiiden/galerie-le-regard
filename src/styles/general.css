@@ -468,17 +468,8 @@ a[href="/"]:focus-visible, a[href="/"]:active {
   text-transform: uppercase;
   font-family: "Roboto-Thin";
 }
-
-.cart-items-wrapper {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.cart-items-wrapper .cart-empty-text {
+.cart-menu-closed.cart-menu-open .cart-empty-text {
   margin: auto;
-}
-.cart-items-wrapper div {
-  margin-top: auto;
 }
 
 .black-btn {
