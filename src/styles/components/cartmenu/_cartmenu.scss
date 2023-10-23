@@ -57,6 +57,18 @@
         .cart-total {
             padding: clamp(0.25rem, 2.5vw, 1rem);
             border-top: 1px solid $black;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+
+            p {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            button {
+                margin-top: 1rem;
+            }
         }
     }
 }

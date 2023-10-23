@@ -12,8 +12,8 @@ const TotalPriceAndItems = () => {
 
     return (
         <div>
-            <p>Total price: ${totalSumOfItemsInCart.toLocaleString()}</p>
-            <p style={{ display: 'inline-flex', alignItems: 'center', margin: 0 }}>Total items in cart: <TotalProductsInCart/></p>
+            <p><span>Total price:</span> ${totalSumOfItemsInCart.toLocaleString()}</p>
+            <p><span>Total items in cart:</span> <TotalProductsInCart/></p>
         </div>
     )
 }
