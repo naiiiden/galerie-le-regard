@@ -630,20 +630,6 @@
     "image": "src/assets/autumn.jpg"
   },
   {
-    "id": 36,
-    "name": "Composition with Grid Number One",
-    "artist": "Piet Mondrian",
-    "year": "1918",
-    "dimensions": "w49.8 x h80.2 cm (without frame)",
-    "location": "The Museum of Fine Arts, Houston",
-    "category": "De Stijl",
-    "medium": "Oil on canvas",
-    "description": "In 1917, Piet Mondrian helped to found the Dutch art group de Stijl (the Style), among the most idealistic and severe of the early Abstract movements. Driven by more than aesthetics, de Stijl aimed to unite the material and spiritual worlds through an art of pure geometry. For Mondrian, a grid-pattern composition of horizontal and vertical lines could represent the universal harmony of the world. He saw the grid as a resolution to the opposing demands of the material and spiritual. Although Composition with Grid 1, 1918 appears to be a random sequence of squares and rectangles, X-ray photography has revealed that Mondrian first sketched a perfectly uniform grid of rectangles based on the classical golden section. This underlying grid then formed the scaffolding for the superimposed composition, giving the work an exceptional harmony of proportion. A nuance of mood and tone is established through the variations in gray and ochre glazes so that the ultimate effect is one of subtly shifting planes of color.",
-    "price": 71000000,
-    "quantity": 50,
-    "image": "src/assets/grid.jpg"
-  },
-  {
     "id": 16,
     "name": "Moses and the Egyptians",
     "artist": "Jean-Michel Basquiat",
@@ -712,20 +698,6 @@
     "price": 80000000,
     "quantity": 50,
     "image": "src/assets/wally.jpg"
-  },
-  {
-    "id": 35,
-    "name": "Composition with Red, Blue and Yellow",
-    "artist": "Piet Mondrian",
-    "year": "1930",
-    "dimensions": "45 x 45 cm",
-    "location": "Kunsthaus Zürich, Switzerland",
-    "category": "De Stijl",
-    "medium": "Oil on canvas",
-    "description": "Composition with Red, Blue and Yellow is dominated by a large red rectangle. In this type, developed by Piet Mondrian in around 1930, the edge of the painting is delimited by two wide, sub-divided strips. The criss-crossing black bars are displaced far from the centre and meet in a corner at the bottom left. Deep blue and lemon yellow separated by whitish-grey surfaces form the counterpoint to the red note. Like Kandinsky, Piet Mondrian came to abstraction via his work on landscape. Yet what emerged was completely different. After a Cubist phase built entirely on the contrast between light and dark, in 1920 Mondrian found his own style, which he dubbed ‘Neoplasticism’. In the construction of the picture, this process relied entirely on vertical and horizontal lines and the use of the primary colours red, blue and yellow. The aesthetic objective was to obtain an arrangement of balanced contrasts: non-colours/primary colours; vertical/horizontal. Mondrian sought to give expression to the ‘universal’ through the absolute harmony of the individual pictorial elements.",
-    "price": 99000000,
-    "quantity": 50,
-    "image": "src/assets/composition.jpg"
   },
   {
     "id": 100,
@@ -840,20 +812,6 @@
     "image": "src/assets/fish_magic.jpg"
   },
   {
-    "id": 38,
-    "name": "Arrest 2",
-    "artist": "Bridget Riley",
-    "year": "1965",
-    "dimensions": "w1905 x h1949.45 in (Unframed)",
-    "location": "The Nelson-Atkins Museum of Art, Kansas City, Missouri",
-    "category": "Op art",
-    "medium": "Acrylic on linen",
-    "description": "Bridget Riley defines nature as a \"dynamism of visual forces—an event rather than an appearance.\" Her aim is to express these forces in abstract depictions of rhythms, tempos, contrasts and reversals that parallel the range of human emotion. The rippling, vertical lines in Arrest 2 modulate from black to cool gray, creating vibrant spatial illusions that both delight and frustrate the eye. Art critics of the 1960s dubbed Riley's optical painting style Op Art. By the time her work was exhibited at the Museum of Modern Art in New York in 1965, it already had been embraced by the fashion and design industry. Today her paintings are inspiring a new generation of abstractionists because of what they say about the magic of seeing.",
-    "price": 750000,
-    "quantity": 50,
-    "image": "src/assets/arrest.jpg"
-  },
-  {
     "id": 1,
     "name": "Woman Bathing",
     "artist": "Goyō Hashiguchi",
@@ -880,20 +838,6 @@
     "price": 2000000,
     "quantity": 50,
     "image": "src/assets/edo3.jpg"
-  },
-  {
-    "id": 39,
-    "name": "Conversation",
-    "artist": "Bridget Riley",
-    "year": "1992",
-    "dimensions": "126 x 92 cm",
-    "location": "Lakeland Arts - Abbot Hall Art Gallery and Museum, Kendal",
-    "category": "Op art",
-    "medium": "Oil on linen",
-    "description": "Bridget Riley is one of Britain's leading abstract painters. Over the past 35 years her approach to painting has developed and evolved, from the celebrated Op Art works of the 1960's to the richly coloured paintings she is producing in the 1990's. Conversation (1992) belongs to a new body of work inspired by the natural colours and pigments that Bridget Riley experienced on her travels through Egypt and India in the 1980's. A diagonal element has been added to the earlier stripe paintings. Bands of complex colours are arranged vertically in varying depths allowing rhythms to be set up and flow in several different directions at the same time. The bands of colour act diagonally to cut and overlap the verticals, creating a complex illusion of planes beyond the painting's surface, reminiscent of the different layers of sound produced by an orchestra. As with music, Conversation acts in a purely abstract way to evoke sensations we may previously have experienced in a different context.",
-    "price": 925000,
-    "quantity": 50,
-    "image": "src/assets/conversation.jpg"
   },
   {
     "id": 31,
@@ -994,20 +938,6 @@
     "image": "src/assets/on_the_thames.jpg"
   },
   {
-    "id": 37,
-    "name": "Bi-Cheyt",
-    "artist": "Victor Vasarely",
-    "year": "1980s",
-    "dimensions": "27 1/2 in. x 25 1/4 in.",
-    "location": "Inter-American Development Bank, Washington",
-    "category": "Op art",
-    "medium": "lithograph (59/250)",
-    "description": "“I did not experience a true revelation of ‘the abstract’ until 1947,” Vasarely reflected, “when I came to realize that pure form and pure color can suggest the world.” From that moment, he began to investigate the optical effects made possible by the mathematical organization of form and color within the picture plane. These discoveries formed the basis of his concept of “plastic unity,” defined by the integration of geometric forms and colors to convey effects of depth and movement. In Bi-Cheyt, the combined geometric patterns of a square and a rhombus create the illusion of four circles projecting outwards. This construction of multiple planes suggests expansive and receding motion, while the contrast between bright tones of blue, green, pink and orange makes the two-dimensional shapes appear to vibrate in space. Throughout his career, Vasarely produced large and significant series of prints, producing variations of the same pattern. Although his notion of “multiples” did not reject the principle of uniqueness, he considered printmaking a medium that furthered the democratization of art. This text was created in collaboration with the University of Maryland Department of Art History & Archaeology and written by Patricia Ortega-Miranda.",
-    "price": 500000,
-    "quantity": 50,
-    "image": "src/assets/bi_cheyt.jpg"
-  },
-  {
     "id": 89,
     "name": "Almond Blossom",
     "artist": "Vincent van Gogh",
@@ -1062,20 +992,6 @@
     "price": 3000000,
     "quantity": 50,
     "image": "src/assets/fuji.jpg"
-  },
-  {
-    "id": 55,
-    "name": "Orange Car Crash (5 Deaths 11 Times in Orange) (Orange Disaster)",
-    "artist": "Andy Warhol",
-    "year": "1963",
-    "dimensions": "w210 x h220 cm",
-    "location": "Galleria Civica d'Arte Moderna e Contemporanea, Torino",
-    "category": "Pop art",
-    "medium": "Acrylic paint, canvas",
-    "description": "This first of this series, entitled Death and Disaster, was still painted by hand: 129 Die in Jet (Museum Ludwig, Cologne), from 1962, was a faithful reproduction of the front page of the “New York Mirror” of the 4 June of that year, reporting an air disaster in which 129 people died. This first work was followed by scenes of road accidents, suicides, operating theatres, electric chairs, mug shots of criminals, weapons and skulls. The idea underlying this artistic process - extrapolation of a fragment of reality perceived within the bounds of different, aesthetic values – is the basis for Orange Car Crash: it samples a piece of life – albeit a second take – through the umpteenth photograph of a road accident from 1959, published by the United Press International Corporation. By replicating an image several times on fabric, normally with very bright backgrounds, in accordance with the colour schemes of advertising language, Warhol engenders a sort of visual habituation and consequently a dramatic emptying of the sequence, almost as a antidote to the powerful emotions of existence.",
-    "price": 7900000,
-    "quantity": 50,
-    "image": "src/assets/crash.jpg"
   },
   {
     "id": 80,
@@ -1204,20 +1120,6 @@
     "image": "src/assets/kiss.jpg"
   },
   {
-    "id": 54,
-    "name": "The Archaeologists",
-    "artist": "Giorgio de Chirico",
-    "year": "1927",
-    "dimensions": "w127 x h92 cm",
-    "location": "Museo Carlo Bilotti, Rome",
-    "category": "Metaphysical art",
-    "medium": "Oil on canvas",
-    "description": "Two figures, presented as antique, in an interior. Their laps are full of ruins and landscape elements, a fragment of sky with a cloud, rocky formations, indefinite shapes, perhaps of waves. The two absurd figures sit on an extremely traditional cushioned divan, to underline the gap between the normality of the household environment with two figures in friendly conversation, and the unreal nature of their physicality. The two are caught in the act of passing a tablet which is found in the hands of dechirican mannequins on other occasions, often incised with mysterious antique signs.",
-    "price": 23500000,
-    "quantity": 50,
-    "image": "src/assets/archeologists.jpg"
-  },
-  {
     "id": 19,
     "name": "Fränzi in front of Carved Chair",
     "artist": "Ernst Ludwig Kirchner",
@@ -1272,20 +1174,6 @@
     "price": 50000000,
     "quantity": 50,
     "image": "src/assets/bewitched_mill.jpg"
-  },
-  {
-    "id": 40,
-    "name": "Helene's Florist",
-    "artist": "Richard Estes",
-    "year": "1971",
-    "dimensions": "H: 48 in. (121.9 cm); W: 72 in. (182.8 cm)",
-    "location": "The Toledo Museum of Art, Toledo",
-    "category": "Photorealism",
-    "medium": "Oil on Canvas",
-    "description": "When you add figures [to the painting] then people start relating to the figures and it’s an emotional relationship. The painting becomes too literal, whereas without the figure it’s more purely a visual experience. Richard Estes’ paintings are primarily celebrations of the visual complexity of the urban environment—though one without people. He used a photograph of Helene’s Florist Shop (at the time located on Columbus Avenue at 72nd Street in New York) as his source material for the painting. However, much as it may resemble a photograph, the painting has qualities not found in photography. No traditional film camera can achieve the simultaneous depth of field necessary to give such complete clarity at both close and far range. The cropped neon sign at the upper left seems perhaps a sly reference to the “purely visual experience” Estes intends—Op (short for “optical”) Art was a contemporaneous abstract art movement that emphasized optical illusions. Estes has cleverly incorporated his signature (Richard Estes 71) into a sign in the painting—can you find it?",
-    "price": 25000000,
-    "quantity": 50,
-    "image": "src/assets/florist.jpg"
   },
   {
     "id": 92,

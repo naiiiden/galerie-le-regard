@@ -14,12 +14,15 @@ const AllPaintings = () => {
 
   const categories = [...new Set(cartState.products.map((product) => product.category))];
 
-  const productsByCategory = {};
-  cartState.products.forEach((product) => {
-    !productsByCategory[product.category] 
-      ? productsByCategory[product.category] = []
-      : productsByCategory[product.category].push(product);
-  });
+  const productsByCategory = cartState.products.reduce((acc, product) => {
+    if (!acc[product.category]) {
+      acc[product.category] = [];
+    }
+    acc[product.category].push(product);
+    return acc;
+  }, {});
+
+  console.log(1, productsByCategory);
 
   useEffect(() => {
     setSelectedCategory(category || '');
@@ -41,21 +44,17 @@ const AllPaintings = () => {
         )}
       </select>
       {selectedCategory
-        ? 
-          <ul>
+        ? <ul>
             {productsByCategory[selectedCategory].map((product) => (
               <ProductItem
                 linkHref={`/paintings/${product.category}/${product.name}`}
                 product={product}
                 key={product.id}
-                onClick={() =>
-                  dispatch({ type: 'ADD_TO_CART', payload: product }, clearAlert(dispatch))
-                }
+                onClick={() => dispatch({ type: 'ADD_TO_CART', payload: product }, clearAlert(dispatch))}
               />
             ))}
           </ul>
-        : 
-          categories.map((category) => (
+        : categories.map((category) => (
             <div key={category}>
               <h2>{category}</h2>
               <ul>
@@ -64,9 +63,7 @@ const AllPaintings = () => {
                     linkHref={`/paintings/${product.category}/${product.name}`}
                     product={product}
                     key={product.id}
-                    onClick={() =>
-                      dispatch({ type: 'ADD_TO_CART', payload: product }, clearAlert(dispatch))
-                    }
+                    onClick={() => dispatch({ type: 'ADD_TO_CART', payload: product }, clearAlert(dispatch))}
                   />
                 ))}
               </ul>
