@@ -13,9 +13,13 @@ const AllPaintings = () => {
   const [selectedCategory, setSelectedCategory] = useState(category || '');
 
   const categories = [...new Set(cartState.products.map((product) => product.category))];
-  const filteredProducts = selectedCategory
-    ? cartState.products.filter((product) => product.category === selectedCategory)
-    : cartState.products;
+
+  const productsByCategory = {};
+  cartState.products.forEach((product) => {
+    !productsByCategory[product.category] 
+      ? productsByCategory[product.category] = []
+      : productsByCategory[product.category].push(product);
+  });
 
   useEffect(() => {
     setSelectedCategory(category || '');
@@ -36,19 +40,39 @@ const AllPaintings = () => {
             <option key={category} value={category}>{category}</option>
         )}
       </select>
-      <ul>
-        {filteredProducts.map((product) => (
-          <ProductItem 
-            linkHref={`/paintings/${product.category}/${product.name}`}
-            product={product} 
-            key={product.id}
-            onClick={() => 
-                dispatch({ type: 'ADD_TO_CART', payload: product }, 
-                clearAlert(dispatch)
-            )}
-          />
-        ))}
-      </ul>
+      {selectedCategory
+        ? 
+          <ul>
+            {productsByCategory[selectedCategory].map((product) => (
+              <ProductItem
+                linkHref={`/paintings/${product.category}/${product.name}`}
+                product={product}
+                key={product.id}
+                onClick={() =>
+                  dispatch({ type: 'ADD_TO_CART', payload: product }, clearAlert(dispatch))
+                }
+              />
+            ))}
+          </ul>
+        : 
+          categories.map((category) => (
+            <div key={category}>
+              <h2>{category}</h2>
+              <ul>
+                {productsByCategory[category].map((product) => (
+                  <ProductItem
+                    linkHref={`/paintings/${product.category}/${product.name}`}
+                    product={product}
+                    key={product.id}
+                    onClick={() =>
+                      dispatch({ type: 'ADD_TO_CART', payload: product }, clearAlert(dispatch))
+                    }
+                  />
+                ))}
+              </ul>
+            </div>
+          ))
+      }
     </div>
   )
 }
