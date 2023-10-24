@@ -1,14 +1,45 @@
 .all-paintings-container {
     width: 100%;
-    padding: 0 clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem);
+    // padding: 0 clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem);
+    position: relative;
+
+    .horizontal-scroll-div {
+        position: relative;
+        margin-bottom: 20rem;
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    }
 
     ul {
         // margin-top: clamp(0.25rem, 2.5vw, 1rem);
-        border: 1px solid red;
+        position:absolute;
+        display:block;
+        top:0;
+        right: 100%;
+        width: 300px;
+        height: 100vw;
+        overflow-y:auto;
+        overflow-x:hidden;
+        transform:rotate(-90deg);
+        transform-origin: right top;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
 
         li {
             position: relative;
             user-select: none;
+            width: 300px;
+            height: 300px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                transform: rotate(90deg);
+            }
 
             p {
                 font-size: clamp(0.75rem, 1vw, 1rem);
@@ -20,6 +51,7 @@
                 left: 0;
                 z-index: -1;
                 text-align: center;
+                transform: rotate(90deg);
             }
 
             &:focus-within, &:hover {
@@ -28,7 +60,7 @@
                 }
                 
                 p {
-                    z-index: 1;
+                    // z-index: 1;
                 }
             }
             

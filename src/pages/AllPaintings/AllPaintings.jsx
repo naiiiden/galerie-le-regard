@@ -33,6 +33,7 @@ const AllPaintings = () => {
 
   return (
     <div className="all-paintings-container">
+      <p>WIP</p>
       <select
         onChange={(e) => e.target.value === '' ? navigate('/paintings') : navigate(`/paintings/${e.target.value}`)}
         value={selectedCategory || ''}
@@ -55,7 +56,7 @@ const AllPaintings = () => {
             ))}
           </ul>
         : categories.map((category) => (
-            <div key={category}>
+            <div key={category} className="horizontal-scroll-div">
               <h2>{category}</h2>
               <ul>
                 {productsByCategory[category].map((product) => (
