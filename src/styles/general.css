@@ -169,18 +169,17 @@ body .App main {
 }
 .landing-page-container h1 {
   font-family: "Roboto-Black", Helvetica;
-  font-size: clamp(3.625rem, 10vw, 10rem);
+  font-size: clamp(3.625rem, 10vw, 6rem);
   line-height: 1;
-  letter-spacing: -0.375vw;
+  letter-spacing: -0.1875vw;
 }
 .landing-page-container h1, .landing-page-container p {
   text-transform: uppercase;
 }
 .landing-page-container p {
   font-family: "Roboto-Light", Helvetica;
-  font-size: clamp(1rem, 5vw, 3rem);
+  font-size: clamp(1rem, 3vw, 2rem);
   line-height: 1.375;
-  letter-spacing: -0.1875vw;
 }
 .landing-page-container a {
   font-family: "Roboto-LightItalic", Helvetica;
@@ -197,7 +196,7 @@ body .App main {
   color: #f9f9f9;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
   .landing-page-container p {
     font-family: "Roboto-Thin", Helvetica;
     letter-spacing: -0.09375vw;
