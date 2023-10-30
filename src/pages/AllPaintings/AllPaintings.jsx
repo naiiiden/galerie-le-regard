@@ -14,15 +14,9 @@ const AllPaintings = () => {
 
   const categories = [...new Set(cartState.products.map((product) => product.category))];
 
-  const productsByCategory = cartState.products.reduce((acc, product) => {
-    if (!acc[product.category]) {
-      acc[product.category] = [];
-    }
-    acc[product.category].push(product);
-    return acc;
-  }, {});
-
-  console.log(1, productsByCategory);
+  const filteredProducts = selectedCategory
+    ? cartState.products.filter((product) => product.category === selectedCategory)
+    : cartState.products;
 
   useEffect(() => {
     setSelectedCategory(category || '');
@@ -44,33 +38,19 @@ const AllPaintings = () => {
             <option key={category} value={category}>{category}</option>
         )}
       </select>
-      {selectedCategory
-        ? <ul>
-            {productsByCategory[selectedCategory].map((product) => (
-              <ProductItem
-                linkHref={`/paintings/${product.category}/${product.name}`}
-                product={product}
-                key={product.id}
-                onClick={() => dispatch({ type: 'ADD_TO_CART', payload: product }, clearAlert(dispatch))}
-              />
-            ))}
-          </ul>
-        : categories.map((category) => (
-            <div key={category} className="horizontal-scroll-div">
-              <h2>{category}</h2>
-              <ul>
-                {productsByCategory[category].map((product) => (
-                  <ProductItem
-                    linkHref={`/paintings/${product.category}/${product.name}`}
-                    product={product}
-                    key={product.id}
-                    onClick={() => dispatch({ type: 'ADD_TO_CART', payload: product }, clearAlert(dispatch))}
-                  />
-                ))}
-              </ul>
-            </div>
-          ))
-      }
+      <ul>
+        {filteredProducts.map((product) => (
+          <ProductItem 
+            linkHref={`/paintings/${product.category}/${product.name}`}
+            product={product} 
+            key={product.id}
+            onClick={() => 
+                dispatch({ type: 'ADD_TO_CART', payload: product }, 
+                clearAlert(dispatch)
+            )}
+          />
+        ))}
+      </ul>
     </div>
   )
 }

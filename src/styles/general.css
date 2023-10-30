@@ -369,67 +369,10 @@ body .App main {
 }
 .all-paintings-container {
   width: 100%;
+  padding: 0 clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem);
   position: relative;
 }
 
-@media (pointer: fine) {
-  .all-paintings-container .horizontal-scroll-div {
-    position: relative;
-    margin-bottom: 20rem;
-  }
-  .all-paintings-container .horizontal-scroll-div ::-webkit-scrollbar {
-    display: none;
-  }
-  .all-paintings-container ul {
-    position: absolute;
-    display: block;
-    top: 0;
-    right: 100%;
-    width: 300px;
-    height: 100vw;
-    overflow-y: auto;
-    overflow-x: hidden;
-    transform: rotate(-90deg);
-    transform-origin: right top;
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-  }
-  .all-paintings-container ul li {
-    position: relative;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-    width: 300px;
-    height: 300px;
-  }
-  .all-paintings-container ul li img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    transform: rotate(90deg);
-  }
-  .all-paintings-container ul li p {
-    font-size: clamp(0.75rem, 1vw, 1rem);
-    background: #111;
-    color: #f9f9f9;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    left: 0;
-    z-index: -1;
-    text-align: center;
-    transform: rotate(90deg);
-  }
-  .all-paintings-container ul li:focus-within a, .all-paintings-container ul li:hover a {
-    outline: none;
-  }
-  .all-paintings-container ul li:focus-within {
-    outline: 3px dashed #111;
-    outline-offset: 0.125rem;
-  }
-}
 header {
   padding: clamp(0.25rem, 2.5vw, 1rem);
   display: flex;
