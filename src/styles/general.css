@@ -371,6 +371,12 @@ body .App main {
   padding: 0 clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem);
   position: relative;
 }
+.all-paintings-container li {
+  position: absolute;
+  max-width: 200px;
+  height: auto;
+  transition: all 0.3s ease;
+}
 
 header {
   padding: clamp(0.25rem, 2.5vw, 1rem);

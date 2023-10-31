@@ -48,6 +48,10 @@ const AllPaintings = () => {
                 dispatch({ type: 'ADD_TO_CART', payload: product }, 
                 clearAlert(dispatch)
             )}
+            style={{
+              top: `${Math.random() * 80}vh`, // Adjust the range as needed
+              left: `${Math.random() * 80}vw`, // Adjust the range as needed
+            }}
           />
         ))}
       </ul>
