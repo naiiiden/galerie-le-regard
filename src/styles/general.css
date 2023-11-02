@@ -371,6 +371,18 @@ body .App main {
   padding: 0 clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem);
   position: relative;
 }
+.all-paintings-container fieldset {
+  border: none;
+  display: flex;
+}
+.all-paintings-container fieldset input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.all-paintings-container fieldset input:checked + label {
+  color: red;
+}
 .all-paintings-container ul {
   padding: clamp(0.25rem, 2.5vw, 1rem) 0 0 0;
   display: flex;

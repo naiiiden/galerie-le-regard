@@ -3,6 +3,20 @@
     padding: 0 clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem);
     position: relative;
 
+    fieldset {
+        border: none;
+        display: flex;
+
+        input {
+            appearance: none;
+            
+        }
+        
+        input:checked + label {
+            color: red;
+        }
+    }
+
     ul {
         padding: clamp(0.25rem, 2.5vw, 1rem) 0 0 0;
         display: flex;

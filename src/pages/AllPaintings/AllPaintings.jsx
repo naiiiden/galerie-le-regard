@@ -29,15 +29,15 @@ const AllPaintings = () => {
     <div className="all-paintings-container">
       <fieldset>
         <legend>Style:</legend>
-        <label id={category}>
+        <label id="all">
           All
           <input 
             checked={selectedCategory === ''}
             type="radio" 
-            htmlFor={category} 
+            htmlFor="all" 
             name="Painting category" 
             value={''}
-            onClick={(e) => e.target.value === '' ? navigate('/paintings') : navigate(`/paintings/${e.target.value}`)}
+            onChange={(e) => e.target.value === '' ? navigate('/paintings') : navigate(`/paintings/${e.target.value}`)}
           />
         </label>
         {categories.map(category => 
@@ -48,7 +48,7 @@ const AllPaintings = () => {
               htmlFor={category} 
               name="Painting category"
               value={category}
-              onClick={(e) => e.target.value === '' ? navigate('/paintings') : navigate(`/paintings/${e.target.value}`)}
+              onChange={(e) => e.target.value === '' ? navigate('/paintings') : navigate(`/paintings/${e.target.value}`)}
             />
           </label>  
         )}
