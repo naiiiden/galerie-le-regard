@@ -6,7 +6,7 @@ const ProductItem = ({ product, linkHref, style }) => {
     <li key={product.id} style={style}>
       <Link to={linkHref} data-title={product.name}>
         <img src={`/${product.image}`} alt='' loading="lazy"/>
-        <p><span>{product.name}</span></p>
+        <p>{product.name}</p>
       </Link>
     </li>
   )

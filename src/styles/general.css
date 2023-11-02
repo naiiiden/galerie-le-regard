@@ -377,6 +377,9 @@ body .App main {
   flex-wrap: wrap;
   gap: 1rem;
 }
+.all-paintings-container ul li {
+  position: relative;
+}
 .all-paintings-container ul li img {
   filter: invert(1);
   transition: all 0.2s;
@@ -385,13 +388,23 @@ body .App main {
      object-fit: cover;
 }
 .all-paintings-container ul li p {
-  display: none;
+  background: #111;
+  color: #f9f9f9;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  transform: translate(0, -50%);
+  text-align: center;
 }
 .all-paintings-container ul li:hover, .all-paintings-container ul li:focus-within, .all-paintings-container ul li:active {
   outline: 3px solid #111;
 }
 .all-paintings-container ul li:hover img, .all-paintings-container ul li:focus-within img, .all-paintings-container ul li:active img {
   filter: none;
+}
+.all-paintings-container ul li:hover p, .all-paintings-container ul li:focus-within p, .all-paintings-container ul li:active p {
+  z-index: 1;
 }
 
 header {

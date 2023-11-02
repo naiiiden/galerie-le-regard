@@ -49,8 +49,8 @@ const AllPaintings = () => {
             )}
             style={{
               // transform: `translate(${Math.random() * 100}%, ${Math.random() * 100}%)`,
-              top: `${Math.random() * 200}%`, // Adjust the range as needed
-              left: `${Math.random() * 90}%`, // Adjust the range as needed
+              // top: `${Math.random() * 200}%`, // Adjust the range as needed
+              // left: `${Math.random() * 90}%`, // Adjust the range as needed
             }}
           />
         ))}

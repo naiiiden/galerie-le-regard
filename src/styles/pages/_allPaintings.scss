@@ -10,6 +10,8 @@
         gap: 1rem;
 
         li {
+            position: relative;
+
             img {
                 filter: invert(1);
                 transition: all .2s;
@@ -18,7 +20,14 @@
             }
             
             p {
-                display: none;
+                background: $black;
+                color: $white;
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                z-index: -1;
+                transform: translate(0, -50%);
+                text-align: center;
             }
 
             &:hover, &:focus-within, &:active {
@@ -26,6 +35,10 @@
                 
                 img {
                     filter: none;
+                }
+
+                p {
+                    z-index: 1;
                 }
             }
 
