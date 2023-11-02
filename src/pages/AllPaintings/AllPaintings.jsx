@@ -27,7 +27,6 @@ const AllPaintings = () => {
 
   return (
     <div className="all-paintings-container">
-      <p>WIP</p>
       <select
         onChange={(e) => e.target.value === '' ? navigate('/paintings') : navigate(`/paintings/${e.target.value}`)}
         value={selectedCategory || ''}
@@ -49,8 +48,9 @@ const AllPaintings = () => {
                 clearAlert(dispatch)
             )}
             style={{
-              top: `${Math.random() * 80}vh`, // Adjust the range as needed
-              left: `${Math.random() * 80}vw`, // Adjust the range as needed
+              // transform: `translate(${Math.random() * 100}%, ${Math.random() * 100}%)`,
+              top: `${Math.random() * 200}%`, // Adjust the range as needed
+              left: `${Math.random() * 90}%`, // Adjust the range as needed
             }}
           />
         ))}

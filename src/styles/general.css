@@ -371,11 +371,27 @@ body .App main {
   padding: 0 clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem);
   position: relative;
 }
-.all-paintings-container li {
-  position: absolute;
-  max-width: 200px;
-  height: auto;
-  transition: all 0.3s ease;
+.all-paintings-container ul {
+  padding: clamp(0.25rem, 2.5vw, 1rem) 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.all-paintings-container ul li img {
+  filter: invert(1);
+  transition: all 0.2s;
+  height: clamp(100px, 25vw, 500px);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.all-paintings-container ul li p {
+  display: none;
+}
+.all-paintings-container ul li:hover, .all-paintings-container ul li:focus-within, .all-paintings-container ul li:active {
+  outline: 3px solid #111;
+}
+.all-paintings-container ul li:hover img, .all-paintings-container ul li:focus-within img, .all-paintings-container ul li:active img {
+  filter: none;
 }
 
 header {

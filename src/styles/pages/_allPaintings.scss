@@ -2,176 +2,33 @@
     width: 100%;
     padding: 0 clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem);
     position: relative;
-    
+
     ul {
-        // position: relative;
-    }
+        padding: clamp(0.25rem, 2.5vw, 1rem) 0 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
 
-    li {
-        position: absolute;
-        max-width: 200px;
-        height: auto;
-        transition: all 0.3s ease;
-    }
-
-    // ul {
-    //     display: flex;
-    //     flex-wrap: wrap;
-    //     row-gap: 100px;
-
-    //     li {
-    //         width: 25%;
-
-    //         a {
-    //             display: flex;
-    //         }
-
-    //         img {
-    //             width: 200px;
-    //             height: 300px;
-    //             object-fit: cover;
-    //         }
-    //     }
-    // }
-
-    // .horizontal-scroll-div {
-    //     position: relative;
-    //     margin-bottom: 20rem;
-
-    //     ::-webkit-scrollbar {
-    //         display: none;
-    //     }
-    // }
-
-    // ul {
-    //     // margin-top: clamp(0.25rem, 2.5vw, 1rem);
-    //     position:absolute;
-    //     display:block;
-    //     top:0;
-    //     right: 100%;
-    //     width: 300px;
-    //     height: 100vw;
-    //     overflow-y:auto;
-    //     overflow-x:hidden;
-    //     transform:rotate(-90deg);
-    //     transform-origin: right top;
-    //     display: flex;
-    //     flex-direction: column;
-    //     gap: 3rem;
-
-    //     li {
-    //         position: relative;
-    //         user-select: none;
-    //         width: 300px;
-    //         height: 300px;
-
-    //         img {
-    //             height: 100%;
-    //             width: 100%;
-    //             object-fit: cover;
-    //             transform: rotate(90deg);
-    //         }
-
-    //         p {
-    //             font-size: clamp(0.75rem, 1vw, 1rem);
-    //             background: $black;
-    //             color: $white;
-    //             position: absolute;
-    //             top: 50%;
-    //             right: 0;
-    //             left: 0;
-    //             z-index: -1;
-    //             text-align: center;
-    //             transform: rotate(90deg);
-    //         }
-
-    //         &:focus-within, &:hover {
-    //             a {
-    //                 outline: none;
-    //             }
-                
-    //             p {
-    //                 // z-index: 1;
-    //             }
-    //         }
+        li {
+            img {
+                filter: invert(1);
+                transition: all .2s;
+                height: clamp(100px, 25vw, 500px);
+                object-fit: cover;
+            }
             
-    //         &:focus-within {
-    //             outline: 3px dashed $black;
-    //             outline-offset: .125rem;
-    //         }
-    //     }
-    // }
-}
+            p {
+                display: none;
+            }
 
-// @media (pointer: fine) {
-//     .all-paintings-container {
-//         .horizontal-scroll-div {
-//             position: relative;
-//             margin-bottom: 20rem;
-    
-//             ::-webkit-scrollbar {
-//                 display: none;
-//             }
-//         }
-        
-//         ul {
-//             // margin-top: clamp(0.25rem, 2.5vw, 1rem);
-//             position:absolute;
-//             display:block;
-//             top:0;
-//             right: 100%;
-//             width: 300px;
-//             height: 100vw;
-//             overflow-y:auto;
-//             overflow-x:hidden;
-//             transform:rotate(-90deg);
-//             transform-origin: right top;
-//             display: flex;
-//             flex-direction: column;
-//             gap: 3rem;
-    
-//             li {
-//                 position: relative;
-//                 user-select: none;
-//                 width: 300px;
-//                 height: 300px;
-    
-//                 img {
-//                     height: 100%;
-//                     width: 100%;
-//                     object-fit: cover;
-//                     transform: rotate(90deg);
-//                 }
-    
-//                 p {
-//                     font-size: clamp(0.75rem, 1vw, 1rem);
-//                     background: $black;
-//                     color: $white;
-//                     position: absolute;
-//                     top: 50%;
-//                     right: 0;
-//                     left: 0;
-//                     z-index: -1;
-//                     text-align: center;
-//                     transform: rotate(90deg);
-//                 }
-    
-//                 &:focus-within, &:hover {
-//                     a {
-//                         outline: none;
-//                     }
-                    
-//                     p {
-//                         // z-index: 1;
-//                     }
-//                 }
+            &:hover, &:focus-within, &:active {
+                outline: 3px solid $black;
                 
-//                 &:focus-within {
-//                     outline: 3px dashed $black;
-//                     outline-offset: .125rem;
-//                 }
-//             }
-//         }
-//     }
+                img {
+                    filter: none;
+                }
+            }
 
-// }
+        }
+    }
+}
