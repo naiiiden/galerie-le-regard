@@ -27,27 +27,26 @@ const AllPaintings = () => {
 
   return (
     <div className="all-paintings-container">
-      {/* <select
-        onChange={(e) => e.target.value === '' ? navigate('/paintings') : navigate(`/paintings/${e.target.value}`)}
-        value={selectedCategory || ''}
-        aria-label='Filter products by category'
-      >
-        <option value={''}>Filter by category</option>
-        {categories.map(category => 
-            <option key={category} value={category}>{category}</option>
-        )}
-      </select> */}
       <fieldset>
         <legend>Style:</legend>
         <label id={category}>
           All
-          <input type="radio" htmlFor={category} name="Painting category" value={''}
+          <input 
+            checked={selectedCategory === ''}
+            type="radio" 
+            htmlFor={category} 
+            name="Painting category" 
+            value={''}
             onClick={(e) => e.target.value === '' ? navigate('/paintings') : navigate(`/paintings/${e.target.value}`)}
           />
         </label>
         {categories.map(category => 
           <label key={category} id={category}>{category}
-            <input type="radio" htmlFor={category} name="Painting category"
+            <input 
+              checked={selectedCategory === category}
+              type="radio" 
+              htmlFor={category} 
+              name="Painting category"
               value={category}
               onClick={(e) => e.target.value === '' ? navigate('/paintings') : navigate(`/paintings/${e.target.value}`)}
             />
