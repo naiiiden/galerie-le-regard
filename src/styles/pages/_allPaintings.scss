@@ -7,7 +7,7 @@
         padding: clamp(0.25rem, 2.5vw, 1rem) 0 0 0;
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: .5rem;
 
         li {
             position: relative;
@@ -15,11 +15,12 @@
             img {
                 filter: invert(1);
                 transition: all .2s;
-                height: clamp(100px, 25vw, 500px);
+                height: clamp(125px, 25vw, 300px);
                 object-fit: cover;
             }
             
             p {
+                font-size: clamp(.75rem, 2vw, 1rem);
                 background: $black;
                 color: $white;
                 width: 100%;
