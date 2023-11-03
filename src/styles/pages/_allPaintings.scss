@@ -3,14 +3,15 @@
     padding: 0 clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem);
     position: relative;
 
-    fieldset {
-        border: none;
+    div {
+        padding: clamp(0.5rem, 2.5vw, 1rem) 0;
         display: flex;
-        flex-wrap: wrap;
+        gap: 1rem;
+        overflow-y: scroll;
+        text-wrap: nowrap;
 
         input {
             appearance: none;
-            
         }
     }
 

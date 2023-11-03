@@ -27,8 +27,8 @@ const AllPaintings = () => {
 
   return (
     <div className="all-paintings-container">
-      <fieldset>
-        <legend>Style:</legend>
+      <div role="radiogroup" aria-label="Filter paintings by style">
+        <p>Style:</p>
         <label id="all">
           All
           <input 
@@ -52,7 +52,7 @@ const AllPaintings = () => {
             />
           </label>  
         )}
-      </fieldset>
+      </div>
       <ul>
         {filteredProducts.map((product) => (
           <ProductItem 

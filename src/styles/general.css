@@ -155,11 +155,11 @@ body .App main {
   white-space: nowrap;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar:not(.all-paintings-container div) {
   width: 0.375rem;
 }
 
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb:not(.all-paintings-container div) {
   background: rgba(17, 17, 17, 0.875);
 }
 
@@ -371,12 +371,14 @@ body .App main {
   padding: 0 clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem) clamp(0.25rem, 2.5vw, 1rem);
   position: relative;
 }
-.all-paintings-container fieldset {
-  border: none;
+.all-paintings-container div {
+  padding: clamp(0.5rem, 2.5vw, 1rem) 0;
   display: flex;
-  flex-wrap: wrap;
+  gap: 1rem;
+  overflow-y: scroll;
+  text-wrap: nowrap;
 }
-.all-paintings-container fieldset input {
+.all-paintings-container div input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
