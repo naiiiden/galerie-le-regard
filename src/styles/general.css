@@ -374,20 +374,17 @@ body .App main {
 .all-paintings-container fieldset {
   border: none;
   display: flex;
+  flex-wrap: wrap;
 }
 .all-paintings-container fieldset input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
 }
-.all-paintings-container fieldset input:checked + label {
-  color: red;
-}
 .all-paintings-container ul {
   padding: clamp(0.25rem, 2.5vw, 1rem) 0 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 .all-paintings-container ul li {
   position: relative;
@@ -395,7 +392,6 @@ body .App main {
 .all-paintings-container ul li img {
   filter: invert(1);
   transition: all 0.2s;
-  height: clamp(125px, 25vw, 300px);
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -420,6 +416,21 @@ body .App main {
   z-index: 1;
 }
 
+@media screen and (min-width: 600px) {
+  .all-paintings-container ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 900px) {
+  .all-paintings-container ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media screen and (min-width: 1400px) {
+  .all-paintings-container ul {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
 header {
   padding: clamp(0.25rem, 2.5vw, 1rem);
   display: flex;
