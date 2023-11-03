@@ -384,7 +384,8 @@ body .App main {
 .all-paintings-container ul {
   padding: clamp(0.25rem, 2.5vw, 1rem) 0 0 0;
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 5vw;
 }
 .all-paintings-container ul li {
   position: relative;
@@ -392,6 +393,8 @@ body .App main {
 .all-paintings-container ul li img {
   filter: invert(1);
   transition: all 0.2s;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -416,11 +419,6 @@ body .App main {
   z-index: 1;
 }
 
-@media screen and (min-width: 600px) {
-  .all-paintings-container ul {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
 @media screen and (min-width: 900px) {
   .all-paintings-container ul {
     grid-template-columns: repeat(3, minmax(0, 1fr));
