@@ -33,11 +33,11 @@ body {
     white-space: nowrap;
 }
 
-::-webkit-scrollbar:not(.all-paintings-container div) {
+::-webkit-scrollbar {
     width: .375rem;
 }
 
-::-webkit-scrollbar-thumb:not(.all-paintings-container div) {
+::-webkit-scrollbar-thumb {
     background: rgba(17, 17, 17, .875);
 }
 
