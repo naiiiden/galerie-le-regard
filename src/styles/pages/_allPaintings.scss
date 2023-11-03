@@ -18,15 +18,11 @@
         padding: clamp(0.25rem, 2.5vw, 1rem) 0 0 0;
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 5vw;
-        // border: 1px solid red;
-
+        gap: clamp(1rem, 5vw, 5rem);
 
         li {
             position: relative;
-            // border: 1px solid red;
-            // height: clamp(320px, 25vw, 400px);
-            // width: clamp(320px, 25vw, 400px);
+            height: clamp(320px, 30vw, 500px);
 
             img {
                 filter: invert(1);
@@ -46,7 +42,6 @@
                 z-index: -1;
                 transform: translate(0, -50%);
                 text-align: center;
-                // display: none;
             }
 
             &:hover, &:focus-within, &:active {

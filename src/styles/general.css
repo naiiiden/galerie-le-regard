@@ -385,10 +385,11 @@ body .App main {
   padding: clamp(0.25rem, 2.5vw, 1rem) 0 0 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 5vw;
+  gap: clamp(1rem, 5vw, 5rem);
 }
 .all-paintings-container ul li {
   position: relative;
+  height: clamp(320px, 30vw, 500px);
 }
 .all-paintings-container ul li img {
   filter: invert(1);
