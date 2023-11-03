@@ -27,6 +27,7 @@ const AllPaintings = () => {
 
   return (
     <div className="all-paintings-container">
+      <h1 className="sr-only" aria-live="polite">{selectedCategory !== '' ? selectedCategory : 'All Paintings'}</h1>
       <div role="radiogroup" aria-label="Filter paintings by style">
         <p>Style:</p>
         <label id="all">
