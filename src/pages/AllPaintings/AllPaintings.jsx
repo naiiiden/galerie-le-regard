@@ -30,7 +30,6 @@ const AllPaintings = () => {
       <div role="radiogroup" aria-label="Filter paintings by style">
         <p>Style:</p>
         <label id="all">
-          All
           <input 
             checked={selectedCategory === ''}
             type="radio" 
@@ -39,9 +38,10 @@ const AllPaintings = () => {
             value={''}
             onChange={(e) => e.target.value === '' ? navigate('/paintings') : navigate(`/paintings/${e.target.value}`)}
           />
+          <span>All</span>
         </label>
         {categories.map(category => 
-          <label key={category} id={category}>{category}
+          <label key={category} id={category}>
             <input 
               checked={selectedCategory === category}
               type="radio" 
@@ -50,6 +50,7 @@ const AllPaintings = () => {
               value={category}
               onChange={(e) => e.target.value === '' ? navigate('/paintings') : navigate(`/paintings/${e.target.value}`)}
             />
+            <span>{category}</span>
           </label>  
         )}
       </div>

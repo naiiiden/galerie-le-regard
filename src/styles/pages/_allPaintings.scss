@@ -20,6 +20,20 @@
 
         input {
             appearance: none;
+            
+            &:is(:focus-visible, :active) + span {
+                outline: 3px dashed $black;
+                outline-offset: .125rem;
+            }
+            
+            &:is(:hover) + span {
+                cursor: pointer;
+            }
+
+            &:checked + span {
+                font-family: "Roboto-Bold", Helvetica;
+                text-decoration: underline;
+            }
         }
     }
 

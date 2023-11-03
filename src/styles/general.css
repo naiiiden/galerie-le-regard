@@ -389,6 +389,17 @@ body .App main {
      -moz-appearance: none;
           appearance: none;
 }
+.all-paintings-container div input:is(:focus-visible, :active) + span {
+  outline: 3px dashed #111;
+  outline-offset: 0.125rem;
+}
+.all-paintings-container div input:is(:hover) + span {
+  cursor: pointer;
+}
+.all-paintings-container div input:checked + span {
+  font-family: "Roboto-Bold", Helvetica;
+  text-decoration: underline;
+}
 .all-paintings-container ul {
   padding: clamp(0.25rem, 2.5vw, 1rem) 0 0 0;
   display: grid;
