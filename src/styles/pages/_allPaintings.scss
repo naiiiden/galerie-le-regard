@@ -22,8 +22,7 @@
             appearance: none;
             
             &:is(:focus-visible, :active) + span {
-                outline: 3px dashed $black;
-                outline-offset: .125rem;
+                @extend .state-outline;
             }
             
             &:is(:hover) + span {

@@ -1,5 +1,4 @@
 import CartMenu from "../CartMenu/CartMenu";
-import { UseCart } from "../../context/CartContext";
 import { Link, useLocation } from "react-router-dom";
 import { OpenCart } from "../../context/OpenCartContext";
 import TotalProductsInCart from "../TotalProductsInCart/TotalProductsInCart";
@@ -8,7 +7,6 @@ import Logo from "../Logo/Logo";
 const Header = () => {
     const location = useLocation();
 
-    const { cartState } = UseCart();
     const { openedCart, openCart, closeCart } = OpenCart();
 
     openedCart ? document.body.style.overflow = "hidden" : document.body.style.overflow = "";

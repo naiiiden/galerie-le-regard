@@ -6,6 +6,10 @@ header {
     justify-content: space-between;
     align-items: center;
 
+    a:is(:active, :focus-visible), button:is(:active, :focus-visible) {
+        @extend .state-outline;
+    }
+
     button {
         margin-left: 1rem;
         border: none;

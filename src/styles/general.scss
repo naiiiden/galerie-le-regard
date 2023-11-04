@@ -25,6 +25,14 @@ body {
     color: $white;
 }
 
+::-webkit-scrollbar {
+    width: .375rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(17, 17, 17, .875);
+}
+
 // reusable classes
 .text-overflow-fix {
     width: clamp(150px, 25vw, 250px);
@@ -33,12 +41,9 @@ body {
     white-space: nowrap;
 }
 
-::-webkit-scrollbar {
-    width: .375rem;
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgba(17, 17, 17, .875);
+.state-outline {
+    outline: 3px dashed $black;
+    outline-offset: .125rem;
 }
 
 // pages

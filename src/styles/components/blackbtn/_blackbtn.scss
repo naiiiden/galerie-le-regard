@@ -6,8 +6,7 @@
     padding: .25rem .5rem;
 
     &:not([disabled]):active, &:not([disabled]):focus-visible {
-        outline: 3px dashed $black;
-        outline-offset: .125rem;
+        @extend .state-outline;
     }
 
     &[disabled] {
