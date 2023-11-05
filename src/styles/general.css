@@ -488,6 +488,8 @@ a[href="/"] {
      -moz-user-select: none;
           user-select: none;
   overflow: hidden;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 a[href="/"] span {
   display: grid;

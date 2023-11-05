@@ -8,6 +8,7 @@ a[href='/'] {
     gap: 4px;
     user-select: none;
     overflow: hidden;
+    width: fit-content;
 
     span {
         display: grid;
