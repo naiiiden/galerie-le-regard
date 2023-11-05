@@ -450,6 +450,20 @@ body .App main {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
+main:has(> footer) {
+  display: unset !important;
+}
+main:has(> footer) footer {
+  margin-top: clamp(0.25rem, 10vw, 10rem);
+  padding: clamp(0.25rem, 2.5vw, 5rem) clamp(0.25rem, 2.5vw, 1rem);
+  background: #111;
+  color: #f9f9f9;
+}
+main:has(> footer) footer .logo span {
+  background: #f9f9f9;
+  color: #111;
+}
+
 header {
   padding: clamp(0.25rem, 2.5vw, 1rem);
   display: flex;

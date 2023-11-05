@@ -3,6 +3,7 @@ import { UseCart } from '../../context/CartContext'
 import clearAlert from '../../helpers/clearAlert';
 import ProductItem from '../../components/ProductItem/ProductItem';
 import { useParams, useNavigate } from 'react-router-dom';
+import Logo from '../../components/Logo/Logo';
 
 /* eslint-disable react/prop-types */
 const AllPaintings = () => {
@@ -26,54 +27,63 @@ const AllPaintings = () => {
   }, [category]);
 
   return (
-    <div className="all-paintings-container">
-      <h1 className="sr-only" aria-live="polite">{selectedCategory !== '' ? selectedCategory : 'All Paintings'}</h1>
-      <div role="radiogroup" aria-label="Filter paintings by style">
-        <p>Style:</p>
-        <label id="all">
-          <input 
-            checked={selectedCategory === ''}
-            type="radio" 
-            htmlFor="all" 
-            name="Painting category" 
-            value={''}
-            onChange={(e) => e.target.value === '' ? navigate('/paintings') : navigate(`/paintings/${e.target.value}`)}
-          />
-          <span>All</span>
-        </label>
-        {categories.map(category => 
-          <label key={category} id={category}>
+    <>
+      <div className="all-paintings-container">
+        <h1 className="sr-only" aria-live="polite">{selectedCategory !== '' ? selectedCategory : 'All Paintings'}</h1>
+        <div role="radiogroup" aria-label="Filter paintings by style">
+          <p>Style:</p>
+          <label id="all">
             <input 
-              checked={selectedCategory === category}
+              checked={selectedCategory === ''}
               type="radio" 
-              htmlFor={category} 
-              name="Painting category"
-              value={category}
+              htmlFor="all" 
+              name="Painting category" 
+              value={''}
               onChange={(e) => e.target.value === '' ? navigate('/paintings') : navigate(`/paintings/${e.target.value}`)}
             />
-            <span>{category}</span>
-          </label>  
-        )}
+            <span>All</span>
+          </label>
+          {categories.map(category => 
+            <label key={category} id={category}>
+              <input 
+                checked={selectedCategory === category}
+                type="radio" 
+                htmlFor={category} 
+                name="Painting category"
+                value={category}
+                onChange={(e) => e.target.value === '' ? navigate('/paintings') : navigate(`/paintings/${e.target.value}`)}
+              />
+              <span>{category}</span>
+            </label>  
+          )}
+        </div>
+        <ul>
+          {filteredProducts.map((product) => (
+            <ProductItem 
+              linkHref={`/paintings/${product.category}/${product.name}`}
+              product={product} 
+              key={product.id}
+              onClick={() => 
+                  dispatch({ type: 'ADD_TO_CART', payload: product }, 
+                  clearAlert(dispatch)
+              )}
+              style={{
+                // transform: `translate(${Math.random() * 100}%, ${Math.random() * 100}%)`,
+                // top: `${Math.random() * 200}%`, // Adjust the range as needed
+                // left: `${Math.random() * 90}%`, // Adjust the range as needed
+              }}
+            />
+          ))}
+        </ul>
       </div>
-      <ul>
-        {filteredProducts.map((product) => (
-          <ProductItem 
-            linkHref={`/paintings/${product.category}/${product.name}`}
-            product={product} 
-            key={product.id}
-            onClick={() => 
-                dispatch({ type: 'ADD_TO_CART', payload: product }, 
-                clearAlert(dispatch)
-            )}
-            style={{
-              // transform: `translate(${Math.random() * 100}%, ${Math.random() * 100}%)`,
-              // top: `${Math.random() * 200}%`, // Adjust the range as needed
-              // left: `${Math.random() * 90}%`, // Adjust the range as needed
-            }}
-          />
-        ))}
-      </ul>
-    </div>
+      <footer>
+        <div className="footer-logo-title-wrapper">
+          <Logo/> 
+          <h2>Le Regard Museum</h2>
+          <p>A practice project to improve my design skills</p>
+        </div>
+      </footer>
+    </>
   )
 }
 
