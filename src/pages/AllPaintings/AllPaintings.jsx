@@ -3,7 +3,7 @@ import { UseCart } from '../../context/CartContext'
 import clearAlert from '../../helpers/clearAlert';
 import ProductItem from '../../components/ProductItem/ProductItem';
 import { useParams, useNavigate } from 'react-router-dom';
-import Logo from '../../components/Logo/Logo';
+import Footer from '../../components/Footer/Footer';
 
 /* eslint-disable react/prop-types */
 const AllPaintings = () => {
@@ -76,13 +76,7 @@ const AllPaintings = () => {
           ))}
         </ul>
       </div>
-      <footer>
-        <div className="footer-logo-title-wrapper">
-          <Logo/> 
-          <h2>Le Regard Museum</h2>
-          <p>A practice project to improve my design skills</p>
-        </div>
-      </footer>
+      <Footer/>
     </>
   )
 }

@@ -450,6 +450,18 @@ body .App main {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
+header {
+  padding: clamp(0.25rem, 2.5vw, 1rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header button {
+  margin-left: 1rem;
+  border: none;
+  background: none;
+}
+
 main:has(> footer) {
   display: unset !important;
 }
@@ -462,18 +474,6 @@ main:has(> footer) footer {
 main:has(> footer) footer .logo span {
   background: #f9f9f9;
   color: #111;
-}
-
-header {
-  padding: clamp(0.25rem, 2.5vw, 1rem);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-header button {
-  margin-left: 1rem;
-  border: none;
-  background: none;
 }
 
 a[href="/"] {
