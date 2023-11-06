@@ -399,7 +399,9 @@ body .App main {
 }
 .all-paintings-container div input:checked + span {
   font-family: "Roboto-Bold", Helvetica;
-  text-decoration: underline;
+  display: inline-block;
+  line-height: 1;
+  border-bottom: 3px solid #111;
 }
 .all-paintings-container ul {
   padding: clamp(0.25rem, 2.5vw, 1rem) 0 0 0;
@@ -467,7 +469,7 @@ main:has(> footer) {
 }
 main:has(> footer) footer {
   margin-top: clamp(0.25rem, 10vw, 10rem);
-  padding: clamp(0.25rem, 2.5vw, 5rem) clamp(0.25rem, 2.5vw, 1rem);
+  padding: clamp(2.25rem, 5vw, 5rem) clamp(0.25rem, 2.5vw, 1rem);
   background: #111;
   color: #f9f9f9;
 }

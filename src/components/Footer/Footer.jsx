@@ -5,8 +5,8 @@ const Footer = () => {
         <footer>
             <div className="footer-logo-title-wrapper">
                 <Logo/> 
-                <h2>Le Regard Museum</h2>
-                <p>A practice project to improve my design skills</p>
+                <h2>Le Regard Gallery</h2>
+                <p>A collection of the world&apos;s most renowned paintings</p>
             </div>
         </footer>
     )

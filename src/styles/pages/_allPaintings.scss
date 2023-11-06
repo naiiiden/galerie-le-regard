@@ -31,7 +31,9 @@
 
             &:checked + span {
                 font-family: "Roboto-Bold", Helvetica;
-                text-decoration: underline;
+                display: inline-block;
+                line-height: 1;
+                border-bottom: 3px solid $black;
             }
         }
     }
