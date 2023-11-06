@@ -6,12 +6,5 @@ main:has(> footer) {
         padding: clamp(2.25rem, 5vw, 5rem) clamp(0.25rem, 2.5vw, 1rem);
         background: $black;
         color: $white;
-
-        .logo {
-            span {
-                background: $white;
-                color: $black;
-            }
-        }
     }
 }

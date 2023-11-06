@@ -49,3 +49,12 @@ a[href='/'] {
         }
     }
 }
+
+footer {
+    .logo {
+        span {
+            background: $white;
+            color: $black;
+        }
+    }
+}

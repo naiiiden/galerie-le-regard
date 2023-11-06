@@ -473,10 +473,6 @@ main:has(> footer) footer {
   background: #111;
   color: #f9f9f9;
 }
-main:has(> footer) footer .logo span {
-  background: #f9f9f9;
-  color: #111;
-}
 
 a[href="/"] {
   color: #f9f9f9;
@@ -525,6 +521,11 @@ a[href="/"]:focus-visible, a[href="/"]:active {
     transition: opacity 0.2s;
   }
 }
+footer .logo span {
+  background: #f9f9f9;
+  color: #111;
+}
+
 .click-outside.close {
   background: transparent;
   height: 1000vh;
